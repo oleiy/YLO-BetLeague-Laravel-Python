@@ -1,0 +1,42 @@
+.ranking-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.ranking-row {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+.ranking-row:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(5px);
+}
+
+.rank-pos { font-weight: 900; font-size: 0.75rem; width: 25px; color: var(--text-dim); }
+.ranking-row:nth-child(1) .rank-pos { color: #FFD700; }
+.ranking-row:nth-child(2) .rank-pos { color: #C0C0C0; }
+.ranking-row:nth-child(3) .rank-pos { color: #CD7F32; }
+
+.avatar-mini {
+    width: 28px; height: 28px; background: var(--cyber-dark-blue);
+    border: 1px solid var(--glass-border); border-radius: 8px;
+}
+
+.rank-pts { color: #00ff41; font-weight: 800; font-size: 0.75rem; font-family: monospace; }
+
+.ranking-scrollable-container {
+    max-height: 428px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+

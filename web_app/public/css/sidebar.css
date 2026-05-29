@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Sidebar Bet Slip - UNIFIED CLEAN CYBER DESIGN
+   ========================================================================== */
+
+/* 1. Kontener Główny */
+.bet-slip-container {
+    background: #0f1216;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    max-height: 622px;
+    width: 100%;
+    max-width: 380px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* 2. Nagłówek Sidebaru */
+.slip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.slip-title {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #8b8e92;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.slip-badge-count {
+    background: rgba(88, 166, 255, 0.15);
+    color: #58a6ff;
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+/* 3. Karta Typu (Pojedynczy Zakład) */
+.bet-card-main {
+    background: #0f1216;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.bet-card-main:hover {
+    border-color: #58a6ff;
+    background: #12151a;
+}
+
+/* 4. Elementy Karty */
+.bet-card-header {
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bet-league-name {
+    font-size: 0.55rem;
+    color: #8b8e92;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bet-teams {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f0f6fc;
+    line-height: 1.2;
+}
+
+.bet-time {
+    font-size: 0.6rem;
+    color: #8b8e92;
+    font-weight: 700;
+}
+
+.bet-card-body {
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.bet-builder-label {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 0.7rem;
+    color: #58a6ff;
+}
+
+.bet-builder-odd {
+    font-weight: 900;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* 5. Lista Zdarzeń (Kropki i Linie) */
+.bet-events-list {
+    position: relative;
+    padding-left: 18px;
+    margin-top: 5px;
+}
+
+.events-connector {
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    border-left: 1px dashed rgba(88, 166, 255, 0.2);
+}
+
+.event-item {
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.event-dot {
+    position: absolute;
+    left: -17px;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+    background: #58a6ff;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
+}
+
+.event-market {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+
+.event-sub {
+    font-size: 0.65rem;
+    color: #8b8e92;
+}
+
+/* 6. Finanse i Przyciski Karty */
+.bet-card-finance {
+    padding: 8px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.finance-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.finance-label {
+    font-size: 0.75rem;
+    color: #8b8e92;
+    font-weight: 800;
+}
+
+.finance-val {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.finance-val.win {
+    color: #58a6ff;
+    text-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
+}
+
+.btn-slip-analysis {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 12px;
+    color: #f0f6fc;
+    font-size: 0.65rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-slip-analysis:hover {
+    background: rgba(88, 166, 255, 0.05);
+    color: #58a6ff;
+}
+
+/* 7. Stopka Całego Kontenera (Podsumowanie) */
+.slip-footer {
+    border-top: 2px dashed rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.summary-label {
+    font-size: 0.65rem;
+    color: #8b8e92;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.potential-win-box {
+    background: rgba(88, 166, 255, 0.05);
+    border: 1px solid rgba(88, 166, 255, 0.15);
+    border-left: 4px solid #58a6ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.win-val {
+    font-weight: 950;
+    font-size: 1.2rem;
+    color: #58a6ff;
+    text-shadow: 0 0 15px rgba(88, 166, 255, 0.5);
+}
+
+/* 8. Scrollbar i Kontenery Przewijane */
+.bet-slip-scroll,
+.bet-slip-scrollable-container {
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.bet-slip-scroll::-webkit-scrollbar { width: 4px; }
+.bet-slip-scroll::-webkit-scrollbar-thumb {
+    background: rgba(88, 166, 255, 0.3);
+    border-radius: 10px;
+}
+
+/* 9. Przyciski Akcji */
+.btn-confirm-bet {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    font-weight: 800;
+    border-radius: 6px;
+    width: 100%;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-confirm-bet:hover {
+    background: #eeeeee;
+    transform: translateY(-2px);
+}

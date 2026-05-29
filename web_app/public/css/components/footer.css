@@ -1,0 +1,73 @@
+.footer-custom {
+    background: #0d1117; /* Nieco jaśniejszy niż tło body */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #8b949e;
+}
+
+.footer-logo {
+    height: 80px;
+}
+
+.footer-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.footer-title {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #00d2ff; /* Kolor akcentu jak w Twoim Dashboardzie */
+}
+
+.footer-socials a {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px);
+    color: #00d2ff;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.update-pill {
+    background: rgba(0, 210, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #00d2ff;
+    width: fit-content;
+}
+
+.dot-online {
+    width: 8px;
+    height: 8px;
+    background: #00d2ff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00d2ff;
+}
+
+.text-dim {
+    color: #484f58;
+}

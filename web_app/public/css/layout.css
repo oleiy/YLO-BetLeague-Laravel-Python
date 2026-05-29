@@ -1,0 +1,80 @@
+
+.h-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.brand-accent { color: var(--cyber-blue); }
+
+.dashboard-subtitle {
+    font-size: 1rem;
+    color: var(--text-dim);
+    max-width: 650px;
+}
+
+.section-header-alignment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-title-cyber {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 90px;
+    z-index: 1000;
+}
+
+/* Swiper Nav Buttons */
+.swiper-button-next-custom, .swiper-button-prev-custom {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    color: var(--cyber-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Styl przycisku Zobacz Więcej w Dashboardzie */
+.btn-see-more-cyber {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(88, 166, 255, 0.05);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    color: #58a6ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-see-more-cyber:hover {
+    background: rgba(88, 166, 255, 0.15);
+    border-color: #58a6ff;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-see-more-cyber i {
+    font-size: 1.1rem;
+}

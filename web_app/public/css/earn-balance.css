@@ -1,0 +1,449 @@
+/* ==========================================================================
+   1. PAGE LAYOUT
+   ========================================================================== */
+
+.earn-page {
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    min-height: calc(100vh - 120px);
+}
+
+/* ==========================================================================
+   2. HEADER
+   ========================================================================== */
+
+.earn-header {
+    margin-bottom: 2px;
+}
+
+.earn-title {
+    font-size: 1.95rem;
+    font-weight: 800;
+    color: white;
+
+    margin-bottom: 4px;
+    line-height: 1.1;
+}
+
+.earn-title span {
+    color: #58a6ff;
+}
+
+.earn-subtitle {
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+
+    font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   3. HERO CARD
+   ========================================================================== */
+
+.earn-hero-card {
+    background: linear-gradient(
+        135deg,
+        #161b22,
+        #0d1117
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    padding: 14px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    min-height: 92px;
+}
+
+.earn-label {
+    color: rgba(255,255,255,0.5);
+
+    font-size: 0.72rem;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 4px;
+}
+
+.earn-balance {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #58a6ff;
+
+    line-height: 1;
+}
+
+.earn-streak-box {
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 16px;
+
+    padding: 10px 16px;
+
+    min-width: 85px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 62px;
+}
+
+.earn-streak-value {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+
+    line-height: 1;
+}
+
+/* ==========================================================================
+   4. MAIN GRID
+   ========================================================================== */
+
+.earn-main-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+/* ==========================================================================
+   5. GENERIC CARD
+   ========================================================================== */
+
+.earn-card {
+    background: #161b22;
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 20px;
+
+    padding: 18px;
+}
+
+.referral-big-card {
+    padding: 22px;
+}
+
+.earn-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 14px;
+}
+
+.earn-card-header h3 {
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+.earn-card-header p {
+    color: rgba(255,255,255,0.55);
+    margin: 0;
+
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   6. DAILY REWARD
+   ========================================================================== */
+
+.daily-reward-badge {
+    background: rgba(88,166,255,0.15);
+
+    border: 1px solid rgba(88,166,255,0.3);
+
+    color: #58a6ff;
+
+    padding: 8px 12px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    font-size: 0.82rem;
+
+    white-space: nowrap;
+}
+
+.streak-grid {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.streak-day {
+    height: 54px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(255,255,255,0.35);
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.streak-day.active {
+    background: rgba(88,166,255,0.14);
+
+    border-color: rgba(88,166,255,0.4);
+
+    color: #58a6ff;
+
+    box-shadow: 0 0 14px rgba(88,166,255,0.12);
+}
+
+/* ==========================================================================
+   7. REFERRALS
+   ========================================================================== */
+
+.referral-code-wrapper {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+}
+
+.referral-code {
+    flex: 1;
+
+    height: 46px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 0.92rem;
+}
+
+.copy-ref-btn-big {
+    height: 46px;
+
+    padding: 0 18px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    background: #58a6ff;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 0.88rem;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: 0.25s ease;
+}
+
+.copy-ref-btn-big:hover {
+    transform: translateY(-2px);
+
+    background: #3d8df5;
+}
+
+.referral-stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.referral-stat-card {
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 14px;
+
+    padding: 16px;
+}
+
+.referral-stat-label {
+    color: rgba(255,255,255,0.5);
+
+    margin-bottom: 4px;
+
+    font-size: 0.82rem;
+}
+
+.referral-stat-value {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: white;
+
+    line-height: 1.1;
+}
+
+.referral-stat-value.blue {
+    color: #58a6ff;
+}
+
+/* ==========================================================================
+   8. GUEST
+   ========================================================================== */
+
+.earn-guest-box {
+    background: #161b22;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    padding: 34px;
+
+    text-align: center;
+}
+
+/* ==========================================================================
+   9. MOBILE
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+    .earn-page {
+        gap: 16px;
+    }
+
+    .earn-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .earn-hero-card,
+    .earn-card-header,
+    .referral-code-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .streak-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .referral-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .earn-balance {
+        font-size: 1.7rem;
+    }
+
+}
+
+/* ==========================================================================
+   GUEST LOGIN BOX
+   ========================================================================== */
+
+.mybets-login-box {
+    background: var(--card-background);
+
+    border-radius: 22px;
+
+    padding: 50px 30px;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    text-align: center;
+}
+
+.mybets-login-icon {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 22px auto;
+
+    border-radius: 22px;
+
+    background: rgba(88,166,255,.08);
+
+    border: 1px solid rgba(88,166,255,.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+
+    color: #58a6ff;
+}
+
+.mybets-login-title {
+    color: white;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+    font-size: 1.8rem;
+}
+
+.mybets-login-subtitle {
+    color: rgba(255,255,255,.6);
+
+    margin-bottom: 26px;
+
+    max-width: 520px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 1.6;
+}
+
+@media(max-width:768px){
+
+    .mybets-login-box {
+        padding: 38px 20px;
+    }
+
+}

@@ -1,0 +1,31 @@
+:root {
+    --cyber-blue: #58a6ff;
+    --button-color: #58a6ff;
+    --cyber-blue-dark: #1E4D8C;
+    --cyber-black: #0d1117;
+    --cyber-black-darker: #050a0f;
+    --cyber-green: #7ee787;
+    --cyber-red: #ff7b72;
+    --bg-card: #161b22;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(88, 166, 255, 0.2);
+    --text-main: #ffffff;
+    --text-dim: #8b949e;
+    --text-muted: #484f58;
+    --card-background: linear-gradient(
+            180deg,
+            rgba(13,17,23,.98) 0%,
+            rgba(19, 27, 39, 0.98) 100%
+        );
+        --card-background: linear-gradient(
+    0deg, /* Zamiana ze 180deg */
+    rgba(13, 17, 23, .98) 0%,
+    rgba(19, 27, 39, 0.98) 100%
+);
+}
+
+body {
+    background-color: #0b0e11;
+    color: white;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}

@@ -1,0 +1,506 @@
+
+
+/* ==========================================================================
+   1. NAVBAR - GŁÓWNY KONTENER
+   ========================================================================== */
+.navbar-custom {
+    background: var(--card-background);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   2. NAWIGACJA (LINKI)
+   ========================================================================== */
+.nav-link-custom {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: 0.3s;
+    display: block;
+}
+
+.nav-link-custom:hover {
+    opacity: 1;
+    color: #58a6ff; /* Cyber blue */
+}
+
+/* ==========================================================================
+   3. WSPÓLNY STANDARD PIGUŁEK (ZALOGOWANY I GOŚĆ)
+   ========================================================================== */
+.balance-pill,
+.user-profile-nav,
+.logout-pill,
+.btn-guest-login,
+.btn-guest-register {
+    height: 46px; /* Identyczna wysokość dla wszystkich elementów w navbarze */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px; /* Spójne zaokrąglenie pigułki */
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   4. SEKCJA ZALOGOWANEGO (BALANS, PROFIL, LOGOUT)
+   ========================================================================== */
+
+/* --- Balans Punktów --- */
+.balance-pill {
+    background: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 24px;
+    gap: 12px;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.balance-value {
+    color: #58a6ff;
+    font-weight: 700;
+}
+
+/* --- Panel Profilu --- */
+.user-profile-nav {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0 5px 0 20px; /* Miejsce na awatar z prawej */
+    gap: 12px;
+    cursor: pointer;
+}
+
+.user-profile-nav:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--cyberblue);
+}
+
+.user-name-header {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    order: 1;
+}
+
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    background: #161b22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: 2px solid #58a6ff;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+    flex-shrink: 0;
+    order: 2;
+}
+
+/* --- Przycisk Wyloguj --- */
+.logout-pill {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0 24px;
+    gap: 10px;
+}
+
+.logout-pill:hover {
+    background: rgba(255, 71, 71, 0.08);
+    border-color: rgba(255, 71, 71, 0.3);
+    box-shadow: 0 0 15px rgba(255, 71, 71, 0.1);
+}
+
+.logout-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+}
+
+.logout-icon {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.logout-pill:hover .logout-text,
+.logout-pill:hover .logout-icon {
+    color: #ff4747;
+}
+
+/* ==========================================================================
+   5. SEKCJA GOŚCIA (LOGIN, REGISTER)
+   ========================================================================== */
+
+.btn-guest-login {
+    background-color: #007bff;
+    color: #ffffff !important;
+    padding: 0 24px;
+    font-weight: 700;
+    gap: 8px;
+}
+
+.btn-guest-login:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-guest-register {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 24px;
+    font-weight: 700;
+}
+
+.btn-guest-register:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #ffffff;
+}
+
+/* ==========================================================================
+   6. RWD - RESPONSYWNOŚĆ
+   ========================================================================== */
+@media (max-width: 991px) {
+    .navbar-collapse .d-flex {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px !important;
+        padding: 20px 0;
+    }
+
+    .balance-pill,
+    .user-profile-nav,
+    .logout-pill,
+    .btn-guest-login,
+    .btn-guest-register {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .user-profile-nav {
+        justify-content: space-between; /* Nick z lewej, awatar z prawej na mobile */
+        padding: 0 10px 0 20px;
+    }
+}
+
+.navbar-custom {
+    position: relative;
+    z-index: 1050; /* Wyżej niż sidebary i main content */
+    background: #0d1117;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Upewnij się, że przyciski mają pointera */
+.btn-guest-register, .btn-guest-login {
+    cursor: pointer !important;
+    z-index: 1051;
+}
+
+.navbar-custom {
+    position: sticky;
+    top: 0;
+    z-index: 1100 !important; /* Musi być wyższy niż sidebar (który ma 1 lub 10) */
+    background: #0d1117;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-guest-register, .btn-guest-login, .logout-pill {
+    position: relative;
+    z-index: 1101 !important;
+    cursor: pointer !important;
+}
+
+/* Header musi być absolutnie najwyżej */
+.navbar-custom {
+    position: sticky !important;
+    top: 0;
+    z-index: 1060 !important; /* Wartość wyższa niż domyślne modale (1050) i sidebar */
+}
+
+/* Sidebar musi być niżej, aby nie blokował rozwijanego menu i modali */
+.sidebar-sticky {
+    position: sticky;
+    top: 90px; /* Odstęp od góry (wysokość headera + margines) */
+    z-index: 1000;
+}
+
+/* W pliku main.css lub header.css */
+
+.navbar-custom {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    height: 70px; /* Ustaw sztywną wysokość headera */
+}
+
+.dashboard-wrapper {
+    /* Wypełnia ekran: 100% wysokości widoku minus wysokość headera */
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: stretch;
+    margin-top: 30px;
+}
+
+/* Opcjonalnie: Jeśli chcesz, aby Sidebar też był sztywny na swojej wysokości */
+.sidebar-sticky {
+    position: sticky;
+    top: 90px; /* 70px headera + 20px marginesu */
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+}
+
+.nav-link-custom.active {
+    opacity: 1;
+    color: #58a6ff; /* Cyber blue */
+}
+
+.nav-right-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+
+    .nav-right-section {
+        margin-top: 18px;
+        width: 100%;
+    }
+
+}
+
+/* ==========================================================================
+   PROFILE DROPDOWN
+   ========================================================================== */
+
+.profile-dropdown-wrapper {
+    position: relative;
+}
+
+.profile-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 360px;
+
+    background: #11161d;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 22px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.45);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: 0.25s ease;
+
+    z-index: 2000;
+}
+
+.profile-dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* TOP */
+
+.profile-dropdown-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.profile-big-avatar {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #58a6ff,
+        #1f6feb
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1rem;
+    font-weight: 800;
+
+    color: white;
+}
+
+.profile-dropdown-username {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.profile-dropdown-email {
+    margin-top: 4px;
+
+    font-size: 0.82rem;
+
+    color: rgba(255,255,255,0.55);
+
+    word-break: break-word;
+}
+
+/* SECTION */
+
+.profile-dropdown-section {
+    padding-top: 18px;
+}
+
+.profile-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+.profile-info-label {
+    font-size: 0.82rem;
+
+    color: rgba(255,255,255,0.55);
+}
+
+.profile-info-value {
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    color: white;
+}
+
+.profile-info-value.success {
+    color: #2ecc71;
+}
+
+.profile-info-value.blue {
+    color: #58a6ff;
+}
+
+/* REFERRAL */
+
+.referral-code-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 12px;
+
+    padding: 8px 12px;
+
+    color: white;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.copy-ref-btn {
+    border: none;
+    background: transparent;
+
+    color: #58a6ff;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.copy-ref-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ACTIONS */
+
+.profile-dropdown-actions {
+    margin-top: 20px;
+}
+
+.dropdown-logout-btn {
+    width: 100%;
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    background: rgba(255, 71, 71, 0.08);
+
+    border: 1px solid rgba(255, 71, 71, 0.18);
+
+    color: #ff6b6b;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.dropdown-logout-btn:hover {
+    background: rgba(255, 71, 71, 0.14);
+
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+
+    .profile-dropdown-menu {
+        width: 100%;
+        right: 0;
+        left: 0;
+
+        top: calc(100% + 12px);
+    }
+
+}

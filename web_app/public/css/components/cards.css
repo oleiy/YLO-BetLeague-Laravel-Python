@@ -1,0 +1,159 @@
+/* GŁÓWNA KARTA MECZU */
+.card-cyber-grid {
+        background:
+        linear-gradient(
+            180deg,
+            rgba(13,17,23,.98) 0%,
+            rgba(19, 27, 39, 0.98) 100%
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    height: 100%;
+    padding: 15px !important;
+    transition: border-color 0.3s ease;
+}
+
+.card-cyber-grid:hover {
+    border-color: var(--cyber-blue);
+}
+
+/* LIGA I LOGO */
+.league-logo-mini {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1));
+}
+
+.league-tag-mini {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* DATA I CZAS */
+.match-date-tag {
+    font-size: 0.6rem;
+    color: #5a5d61;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.match-time-tag {
+    font-size: 0.65rem;
+    color: #8b8e92;
+    font-weight: 600;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: flex-end;
+}
+
+/* DRUŻYNY I VS */
+.team-shortcut-grid {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.7rem;
+    margin: 0 auto;
+}
+
+.vs-badge-compact {
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: var(--text-dim);
+    margin-top: 10px;
+}
+
+/* KURSY (ODDS) */
+.odds-grid-container {
+    border-radius: 10px;
+    padding: 4px;
+    margin-top: 8px;
+}
+
+.odd-box-mini {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 6px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease; /* Usunięto transform */
+}
+
+.odd-box-mini:hover {
+    border-color: #58a6ff;
+    background: rgba(88, 166, 255, 0.1);
+}
+
+.odd-label-xs {
+    font-size: 0.6rem;
+    color: #8b949e;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+.odd-val {
+    font-size: 0.8rem;
+    color: #58a6ff;
+    font-weight: 700;
+}
+
+/* PRZYCISK DODAJ TYP */
+.btn-add-analysis-sm {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    color: #58a6ff;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    margin-top: 2px;
+    transition: 0.3s;
+}
+
+.btn-add-analysis-sm:hover {
+    background: #58a6ff;
+    color: #0d1117;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+}
+
+/* POPULARNE ZAKŁADY */
+.popular-bet-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    border-left: 3px solid var(--cyber-blue);
+    height: 100%;
+}
+
+.odd-box-mini.active {
+    background: #58a6ff;
+    border-color: #58a6ff;
+}
+
+.odd-box-mini.active .odd-val,
+.odd-box-mini.active .odd-label-xs {
+    color: #000 !important;
+}

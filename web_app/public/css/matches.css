@@ -1,0 +1,902 @@
+/* ==========================================================================
+   1. KONTENER I NAWIGACJA DNI (KALENDARZ)
+   ========================================================================== */
+.filter-days-wrapper {
+    position: relative;
+    background: rgba(13, 17, 23, 0.4);
+    border-radius: 14px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.filter-days-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 5px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.filter-days-container::-webkit-scrollbar {
+    display: none;
+}
+
+.day-btn {
+    background: var(--card-background);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.day-btn .day-name {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #8b949e;
+    letter-spacing: 0.5px;
+}
+
+.day-btn .day-date {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-top: 2px;
+}
+
+.day-btn:hover,
+.day-btn.active {
+    background: #58a6ff !important;
+    border-color: #58a6ff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+}
+
+.day-btn:hover .day-name, .day-btn.active .day-name,
+.day-btn:hover .day-date, .day-btn.active .day-date {
+    color: #0d1117 !important;
+}
+
+.scroll-arrow {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #58a6ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.scroll-arrow:hover {
+    background: #58a6ff;
+    color: #0d1117;
+}
+
+/* ==========================================================================
+   2. NAGŁÓWEK LIGI
+   ========================================================================== */
+.league-header {
+    padding: 18px 12px;
+    align-items: center;
+}
+
+.league-logo-sm {
+    width: auto;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.section-title-cyber {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding-left: 12px;
+    line-height: 1;
+}
+
+/* ==========================================================================
+   3. KAFELEK MECZU (STRIP)
+   ========================================================================== */
+.match-strip-item {
+    /*background: var(--card-background);*/
+    background: var(--card-background);
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.match-strip-item:hover {
+    border-color: #58a6ff;
+}
+.match-strip-item:active {
+    border-color: #58a6ff;
+}
+
+.match-time-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 80px;
+}
+
+.m-hour {
+    font-weight: 800;
+    color: #58a6ff;
+    font-size: 1.1rem;
+}
+
+.m-date {
+    font-size: 0.7rem;
+    color: #8b949e;
+    text-transform: uppercase;
+}
+
+.match-teams-part {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-color-sq {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: white;
+}
+
+.team-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #f0f6fc;
+}
+
+/* ==========================================================================
+   4. KURSY GŁÓWNE (1X2) I POBOCZNE
+   ========================================================================== */
+.match-odds-part {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-odd, .btn-odd-style {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.btn-odd {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65px;
+}
+
+.btn-odd-style {
+    padding: 8px;
+    width: 100%;
+}
+
+.btn-odd:hover, .btn-odd-style:hover {
+    border-color: #58a6ff;
+    background: rgba(88, 166, 255, 0.1);
+}
+
+.btn-odd.active, .btn-odd-style.active {
+    background: #58a6ff !important;
+    border-color: #58a6ff !important;
+    color: #0d1117 !important;
+}
+
+/* Specyficzne kolory dla tekstu wewnątrz aktywnego przycisku kursu */
+.btn-odd.active .odd-val,
+.btn-odd.active .odd-label-xs,
+.btn-odd-style.active .text-accent,
+.btn-odd-style.active .text-secondary {
+    color: #0d1117 !important;
+}
+
+.odd-label-xs { font-size: 0.65rem; color: #8b949e; font-weight: 800; }
+.odd-val { font-size: 0.9rem; color: #58a6ff; font-weight: 700; }
+
+.btn-more-odds {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #8b949e;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-more-odds:hover {
+    background: #58a6ff;
+    color: #0d1117;
+}
+
+/* ==========================================================================
+   5. RYNKI POBOCZNE (AKORDEON)
+   ========================================================================== */
+.market-header-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.market-header-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #58a6ff;
+}
+
+.market-header-item .m-name {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: #f0f6fc;
+}
+
+.market-content-pane {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
+}
+
+.ou-row {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    padding: 6px 0;
+    transition: 0.2s;
+}
+
+/* Przełącznik Drużyn */
+.team-switcher-mini {
+    display: flex;
+    background: #161b22;
+    padding: 4px;
+    border-radius: 8px;
+    gap: 4px;
+}
+
+.btn-switch {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    padding: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-switch.active {
+    background: #58a6ff;
+    color: #0d1117; /* Poprawiono czytelność - ciemny tekst na jasnym tle */
+}
+
+/* ==========================================================================
+   6. NARZĘDZIOWE I ANIMACJE
+   ========================================================================== */
+.text-accent { color: #58a6ff; }
+.x-small { font-size: 0.7rem; letter-spacing: 0.5px; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.match-details-expand {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Kontener rynków pobocznych */
+.market-content-pane {
+    padding: 20px; /* Zwiększony padding dla lepszego oddechu */
+    background: rgba(13, 17, 23, 0.8);
+    border-radius: 0 0 12px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
+    margin-top: -8px;
+}
+
+/* Nagłówki kolumn (LINIA | POWYŻEJ | PONIŻEJ) */
+.market-content-pane .row.text-secondary {
+    margin-bottom: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+/* Wiersz z kursami (Over/Under) */
+.ou-row {
+    background: transparent; /* Usuwamy tło z wiersza, by nie konkurowało z przyciskami */
+    padding: 4px 0;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center; /* Centrowanie pionowe linii względem przycisków */
+}
+
+/* Stylizacja kolumny z wartością linii (np. 2.5) */
+.ou-row .col-4:first-child {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f0f6fc;
+    padding-left: 15px; /* Dopasowanie do lewej krawędzi */
+}
+
+/* Przycisk kursu - poprawione wyrównanie */
+.btn-odd-style {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    color: #58a6ff;
+    padding: 12px 10px; /* Zwiększony padding pionowy dla lepszego wyglądu */
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-odd-style:hover {
+    background: #21262d;
+    border-color: #58a6ff;
+    transform: translateY(-1px);
+}
+
+/* Poprawka dla nagłówków kolumn, aby pasowały do środka przycisków */
+.market-content-pane .row > .col-4 {
+    display: flex;
+    align-items: center;
+}
+
+.market-content-pane .row > .col-4.text-center {
+    justify-content: center;
+}
+
+/* Specyficzne poprawki dla tabeli goli */
+#table-goals-container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.team-color-sq {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.7rem;
+    border-radius: 6px; /* Lekkie zaokrąglenie jak na screenie */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2); /* Efekt głębi */
+    flex-shrink: 0;
+}
+
+.team-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Styl dla formy (kropki W/L/D) */
+.form-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    margin: 0 1px;
+    color: white;
+    font-weight: bold;
+}
+.form-dot.w { background-color: #28a745; }
+.form-dot.l { background-color: #dc3545; }
+.form-dot.d { background-color: #6c757d; }
+
+.team-logo {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+
+    padding: 4px;
+
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+
+    .team-logo {
+        width: 32px;
+        height: 32px;
+        padding: 3px;
+    }
+
+}
+/* =========================================
+   TEAM LOGOS
+========================================= */
+
+.team-logo-grid {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.team-logo-match {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   7. FINISHED MATCHES — YLO STYLE
+   ========================================================================== */
+
+.finished-match-wrapper{
+    background: var(--card-background);
+
+    border:1px solid rgba(88,166,255,.10);
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    margin-bottom:12px;
+
+    transition:
+        border-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,.02) inset,
+        0 10px 30px rgba(0,0,0,.25);
+}
+
+.finished-match-wrapper:hover{
+    border-color:rgba(88,166,255,.35);
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,.03) inset,
+        0 14px 34px rgba(0,0,0,.35);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.finished-match-compact{
+    padding:16px 18px;
+
+    cursor:pointer;
+
+    user-select:none;
+}
+
+.finished-date-small{
+    font-size:.68rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+
+    color:#8b949e;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+}
+
+/* =========================================
+   MAIN ROW
+========================================= */
+
+.finished-main-row{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        auto
+        minmax(0,1fr);
+
+    align-items:center;;
+
+    width:100%;
+}
+
+/* =========================================
+   TEAM SIDE
+========================================= */
+
+.finished-team-mini{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:140px;
+
+    text-align:center;
+}
+
+.finished-logo-mini{
+    width:58px;
+    height:58px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,255,255,.08));
+}
+
+.finished-team-mini span{
+    color:#f0f6fc;
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+.finished-team-name{
+    color:#f0f6fc;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    max-width:140px;
+
+    text-align:center;
+}
+
+/* =========================================
+   SCORE
+========================================= */
+
+.finished-score-center{
+    min-width:90px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.finished-score-mini{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:120px;
+
+    font-size:2rem;
+
+    line-height:1;
+
+    font-weight:900;
+
+    letter-spacing:-2px;
+
+    color:#f0f6fc;
+}
+
+.finished-ft{
+    margin-top:8px;
+
+    font-size:.72rem;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    color:#58a6ff;
+
+    text-transform:uppercase;
+}
+
+.finished-expand-icon{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#7d8590;
+
+    font-size:.8rem;
+}
+
+.finished-match-wrapper.active .finished-expand-icon{
+    transform:rotate(180deg);
+
+    color:#58a6ff;
+}
+
+/* =========================================
+   EXPAND AREA
+========================================= */
+
+.finished-stats-expand{
+    padding:18px;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.015) 0%,
+            rgba(255,255,255,0) 100%
+        );
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.stat-row{
+    display:grid;
+
+    grid-template-columns:52px 1fr 52px;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:16px;
+}
+
+.stat-row:last-child{
+    margin-bottom:0;
+}
+
+.stat-value{
+    color:#f0f6fc;
+
+    font-size:1rem;
+
+    font-weight:800;
+
+    text-align:center;
+}
+
+.stat-center{
+    width:100%;
+}
+
+.stat-label{
+    text-align:center;
+
+    color:#8b949e;
+
+    font-size:.68rem;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+/* =========================================
+   BARS
+========================================= */
+
+.stat-bars{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:8px;
+}
+
+.bar{
+    height:8px;
+
+    background:#161b22;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.bar.left .fill{
+    height:100%;
+
+    margin-left:auto;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #58a6ff 0%,
+            #79c0ff 100%
+        );
+
+    box-shadow:
+        0 0 10px rgba(88,166,255,.35);
+}
+
+.bar.right .fill{
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f0f6fc 0%,
+            #ffffff 100%
+        );
+}
+
+/* =========================================
+   ALIGN FIXES
+========================================= */
+
+.finished-date-small{
+    text-align:center;
+
+    margin-bottom:18px;
+}
+
+
+
+.finished-main-row{
+    padding:0 4px;
+}
+
+.finished-match-compact{
+    padding:20px 28px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .finished-match-compact{
+        padding:14px;
+    }
+
+    .finished-team-mini{
+        width:36%;
+
+        gap:8px;
+    }
+
+    .finished-team-name{
+        font-size:.78rem;
+    }
+
+    .finished-logo-mini{
+        width:30px;
+        height:30px;
+    }
+
+    .finished-score-mini{
+        font-size:1.5rem;
+    }
+
+    .finished-stats-expand{
+        padding:16px 14px;
+    }
+
+    .stat-row{
+        grid-template-columns:42px 1fr 42px;
+
+        gap:8px;
+    }
+
+    .stat-value{
+        font-size:.9rem;
+    }
+
+    .stat-label{
+        font-size:.62rem;
+    }
+}

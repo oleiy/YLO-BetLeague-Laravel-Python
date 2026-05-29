@@ -1,0 +1,218 @@
+/* ==========================================================================
+   MODUŁ: MECZE I KARTY SPOTKAŃ
+   ========================================================================== */
+
+/* SIATKA KART MECZÓW */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+/* BLOK LIGI */
+.league-block {
+    margin-bottom: 28px;
+}
+
+.league-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.league-title {
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: var(--admin-text);
+}
+
+.league-icon {
+    color: var(--admin-accent);
+}
+
+/* KARTA MECZU */
+.match-card {
+    background: var(--admin-card);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    padding: 14px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(88, 166, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* TOP KARTY (STATUS I CZAS) */
+.match-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.match-status {
+    font-size: 0.65rem;
+    font-weight: 900;
+    padding: 4px 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.match-time {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--admin-muted);
+}
+
+/* STYLE STATUSÓW MECZÓW */
+.status-NS, .status-not_started { background: rgba(148, 163, 184, 0.12); color: var(--admin-muted); }
+.status-FT, .status-finished { background: rgba(88, 166, 255, 0.10); color: var(--admin-accent); }
+.status-LIVE { background: rgba(239, 68, 68, 0.12); color: #ef4444; }
+
+/* SEKCJA DRUŻYN (LOGO I NAZWY) */
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.team {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.team-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(88, 166, 255, 0.12));
+}
+
+.team-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--admin-text);
+    text-align: center;
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vs {
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: var(--admin-accent);
+    padding: 0 10px;
+}
+
+.match-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    color: var(--admin-muted);
+}
+
+/* BAR WYBORU DATY (FILTR) */
+.admin-date-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--admin-card);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    padding: 14px 16px;
+    margin-bottom: 22px;
+}
+
+.admin-date-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--admin-text);
+}
+
+.admin-date-label i {
+    color: var(--admin-accent);
+    font-size: 1rem;
+}
+
+.admin-date-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-date-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.admin-date-input {
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-width: 180px;
+}
+
+.admin-date-input:hover { border-color: rgba(88, 166, 255, 0.25); }
+.admin-date-input:focus { outline: none; border-color: rgba(88, 166, 255, 0.45); box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.10); }
+
+.admin-date-wrapper::after {
+    content: "📅";
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.admin-date-btn {
+    background: var(--admin-accent);
+    color: #071018;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-date-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.18);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .admin-date-bar { flex-direction: column; align-items: stretch; }
+    .admin-date-form { width: 100%; }
+    .admin-date-wrapper { flex: 1; }
+    .admin-date-input { width: 100%; }
+    .matches-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,759 @@
+.mybets-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mybet-created {
+    color: var(--community-muted);
+    font-size: .8rem;
+    margin-top: 2px;
+}
+
+.community-status.cancelled {
+    background: rgba(148,163,184,.12);
+    color: #94a3b8;
+}
+
+.mybets-login-box {
+    background: var(--card-background);
+
+    border-radius: 22px;
+
+    padding: 60px 30px;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    text-align: center;
+}
+
+.mybets-login-icon {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 24px auto;
+
+    border-radius: 24px;
+
+    background: rgba(88,166,255,.08);
+
+    border: 1px solid rgba(88,166,255,.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+
+    color: var(--community-accent);
+}
+
+.mybets-login-title {
+    color: white;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.mybets-login-subtitle {
+    color: var(--community-muted);
+
+    margin-bottom: 30px;
+}
+
+@media(max-width:768px){
+
+    .mybets-login-box {
+        padding: 40px 20px;
+    }
+
+}
+
+/* =========================================
+MY BETS TOOLBAR
+========================================= */
+
+.mybets-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* =========================================
+MAIN TABS
+========================================= */
+
+.mybets-main-tabs {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.mybets-main-tab {
+    flex: 1;
+
+    min-width: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 18px 24px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    background: var(--card-background);
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    color: #94a3b8;
+
+    font-weight: 800;
+    font-size: 1rem;
+
+    transition: .2s ease;
+}
+
+.mybets-main-tab:hover {
+    border-color: #58a6ff;
+    color: #fff;
+}
+
+.mybets-main-tab.active {
+    background: rgba(88,166,255,.08);
+
+    border-color: #58a6ff;
+
+    color: #58a6ff;
+}
+
+/* =========================================
+SUB FILTERS
+========================================= */
+
+
+/* =========================================
+SORT
+========================================= */
+
+.mybets-sort-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mybets-select {
+    width: 240px;
+
+    background: var(--card-background) !important;
+
+    border: 1px solid rgba(255,255,255,.08) !important;
+
+    color: #fff !important;
+
+    border-radius: 14px !important;
+
+    padding: 12px 16px !important;
+
+    font-weight: 700;
+}
+
+.mybets-select:focus {
+    border-color: #58a6ff !important;
+
+    box-shadow: none !important;
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .mybets-main-tab {
+        width: 100%;
+    }
+
+    .mybets-sort-box {
+        justify-content: stretch;
+    }
+
+    .mybets-select {
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   MAIN TABS
+========================================= */
+
+.mybets-main-tabs {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.mybets-main-tab {
+    flex: 1;
+    min-width: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 18px 24px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-weight: 800;
+    font-size: 1rem;
+
+    transition: .2s ease;
+}
+
+.mybets-main-tab:hover {
+    border-color: #58a6ff;
+    color: #fff;
+}
+
+.mybets-main-tab.active {
+    background: rgba(88,166,255,.12);
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+/* =========================================
+   SUBFILTERS
+========================================= */
+
+.mybets-subfilter {
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    font-size: .82rem;
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.mybets-subfilter:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,.14);
+}
+
+.mybets-subfilter.active {
+    border-color: #58a6ff;
+    background: rgba(88,166,255,.1);
+    color: #58a6ff;
+}
+
+.mybets-subfilter.won.active {
+    border-color: #22c55e;
+    background: rgba(34,197,94,.12);
+    color: #22c55e;
+}
+
+.mybets-subfilter.lost.active {
+    border-color: #ef4444;
+    background: rgba(239,68,68,.12);
+    color: #ef4444;
+}
+
+.mybets-subfilter.cancelled.active {
+    border-color: #facc15;
+    background: rgba(250,204,21,.12);
+    color: #facc15;
+}
+
+/* =========================================
+   SORTBAR
+========================================= */
+
+.mybets-sortbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.mybets-sort-label {
+    color: #94a3b8;
+    font-size: .78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.mybets-sort-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .mybets-main-tab {
+        min-width: 100%;
+    }
+
+    .mybets-sortbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* =========================================
+   SUBFILTERS
+========================================= */
+
+.mybets-subfilters {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 1.5rem;
+}
+
+.mybets-subfilter {
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 20px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    font-size: .92rem;
+    font-weight: 800;
+
+    transition: .2s ease;
+
+    text-align: center;
+}
+
+.mybets-subfilter:hover {
+    color: #fff;
+
+    border-color: rgba(255,255,255,.14);
+
+    transform: translateY(-1px);
+}
+
+.mybets-subfilter.active {
+    border-color: #58a6ff;
+
+    background: rgba(88,166,255,.1);
+
+    color: #58a6ff;
+}
+
+.mybets-subfilter.won.active {
+    border-color: #22c55e;
+
+    background: rgba(34,197,94,.12);
+
+    color: #22c55e;
+}
+
+.mybets-subfilter.lost.active {
+    border-color: #ef4444;
+
+    background: rgba(239,68,68,.12);
+
+    color: #ef4444;
+}
+
+.mybets-subfilter.cancelled.active {
+    border-color: #facc15;
+
+    background: rgba(250,204,21,.12);
+
+    color: #facc15;
+}
+/* =========================================
+   COMMUNITY ANALYSIS - NOWY WYGLĄD
+========================================= */
+
+.community-analysis-wrapper {
+    margin-top: 16px;
+    border-top: 1px solid rgba(255,255,255,.06);
+
+}
+
+/* Nowy kontener trzymający przycisk rozwijania i akcje */
+.community-analysis-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 14px;
+    padding: 8px 14px;
+    transition: .2s ease;
+}
+
+.community-analysis-top:hover {
+    background: rgba(255,255,255,.05);
+    border-color: rgba(88,166,255,.14);
+}
+
+/* Sam przycisk do rozwijania - przezroczysty, zajmuje lewą stronę */
+.community-analysis-toggle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #f1f5f9; /* Tekst */
+    font-size: .82rem;
+    font-weight: 800;
+    padding: 6px 0;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+}
+
+/* Kontener na małe przyciski akcji (edytuj/usuń) */
+.community-analysis-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+/* Małe, kwadratowe przyciski z ikonami */
+.btn-action-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    font-size: .95rem;
+    cursor: pointer;
+    transition: .2s ease;
+    padding: 0;
+}
+
+/* Kolorystyka Edycji (Niebieski) */
+.btn-action-icon.edit {
+    color: #58a6ff;
+    background: rgba(88,166,255,.1);
+}
+.btn-action-icon.edit:hover {
+    background: rgba(88,166,255,.2);
+    transform: translateY(-2px);
+}
+
+/* Kolorystyka Usuwania (Czerwony) */
+.btn-action-icon.delete {
+    color: #ef4444;
+    background: rgba(239,68,68,.1);
+}
+.btn-action-icon.delete:hover {
+    background: rgba(239,68,68,.2);
+    transform: translateY(-2px);
+}
+
+
+.analysis-arrow {
+    transition: transform .25s ease;
+}
+
+.community-analysis-wrapper.open .analysis-arrow {
+    transform: rotate(180deg);
+}
+
+/* Poprawka formularza edycji, aby zniknął margines jeśli go nie ma */
+.community-analysis-content form {
+    margin: 0;
+}
+
+/* =========================================
+   FIX — UNIFIED ANALYSIS DROPDOWN
+========================================= */
+
+.community-analysis-wrapper {
+    margin-top: 16px !important;
+    border-top: 1px solid rgba(255,255,255,.06) !important;
+    padding-top: 14px !important;
+
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow: visible !important;
+}
+
+.community-analysis-top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+
+    min-height: 46px !important;
+
+    background: rgba(255,255,255,.03) !important;
+    border: 1px solid rgba(255,255,255,.06) !important;
+    border-radius: 14px !important;
+
+    padding: 8px 14px !important;
+}
+
+.community-analysis-toggle {
+    flex: 1 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+
+    width: auto !important;
+
+    background: transparent !important;
+    border: none !important;
+
+    padding: 6px 0 !important;
+    margin: 0 !important;
+
+    color: #f1f5f9 !important;
+
+    font-size: .82rem !important;
+    font-weight: 800 !important;
+
+    line-height: 1.2 !important;
+
+    cursor: pointer !important;
+    text-align: center !important;
+}
+
+.community-analysis-toggle:hover {
+    background: transparent !important;
+}
+
+.community-analysis-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+
+    flex-shrink: 0 !important;
+}
+
+.btn-action-icon {
+    width: 32px !important;
+    height: 32px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    font-size: .95rem !important;
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+}
+
+.btn-action-icon.edit {
+    color: #58a6ff !important;
+    background: rgba(88,166,255,.1) !important;
+}
+
+.btn-action-icon.edit:hover {
+    background: rgba(88,166,255,.2) !important;
+    transform: translateY(-2px);
+}
+
+.btn-action-icon.delete {
+    color: #ef4444 !important;
+    background: rgba(239,68,68,.1) !important;
+}
+
+.btn-action-icon.delete:hover {
+    background: rgba(239,68,68,.2) !important;
+    transform: translateY(-2px);
+}
+
+.community-analysis-content {
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 18px !important;
+    margin: 0 !important;
+
+    color: #cbd5e1 !important;
+
+    font-size: .9rem !important;
+    line-height: 1.65 !important;
+
+    white-space: pre-line !important;
+
+    transition: max-height .3s ease, padding .3s ease;
+}
+
+.community-analysis-wrapper.open .community-analysis-content {
+    max-height: 420px;
+    padding: 18px 18px 4px !important;
+}
+
+.community-analysis-content > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.analysis-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #e5e7eb !important;
+}
+
+.analysis-edit-form {
+    margin-top: 14px !important;
+}
+
+.community-analysis-content form {
+    margin-bottom: 0 !important;
+}
+
+.analysis-arrow {
+    margin-left: 8px !important;
+    transition: transform .25s ease;
+}
+
+.community-analysis-wrapper.open .analysis-arrow {
+    transform: rotate(180deg);
+}
+
+/* =========================================
+   FIX ANALYSIS SPACING + TEXTAREA
+========================================= */
+
+.community-analysis-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    white-space: normal !important;
+}
+
+.community-analysis-wrapper.open .community-analysis-content {
+    max-height: none !important;
+    padding: 14px 16px 0 !important;
+}
+
+.analysis-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: pre-line !important;
+    color: #e5e7eb !important;
+    line-height: 1.55 !important;
+}
+
+.analysis-edit-form {
+    margin: 12px 0 0 0 !important;
+}
+
+.analysis-edit-form textarea {
+    background: rgba(255,255,255,.05) !important;
+    border: 1px solid rgba(255,255,255,.12) !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+    padding: 12px 14px !important;
+    resize: vertical;
+}
+
+.analysis-edit-form textarea:focus {
+    background: rgba(255,255,255,.07) !important;
+    border-color: #58a6ff !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 3px rgba(88,166,255,.12) !important;
+}
+
+/* =========================================
+   ANALYSIS VISUAL FIX
+========================================= */
+
+.community-analysis-content {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.025),
+            rgba(255,255,255,.015)
+        ) !important;
+
+    border: 1px solid rgba(255,255,255,.06) !important;
+
+    border-top: none !important;
+
+    border-radius: 0 0 14px 14px !important;
+}
+
+.community-analysis-wrapper.open .community-analysis-content {
+    padding: 16px !important;
+}
+
+.analysis-text {
+    background: transparent !important;
+    border: none !important;
+}
+/* =========================================
+   EDIT ANALYSIS BUTTON SPACING
+========================================= */
+
+.analysis-edit-form .d-flex.gap-2 {
+    margin-top: 14px;
+}
+
+.analysis-edit-form .btn {
+    min-width: 110px;
+}

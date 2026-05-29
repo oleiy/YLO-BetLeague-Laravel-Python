@@ -1,0 +1,282 @@
+/* ==========================================================================
+   MODUŁ: PANEL UŻYTKOWNIKÓW SYSTEMOWYCH
+   ========================================================================== */
+
+/* PASKI NARZĘDZIOWE (TOOLBAR / SEARCH) */
+.users-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.users-search-input,
+.users-sort-select,
+.user-input {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.users-search-input {
+    min-width: 260px;
+    flex: 1;
+}
+
+.users-search-input:focus,
+.users-sort-select:focus,
+.user-input:focus {
+    outline: none;
+    border-color: rgba(88, 166, 255, 0.35);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.08);
+}
+
+.users-sort-select {
+    cursor: pointer;
+}
+
+/* Wiersz / Karta użytkownika */
+.users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.user-row {
+    background: var(--admin-card);
+    border: 1px solid var(--admin-border);
+    border-radius: 18px;
+    padding: 20px;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-row:hover {
+    border-color: rgba(88, 166, 255, 0.14);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.user-row-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.user-left {
+    flex: 1;
+}
+
+/* PODSTAWOWE INFO (AWATAR I DANE) */
+.user-main-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.user-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(88,166,255,.18), rgba(88,166,255,.05));
+    border: 1px solid rgba(88, 166, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--admin-accent);
+}
+
+.user-basic {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.user-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--admin-text);
+}
+
+.user-email {
+    font-size: 0.78rem;
+    color: var(--admin-muted);
+}
+
+/* STATUSY KONTA */
+.user-status {
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: .04em;
+}
+
+.user-status.active { background: rgba(34, 197, 94, 0.12); color: var(--admin-green); }
+.user-status.banned { background: rgba(239, 68, 68, 0.12); color: var(--admin-red); }
+
+/* STATYSTYKI UŻYTKOWNIKA W KARCIE */
+.user-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.user-stat-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--admin-border);
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.user-stat-box span {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--admin-muted);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.user-stat-box strong {
+    font-size: 0.92rem;
+    font-weight: 900;
+    color: var(--admin-text);
+}
+
+/* ==========================================================================
+   PRZYCISKI WYWOŁUJĄCE AKCJE (WYZWALACZE)
+   ========================================================================== */
+.user-right {
+    min-width: 180px;
+}
+
+.user-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-mini-btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    color: white;
+}
+
+.user-mini-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* PALETA WYZWALACZY */
+.user-mini-btn.edit   { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+.user-mini-btn.ban    { background: linear-gradient(135deg, #dc2626, #ef4444); }
+.user-mini-btn.delete { background: linear-gradient(135deg, #4f4f5a, #27272a); border: 1px solid rgba(255, 255, 255, 0.1); }
+.user-mini-btn.delete:hover { background: linear-gradient(135deg, #71717a, #3f3f46); }
+
+/* ==========================================================================
+   ROZWIJANE PANELE POTWIERDZEŃ AKCJI (SĄ IDENTYCZNE CO WYZWALACZE)
+   ========================================================================== */
+.expand-panel {
+    display: none;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.expand-panel.active {
+    display: block;
+}
+
+.expand-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.expand-form .user-input {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* DOPASOWANIE KOLORÓW PRZYCISKÓW POTWIERDZENIA DO ICH MINI TRIGERÓW */
+
+/* 1. Potwierdzenie Edycji -> Identyczny z user-mini-btn.edit */
+#edit-panel-btn,
+.expand-panel .admin-action-btn.warning {
+    background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+    color: white !important;
+}
+
+/* 2. Potwierdzenie Nałożenia Bana -> Identyczny z user-mini-btn.ban */
+.expand-panel .admin-action-btn.dark {
+    background: linear-gradient(135deg, #dc2626, #ef4444) !important;
+    color: white !important;
+}
+
+/* Podgląd bezpiecznego przycisku Odbanowania */
+.expand-panel .admin-action-btn.success {
+    background: linear-gradient(135deg, #15803d, #22c55e);
+}
+
+/* 3. Panel Sekcji Krytycznej (Usuwanie) */
+.user-danger-box {
+    background: rgba(239, 68, 68, 0.06);
+    border: 1px solid rgba(239, 68, 68, 0.12);
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.user-danger-box p {
+    margin-top: 0;
+    color: #fca5a5;
+    font-size: 0.82rem;
+    margin-bottom: 14px;
+}
+
+/* Potwierdzenie usunięcia profilu */
+.user-danger-box .admin-action-btn.danger {
+    background: linear-gradient(135deg, #71717a, #3f3f46);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   RESPONSIVE MODUŁU UŻYTKOWNIKÓW
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .user-row-top { flex-direction: column; }
+    .user-right { width: 100%; }
+    .user-buttons { width: 100%; flex-direction: row; flex-wrap: wrap; }
+    .user-mini-btn { flex: 1; justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .users-toolbar { flex-direction: column; align-items: stretch; }
+    .users-search-input, .users-sort-select { width: 100%; }
+    .user-main-info { flex-direction: column; align-items: flex-start; }
+    .user-stats { grid-template-columns: repeat(2, 1fr); }
+    .expand-form { flex-direction: column; }
+    .expand-form .user-input { width: 100%; }
+    .user-buttons { flex-direction: column; }
+}

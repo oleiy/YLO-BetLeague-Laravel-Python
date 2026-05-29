@@ -1,0 +1,405 @@
+/* ==========================================================================
+   MODUŁ: TYPY I KUPONY UŻYTKOWNIKÓW
+   ========================================================================== */
+
+/* KONTENER STRUMIENIA TYPÓW */
+.admin-bets-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 75vh;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.admin-bets-feed::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-bets-feed::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+
+/* FILTRY WYSZUKIWANIA */
+.admin-section form {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.admin-section label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--admin-text);
+    margin-bottom: 8px;
+}
+
+.admin-section .form-select,
+.admin-section .admin-date-input {
+    height: 46px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text);
+    border-radius: 14px;
+    padding: 0 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.admin-section .form-select {
+    min-width: 260px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-image:
+        linear-gradient(45deg, transparent 50%, rgba(255,255,255,.55) 50%),
+        linear-gradient(135deg, rgba(255,255,255,.55) 50%, transparent 50%);
+    background-position: calc(100% - 18px) 20px, calc(100% - 12px) 20px;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.admin-section .form-select:hover,
+.admin-section .admin-date-input:hover {
+    border-color: rgba(88, 166, 255, 0.25);
+}
+
+.admin-section .form-select:focus,
+.admin-section .admin-date-input:focus {
+    outline: none;
+    border-color: rgba(88, 166, 255, 0.45);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.10);
+}
+
+.admin-section .form-select option {
+    background: #161b22;
+    color: #fff;
+}
+
+.admin-section .btn-primary {
+    height: 46px;
+    border: none;
+    border-radius: 14px;
+    padding: 0 18px;
+    font-size: 0.82rem;
+    font-weight: 900;
+    background: var(--admin-accent);
+    color: #071018;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.admin-section .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(88, 166, 255, 0.18);
+}
+
+/* ==========================================================================
+   ZARZĄDZANIE ANALIZAMI TYPÓW (PODGLĄD / USUWANIE)
+   ========================================================================== */
+.community-analysis-wrapper {
+    margin-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 14px;
+}
+
+.community-analysis-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 8px 14px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.community-analysis-top:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(88, 166, 255, 0.14);
+}
+
+.community-analysis-toggle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #f1f5f9;
+    font-size: 0.82rem;
+    font-weight: 800;
+    padding: 6px 0;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+}
+
+.community-analysis-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-action-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    padding: 0;
+}
+
+/* Akcja Usuwania Analizy */
+.btn-action-icon.delete {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+.btn-action-icon.delete:hover {
+    background: rgba(239, 68, 68, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Rozwijanie treści analizy */
+.community-analysis-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 4px;
+    color: var(--admin-text) !important; /* Wymuszenie jasnego koloru czcionki z konfiguracji :root */
+}
+
+/* Wymuszenie koloru dla paragrafów oraz wszystkich elementów wewnątrz formularza analizy */
+.community-analysis-content,
+.community-analysis-content p,
+.community-analysis-content form {
+    color: var(--admin-text) !important;
+}
+
+.analysis-arrow {
+    transition: transform 0.25s ease;
+}
+
+.community-analysis-wrapper.open .analysis-arrow {
+    transform: rotate(180deg);
+}
+
+.community-analysis-content form {
+    margin: 0;
+}
+/* =========================================
+   FIX — UNIFIED ANALYSIS DROPDOWN
+========================================= */
+
+.community-analysis-wrapper {
+    margin-top: 16px !important;
+    border-top: 1px solid rgba(255,255,255,.06) !important;
+    padding-top: 14px !important;
+
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow: visible !important;
+}
+
+.community-analysis-top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+
+    min-height: 46px !important;
+
+    background: rgba(255,255,255,.03) !important;
+    border: 1px solid rgba(255,255,255,.06) !important;
+    border-radius: 14px !important;
+
+    padding: 8px 14px !important;
+}
+
+.community-analysis-toggle {
+    flex: 1 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+
+    width: auto !important;
+
+    background: transparent !important;
+    border: none !important;
+
+    padding: 6px 0 !important;
+    margin: 0 !important;
+
+    color: #f1f5f9 !important;
+
+    font-size: .82rem !important;
+    font-weight: 800 !important;
+
+    line-height: 1.2 !important;
+
+    cursor: pointer !important;
+    text-align: center !important;
+}
+
+.community-analysis-toggle:hover {
+    background: transparent !important;
+}
+
+.community-analysis-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+
+    flex-shrink: 0 !important;
+}
+
+.btn-action-icon {
+    width: 32px !important;
+    height: 32px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    font-size: .95rem !important;
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+}
+
+.btn-action-icon.edit {
+    color: #58a6ff !important;
+    background: rgba(88,166,255,.1) !important;
+}
+
+.btn-action-icon.edit:hover {
+    background: rgba(88,166,255,.2) !important;
+    transform: translateY(-2px);
+}
+
+.btn-action-icon.delete {
+    color: #ef4444 !important;
+    background: rgba(239,68,68,.1) !important;
+}
+
+.btn-action-icon.delete:hover {
+    background: rgba(239,68,68,.2) !important;
+    transform: translateY(-2px);
+}
+
+.community-analysis-content {
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 18px !important;
+    margin: 0 !important;
+
+    color: #cbd5e1 !important;
+
+    font-size: .9rem !important;
+    line-height: 1.65 !important;
+
+    white-space: pre-line !important;
+
+    transition: max-height .3s ease, padding .3s ease;
+}
+
+.community-analysis-wrapper.open .community-analysis-content {
+    max-height: 420px;
+    padding: 18px 18px 4px !important;
+}
+
+.community-analysis-content > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.analysis-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #e5e7eb !important;
+}
+
+.analysis-edit-form {
+    margin-top: 14px !important;
+}
+
+.community-analysis-content form {
+    margin-bottom: 0 !important;
+}
+
+.analysis-arrow {
+    margin-left: 8px !important;
+    transition: transform .25s ease;
+}
+
+.community-analysis-wrapper.open .analysis-arrow {
+    transform: rotate(180deg);
+}/* =========================================
+   ANALYSIS VISUAL FIX
+========================================= */
+
+.community-analysis-content {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.025),
+            rgba(255,255,255,.015)
+        ) !important;
+
+    border: 1px solid rgba(255,255,255,.06) !important;
+
+    border-top: none !important;
+
+    border-radius: 0 0 14px 14px !important;
+}
+
+.community-analysis-wrapper.open .community-analysis-content {
+    padding: 16px !important;
+}
+
+.analysis-text {
+    background: transparent !important;
+    border: none !important;
+}
+/* =========================================
+   ADMIN ANALYSIS SPACING FIX
+========================================= */
+
+.community-analysis-content {
+    white-space: normal !important;
+}
+
+.community-analysis-content .analysis-text {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #e5e7eb !important;
+
+    font-size: .9rem !important;
+    line-height: 1.55 !important;
+
+    white-space: pre-line !important;
+}
