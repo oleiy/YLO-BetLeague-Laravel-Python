@@ -7,23 +7,20 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * * Warstwa pośrednicząca (Middleware) zabezpieczająca dostęp do tras administracyjnych.
- * * Odpowiada za:
- * 1. Weryfikację autentyczności użytkownika (czy jest zalogowany).
- * 2. Autoryzację opartą na roli
- * * Działanie:
- * Jeśli użytkownik nie jest zalogowany lub jego rola w bazie danych nie jest
- * równa 'admin', system przerywa żądanie i zwraca błąd 403 (Forbidden).
+ * Middleware zabezpieczający panel administratora.
+ *
+ * Zadania:
+ * - sprawdza, czy użytkownik jest zalogowany,
+ * - sprawdza, czy użytkownik ma rolę `admin`,
+ * - blokuje dostęp zwykłym użytkownikom i gościom.
+ *
+ * Jeśli warunki nie są spełnione, Laravel zwraca błąd 403 Forbidden.
  */
-
 class AdminMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (
-            !auth()->check() ||
-            auth()->user()->role !== 'admin'
-        ) {
+        if (!auth()->check() || auth()->user()->role !== 'admin') {
             abort(403);
         }
 

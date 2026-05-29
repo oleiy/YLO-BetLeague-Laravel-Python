@@ -6,9 +6,9 @@ use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * * Klasa odpowiedzialna za walidację danych podczas rejestracji nowego użytkownika.
+ * * Walidację danych podczas rejestracji nowego użytkownika.
  * * Odpowiada za:
- * 1. Egzekwowanie unikalności danych (username i email muszą być unikalne w tabeli `users`).
+ * 1. Sprawdzenie unikalności danych (username i email muszą być unikalne w tabeli `users`).
  * 2. Weryfikację bezpieczeństwa haseł (`confirmed` – sprawdza zgodność z polem password_confirmation).
  * 3. Ograniczenie długości pól dla optymalizacji bazy danych.
  * * Dzięki niej kontroler rejestracji jest odciążony z logiki sprawdzania poprawności formatu danych.
@@ -16,9 +16,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
+
     public function authorize(): bool
     {
         return true;
@@ -33,7 +31,7 @@ class RegisterRequest extends FormRequest
             'username' => 'required|string|max:255|unique:users,username',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed',
-            'promo_code' => 'nullable|string|max:50',
+            'promo_code' => 'nullable|string|max:50', // opcjonalny
         ];
     }
 }

@@ -36,7 +36,7 @@ class RegisterController extends Controller
         // 1. Logika obsługi kodu polecającego (refferal)
         if ($request->filled('promo_code')) {
             $code = strtoupper($request->promo_code);
-            $referrer = User::where('referral_code', $code)->first();
+            $referrer = User::where('referral_code', $code)->first(); // szukamy który użytkownik ma przypisany podany kod
 
             if ($referrer) {
                 $referredBy = $referrer->id;

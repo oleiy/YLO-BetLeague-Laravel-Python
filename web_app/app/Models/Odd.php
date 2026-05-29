@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Odd extends Model
 {
-    // Pola, które można masowo przypisywać
     protected $fillable = ['fixture_id', 'team_id', 'market_name', 'outcome_name', 'specifier', 'value'];
 
     // Relacja: Kurs przypisany jest do konkretnego meczu
@@ -15,9 +14,9 @@ class Odd extends Model
         return $this->belongsTo(Fixture::class);
     }
 
+    // Dla kursów z podziałem drużynowym
     public function team()
-{
-    return $this->belongsTo(Team::class);
-}
-
+    {
+        return $this->belongsTo(Team::class);
+    }
 }

@@ -15,9 +15,8 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class LoginRequest extends FormRequest
 {
-    /**
-     * Określa, czy użytkownik ma uprawnienia do wykonania tego żądania.
-     */
+
+    // Każdy użtywkonik może próbować się zalgować
     public function authorize(): bool
     {
         return true;
@@ -25,6 +24,8 @@ class LoginRequest extends FormRequest
 
     /**
      * Zasady walidacji dla formularza logowania.
+     * Login musi istnieć
+     * Hasło musi istnieć
      */
     public function rules(): array
     {
@@ -35,7 +36,7 @@ class LoginRequest extends FormRequest
     }
 
     /**
-     * Niestandardowe komunikaty błędów.
+     * Komunikaty błędów wyświetlane w panelu logowania
      */
     public function messages(): array
     {

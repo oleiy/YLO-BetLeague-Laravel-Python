@@ -8,12 +8,12 @@ use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 /**
- * * Serwis obsługujący krytyczną logikę zawierania zakładów.
+ * * Serwis obsługujący logikę zawierania zakładów.
  * * Kluczowe funkcje:
- * 1. Gwarantuje, że saldo nie zostanie odjęte, jeśli zapisanie zakładu lub elementów zakładu (BetItems) nie powiedzie się.
- * 2. Walidacja finansowa: Sprawdza wystarczalność środków przed rozpoczęciem operacji na bazie.
- * 3. Logika "Bet Builder": Algorytmiczne obliczanie kursu łączonego z redukcją ryzyka dla
- * kolejnych rynków, co zapobiega zbyt szybkiemu wzrostowi kursów (tzw. "overround").
+ * 1. tworzenie kuponów
+ * 2. obliczanie kursów
+ * 3. odejmowanie punktów
+ * 4. tworzenie pozycji typu
  */
 
 class BetService

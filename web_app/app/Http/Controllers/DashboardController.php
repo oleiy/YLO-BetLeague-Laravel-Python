@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fixture;
-use Illuminate\Http\Request;
 use App\Services\MatchService;
 
 /**

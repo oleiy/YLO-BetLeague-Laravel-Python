@@ -6,7 +6,7 @@ use Illuminate\View\View;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * * Kontroler obsługujący moduł "Zdobywaj balans" (Referral Program).
+ * * Kontroler obsługujący moduł "Zdobywaj balans".
  * Odpowiada za prezentację danych dotyczących systemu poleceń użytkownika.
  * Przelicza liczbę zaproszonych osób na zdobyte punkty bonusowe,
  * umożliwiając użytkownikowi śledzenie efektów jego działań promocyjnych.
@@ -19,6 +19,7 @@ class EarnBalanceController extends Controller
         /** @var \App\Models\User|null $user */
         $user = Auth::user();
 
+        // widok dostępny dla zalogowanego użytkownika
         if (!$user) {
 
             return view('earn-balance', [

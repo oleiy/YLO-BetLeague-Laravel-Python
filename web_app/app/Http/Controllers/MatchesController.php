@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\League;
-use App\Models\Fixture;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Services\MatchService;
@@ -14,15 +13,11 @@ use App\Services\MatchService;
  * 1. Obsługę kalendarza meczów (filtrowanie po dacie).
  * 2. Dynamiczne pobieranie danych za pomocą AJAX (weryfikacja statusów: przeszłe vs przyszłe).
  * 3. Nawigację do szczegółów spotkania z automatycznym wyborem daty w kalendarzu.
- * 4. Integrację z MatchService dla zapewnienia optymalnej wydajności zapytań (Eager Loading).
+ * 4. Integrację z MatchService
  */
 class MatchesController extends Controller
 {
-    /**
-     * @desc Wyświetla główną listę meczów dla wybranej daty.
-     * @params Request $request - Zapytanie HTTP (opcjonalnie zawiera parametr 'date').
-     * @returns \Illuminate\View\View - Widok 'matches' z listą lig i meczów.
-     */
+
     public function index(Request $request)
     {
         // Pobranie daty z requestu lub ustawienie dzisiejszej jako domyślnej
@@ -32,11 +27,6 @@ class MatchesController extends Controller
         return view('matches', compact('leagues', 'date'));
     }
 
-    /**
-     * @desc Pobiera mecze dla wybranej daty w formacie JSON (używane przez AJAX/JS).
-     * @params string $date - Data w formacie YYYY-MM-DD.
-     * @returns \Illuminate\Http\JsonResponse
-     */
     public function getMatchesByDate(string $date)
     {
         $selectedDate = Carbon::parse($date)->toDateString();
@@ -61,6 +51,7 @@ class MatchesController extends Controller
                         // bo logicznie wszystkie są NS
                     }
 
+                    // żeby ograniczyć liczbę zapytań SQL, czyli zwiększyć wydajność generowania listy meczów
                     $query->with([
                         'homeTeam',
                         'awayTeam',

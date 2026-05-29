@@ -45,7 +45,7 @@ class AdminUsersController extends Controller
             $users->where(
                 'username',
                 'LIKE',
-                '%' . $search . '%'
+                '%' . $search . '%' // szukanie po fragmencie usernamea
             );
         }
 

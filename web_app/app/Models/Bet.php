@@ -21,19 +21,19 @@ class Bet extends Model
         'status'
     ];
 
-    // Relacja: Zakład należy do użytkownika
+    // Relacja: Typ należy do użytkownika
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    // Relacja: Zakład dotyczy konkretnego meczu
+    // Relacja: Typ dotyczy konkretnego meczu
     public function fixture(): BelongsTo
     {
         return $this->belongsTo(Fixture::class);
     }
 
-    // Relacja: Zakład składa się z wielu pozycji (szczególnie w Bet Builderze)
+    // Relacja: Typ składa się z wielu pozycji (Bet Builder)
     public function items(): HasMany
     {
         return $this->hasMany(BetItem::class, 'bet_id');

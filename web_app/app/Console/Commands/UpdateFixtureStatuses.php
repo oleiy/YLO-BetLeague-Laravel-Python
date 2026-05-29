@@ -16,7 +16,7 @@ class UpdateFixtureStatuses extends Command
 
     public function handle(): void
     {
-        // 🔒 LOCK – zapobiega równoległym uruchomieniom (KLUCZOWE dla SQLite)
+        // LOCK – zapobiega równoległym uruchomieniom (KLUCZOWE dla SQLite) - bez tego system się zawieszał
         if (!Cache::add('fixture_status_lock', true, 20)) {
             $this->warn('Command already running. Skipping...');
             return;
@@ -52,7 +52,6 @@ class UpdateFixtureStatuses extends Command
             /*
             |---------------------------------------------
             | 3. BETS: pending -> active
-            | (SQLite-safe: whereIn zamiast whereHas)
             |---------------------------------------------
             */
             $activeUpdated = Bet::where('status', 'pending')

@@ -175,6 +175,7 @@ class AdminActionController extends Controller
         );
     }
 
+    // To nie działa
     /**
      ** Ręczne wywołanie schedulera.
      */

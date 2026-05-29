@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
 /**
- * * Klasa odpowiedzialna za walidację danych przesyłanych do kontrolerów administracyjnych.
+ * * Walidacja danych przesyłanych do kontrolerów administracyjnych.
  * * Odpowiada za:
  * 1. Walidację filtrów listy użytkowników (data, wyszukiwanie, sortowanie).
  * 2. Walidację danych przy edycji profilu użytkownika (unikalność emaila/username z wykluczeniem bieżącego rekordu).
@@ -68,7 +68,7 @@ class AdminIndexRequest extends FormRequest
                 'max:255',
 
                 Rule::unique('users')
-                    ->ignore($user?->id),
+                    ->ignore($user?->id), // ignoruj aktualnie edytowanego użytkownika
             ],
 
             'email' => [
@@ -103,6 +103,7 @@ class AdminIndexRequest extends FormRequest
                 'boolean',
             ],
 
+            // nie można banować do daty wstecz
             'ban_until' => [
                 'nullable',
                 'date',

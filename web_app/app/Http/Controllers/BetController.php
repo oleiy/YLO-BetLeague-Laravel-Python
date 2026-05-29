@@ -3,14 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\BetStoreRequest;
-use App\Models\Bet;
-use App\Models\BetItem;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use App\Services\BetService;
 
 /**
- * * Kontroler obsługujący proces zawierania zakładów przez użytkowników.
+ * * Kontroler obsługujący postawienie zakładów przez użytkowników.
  * Odpowiada za:
  * 1. Walidację danych wejściowych zakładu za pomocą BetStoreRequest.
  * 2. Przekazywanie logiki biznesowej do warstwy serwisowej (BetService).

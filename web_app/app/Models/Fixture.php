@@ -48,6 +48,7 @@ class Fixture extends Model
         return $this->hasMany(Odd::class, 'fixture_id');
     }
 
+    // Wyszukuje kursy dla meczów.
     public function getOdd(string $marketName, string $outcomeName)
     {
         return $this->odds
@@ -56,6 +57,7 @@ class Fixture extends Model
             ->first();
     }
 
+    // Skrót dla kursów 1, X, 2
     public function getWinOdd(string $type)
     {
         return $this->getOdd('Wynik', $type);

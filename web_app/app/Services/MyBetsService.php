@@ -8,11 +8,10 @@ use App\Models\Fixture;
 /**
  * MyBetsService
  * * Serwis dedykowany pobieraniu i filtrowaniu historii zakładów konkretnego użytkownika.
- * * Kluczowe role:
- * 1. Kontroler nie musi znać struktury relacji (`with`)
- * ani nazw kolumn w bazie, aby pobrać zakłady.
- * 2. Elastyczne filtrowanie: Obsługuje dynamiczne statusy (aktywne, rozliczone) oraz
- * filtry treści (analiza użytkownika)
+ * * Obsługuje
+ * 1. historie
+ * 2. sortowania
+ * 3. filtrowania
  */
 
 class MyBetsService
@@ -62,7 +61,7 @@ class MyBetsService
             $query->where('status', 'lost');
         }
 
-        /*
+/*
 |--------------------------------------------------------------------------
 | ANALYSIS FILTER
 |--------------------------------------------------------------------------

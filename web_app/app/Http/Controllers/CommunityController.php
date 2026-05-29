@@ -8,8 +8,7 @@ use App\Services\CommunityService;
 /**
  * * Kontroler obsługujący moduł społecznościowy platformy.
  * Odpowiada za prezentację publicznych typów użytkowników oraz rankingów.
- * Wykorzystuje CommunityService do agregacji danych statystycznych, co pozwala na
- * dynamiczne filtrowanie i sortowanie aktywności społeczności w czasie rzeczywistym.
+ * Wykorzystuje CommunityService do agregacji danych statystycznych, co pozwala na dynamiczne filtrowanie i sortowanie aktywności społeczności w czasie rzeczywistym.
  */
 
 class CommunityController extends Controller

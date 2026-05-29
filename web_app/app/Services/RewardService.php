@@ -9,7 +9,7 @@ use Carbon\Carbon;
 class RewardService
 {
     /**
-     * BONUS ZA CODZIENNE LOGOWANIE
+     * BONUS ZA CODZIENNE LOGOWANIE +50PKT
      */
     public function grantDailyLoginReward(
         User $user
@@ -30,7 +30,7 @@ class RewardService
     }
 
     /**
-     * BONUS ZA REFERRALA
+     * BONUS ZA REFERRALA +500pkt
      */
     public function grantReferralReward(
         User $user

@@ -9,9 +9,8 @@ use Carbon\Carbon;
 /**
  * * Serwis odpowiedzialny za operacje na danych meczowych (Fixtures).
  * * Kluczowe funkcje:
- * 1. Złożone filtrowanie: Obsługuje dynamiczne warunki dla meczów w zależności
- * od ich statusu i daty (przeszłość vs dzisiaj).
- * 2. Zarządza wydajnym pobieraniem relacji (homeTeam, odds, itp.)
+ * 1. Złożone filtrowanie: Obsługuje dynamiczne warunki dla meczów w zależności od ich statusu i daty (przeszłość vs dzisiaj).
+ * 2. Zarządza pobieraniem relacji (homeTeam, odds, itp.)
  * 3. Logika dostępności: Sprawdza, czy zakład może zostać postawiony (hasMatchStarted).
  */
 

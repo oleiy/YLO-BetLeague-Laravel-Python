@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Auth;
  */
 class LogoutController extends Controller
 {
-    /**
-     * @desc Wylogowuje użytkownika, unieważnia sesję i regeneruje token CSRF.
-     * @params Request $request
-     * @returns \Illuminate\Http\RedirectResponse
-     */
     public function logout(Request $request)
     {
         // Wylogowanie

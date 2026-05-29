@@ -17,10 +17,10 @@ class Kernel extends ConsoleKernel
     {
         // Automatyzacja komendy UpdateFixtureStatuses
         $schedule->command('fixtures:update-statuses')
-            ->everyMinute()
-            ->withoutOverlapping()
-            ->runInBackground()
-            ->onOneServer();
+            ->everyMinute() // co minute sprawdź czy istnieje mecz/typ który wymaga aktualizacji statusu
+            ->withoutOverlapping()  // chroni przed duplikacją aktualizacji (czeka aż się skończy komenda)
+            ->runInBackground()  // nie blokuje schedulera
+            ->onOneServer();  // tu bez znaczenia ale jakby było więcej serwerów to żeby tylko jeden wykonywał taska
     }
 
     protected function commands(): void

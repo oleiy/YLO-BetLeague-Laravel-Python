@@ -6,6 +6,16 @@ use App\Models\Bet;
 use App\Models\Fixture;
 use App\Models\User;
 
+/**
+ * * Serwis obsługujący silniik społczenośći
+ * * Kluczowe funkcje:
+ * 1. feed typów
+ * 2. rankingi
+ * 3. statystyki
+ * 4. formę
+ */
+
+
 class CommunityService
 {
     /*

@@ -303,9 +303,262 @@ Projekt był rozwijany na następującej konfiguracji, która zapewnia płynne d
 * **Dysk:** SSD 512 GB
 * **System operacyjny:** Windows 11
 
-## Podręcznik użytkownika
+# Podręcznik użytkownika
 
---- WKRÓTCE ---
+## Role w systemie
+
+System YLO BetLeague obsługuje trzy poziomy dostępu:
+
+- Gość (niezalogowany użytkownik)
+- Użytkownik (zalogowany użytkownik)
+- Administrator
+
+---
+
+## Ścieżka użytkownika – Gość (Guest)
+
+Gość może korzystać z części funkcjonalności platformy bez konieczności zakładania konta.
+
+### Dashboard
+
+Po wejściu na stronę główną użytkownik widzi listę nadchodzących spotkań piłkarskich wraz z podstawowymi informacjami o meczach.
+
+### Mecze
+
+Gość może przejść do zakładki **Mecze**, gdzie dostępny jest pełny harmonogram spotkań dla wybranego dnia.
+
+Dla każdego spotkania prezentowane są kursy wygenerowane automatycznie przez silnik analityczny Python (`python_engine`) wykorzystujący model matematyczny oparty na rozkładzie Poissona.
+
+### Społeczność
+
+Gość ma również dostęp do zakładki **Społeczność**, w której może:
+
+- przeglądać publiczne typy innych użytkowników,
+- analizować opublikowane analizy meczowe,
+- przeglądać ranking najlepszych typerów platformy.
+
+### Ograniczenia
+
+Pozostałe funkcjonalności systemu wymagają zalogowania się na konto użytkownika.
+
+---
+
+## Ścieżka użytkownika – Użytkownik
+
+### Rejestracja
+
+Nowy użytkownik może utworzyć konto za pomocą przycisku **Rejestracja** dostępnego w nagłówku strony.
+
+Podczas rejestracji podaje:
+
+- nazwę użytkownika,
+- adres e-mail,
+- hasło,
+- opcjonalny kod polecający.
+
+Jeżeli użytkownik poda poprawny kod polecający, otrzymuje dodatkowe punkty startowe wykorzystywane do typowania.
+
+### Logowanie
+
+Logowanie odbywa się za pomocą przycisku **Zaloguj**.
+
+Użytkownik może zalogować się wykorzystując:
+
+- nazwę użytkownika lub adres e-mail,
+- hasło.
+
+Po poprawnym zalogowaniu uzyskuje dostęp do wszystkich funkcjonalności platformy.
+
+---
+
+## Stawianie typów
+
+Najważniejszą funkcją platformy jest możliwość typowania zdarzeń sportowych.
+
+Po prawej stronie aplikacji dostępny jest panel typów roboczych, który pozwala użytkownikowi dodawać kursy do kuponu z dowolnego miejsca systemu.
+
+Typy można dodawać poprzez:
+
+- wybór kursów w zakładce Dashboard,
+- wybór kursów w zakładce Mecze,
+- kopiowanie typów innych użytkowników w zakładce Społeczność.
+
+Podczas tworzenia typu użytkownik może dodać własną analizę tekstową opisującą przesłanki podjętej decyzji.
+
+### Rodzaje typów
+
+#### SOLO
+
+Typ zawierający pojedyncze zdarzenie dla jednego meczu.
+
+#### BET BUILDER
+
+Typ zawierający kilka zdarzeń dotyczących tego samego spotkania.
+
+### Stawka
+
+Podczas składania typu użytkownik określa stawkę wyrażoną w punktach (PKT).
+
+W przypadku wygranego typu system automatycznie oblicza wygraną według wzoru:
+
+```text
+Wygrana = Stawka × Łączny Kurs
+```
+
+Następnie odpowiednia liczba punktów zostaje dopisana do salda użytkownika.
+
+---
+
+## Moje Typy
+
+Zakładka **Moje Typy** zawiera historię wszystkich zakładów użytkownika.
+
+Widoczne są zarówno:
+
+- typy aktywne,
+- typy wygrane,
+- typy przegrane.
+
+Dostępne są również filtry umożliwiające wyszukiwanie kuponów według:
+
+- statusu,
+- daty,
+- kursu,
+
+### Zarządzanie analizą
+
+Użytkownik może:
+
+- edytować własną analizę,
+- usuwać własną analizę,
+
+w przypadku błędnego lub nieaktualnego wpisu.
+
+---
+
+## Zdobywaj Balans
+
+W zakładce **Zdobywaj Balans** użytkownik uzyskuje dostęp do dodatkowych metod zdobywania punktów.
+
+### Program poleceń
+
+Każdy użytkownik posiada indywidualny kod referencyjny, który może udostępniać nowym graczom.
+
+Za skuteczne polecenie system przyznaje bonusowe punkty.
+
+### Bonus codziennego logowania
+
+Platforma udostępnia również system nagród za codzienne logowanie.
+
+Po spełnieniu warunków użytkownik może odebrać dodatkowe punkty zwiększające jego saldo.
+
+---
+
+## Społeczność
+
+Zakładka **Społeczność** umożliwia analizowanie aktywności innych użytkowników.
+
+Dostępne są filtry pozwalające wyświetlać:
+
+- typy z analizą,
+- typy bez analizy,
+- typy z wybranego dnia,
+- typy posortowane według różnych kryteriów.
+
+### Rankingi
+
+System automatycznie generuje ranking użytkowników.
+
+Aktualnie zalogowany użytkownik jest dodatkowo wyróżniony na liście rankingowej, co ułatwia odnalezienie własnej pozycji nawet przy dużej liczbie uczestników.
+
+---
+
+# Ścieżka użytkownika – Administrator
+
+Administrator posiada specjalną rolę zapisaną w bazie danych.
+
+Po zalogowaniu zostaje automatycznie przekierowany do dedykowanego panelu administracyjnego.
+
+Administrator ma dostęp do następujących sekcji:
+
+- Dashboard
+- Mecze
+- Typy Użytkowników
+- Użytkownicy
+
+---
+
+## Dashboard Administratora
+
+Najważniejszym elementem panelu administracyjnego jest sekcja sterowania silnikiem systemowym.
+
+Administrator może uruchamiać wszystkie skrypty Python Engine:
+
+- Pobierz Ligi (`import_leagues.py`)
+- Pobierz Drużyny (`import_teams.py`)
+- Pobierz Mecze na 14 Dni (`import_fixtures.py`)
+- Pobierz Statystyki Meczu (`import_fixture_statistics.py`)
+- Przetwórz Statystyki CSV (`stats_aggregator.py`)
+- Generuj Kursy (Poisson) (`odds_engine.py`)
+- Rozlicz Zakłady (`settle_bets.py`)
+
+Wbudowana konsola administracyjna wyświetla logi wykonywanych operacji w czasie rzeczywistym.
+
+---
+
+## Mecze
+
+Administrator może przeglądać spotkania dla wybranego dnia wraz z ich aktualnym statusem.
+
+Widoczne są między innymi statusy:
+
+- NS (Not Started)
+- LIVE
+- FT (Full Time)
+
+---
+
+## Typy Użytkowników
+
+Zakładka umożliwia monitorowanie aktywności społeczności.
+
+Administrator może:
+
+- przeglądać wszystkie typy użytkowników,
+- filtrować typy według daty,
+- filtrować typy według użytkownika,
+- usuwać analizy zawierające niepożądane treści.
+
+---
+
+## Użytkownicy
+
+Administrator posiada pełne uprawnienia zarządzania kontami.
+
+Może:
+
+- przeglądać listę użytkowników,
+- wyszukiwać użytkowników,
+- edytować dane użytkowników,
+- usuwać konta,
+- blokować użytkowników.
+
+Dostępne filtry umożliwiają szybkie wyszukiwanie użytkowników nawet przy dużej liczbie kont.
+
+---
+
+## Najważniejsze procesy systemowe
+
+Administrator odpowiada za inicjalizację oraz utrzymanie danych wykorzystywanych przez platformę.
+
+Najważniejsze zadania administracyjne obejmują:
+
+- import lig i drużyn przed rozpoczęciem sezonu,
+- aktualizację terminarza spotkań,
+- pobieranie statystyk zakończonych meczów,
+- generowanie kursów przy pomocy modelu Poissona,
+- rozliczanie typów użytkowników,
+- aktualizację rankingów oraz statystyk społeczności.
 
 ## Plany rozbudowy
 Projekt mógłby zostać wzbogacony o nowe moduły, które zwiększą zaangażowanie społeczności oraz głębię analityczną platformy:

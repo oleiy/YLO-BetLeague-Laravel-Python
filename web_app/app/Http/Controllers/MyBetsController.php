@@ -27,6 +27,7 @@ class MyBetsController extends Controller
 
     public function index(Request $request)
     {
+        // warunek czy użytkownik jest zalogowany
         if (!Auth::check()) {
 
             return view('my-bets', [
@@ -60,6 +61,7 @@ class MyBetsController extends Controller
         ]);
     }
 
+    // możliwość usunięcia analizy
     public function destroyAnalysis(Bet $bet)
     {
         if ($bet->user_id !== Auth::id()) {
@@ -73,27 +75,28 @@ class MyBetsController extends Controller
         return back();
     }
 
-public function updateAnalysis(Request $request, Bet $bet)
-{
-    if ($bet->user_id !== Auth::id()) {
-        abort(403);
-    }
+    // możliwość edycji analizy
+    public function updateAnalysis(Request $request, Bet $bet)
+    {
+        if ($bet->user_id !== Auth::id()) {
+            abort(403);
+        }
 
-    $validated = $request->validate([
-        'analysis' => ['nullable', 'string', 'max:5000'],
-    ]);
-
-    $bet->update([
-        'analysis' => $validated['analysis'] ?? null,
-    ]);
-
-    if ($request->expectsJson()) {
-        return response()->json([
-            'success' => true,
-            'analysis' => $bet->analysis,
+        $validated = $request->validate([
+            'analysis' => ['nullable', 'string', 'max:5000'],
         ]);
-    }
 
-    return back()->with('success', 'Analiza została zaktualizowana.');
-}
+        $bet->update([
+            'analysis' => $validated['analysis'] ?? null,
+        ]);
+
+        if ($request->expectsJson()) {
+            return response()->json([
+                'success' => true,
+                'analysis' => $bet->analysis,
+            ]);
+        }
+
+        return back()->with('success', 'Analiza została zaktualizowana.');
+    }
 }

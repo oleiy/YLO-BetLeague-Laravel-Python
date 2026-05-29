@@ -5,10 +5,8 @@ namespace App\Services;
 /**
  * * Serwis pomocniczy odpowiedzialny za formatowanie danych dotyczących kursów i rynków.
  * * Kluczowe role:
- * 1. Logika biznesowa specyfikatorów: Odpowiada za to, kiedy do nazwy zakładu
- * (np. "Total Goals") należy dopisać wartość (np. "2.5"), a kiedy nie (zwycięzca rywalizacji).
+ * 1. Logika specyfikatorów: odpowiada za to, kiedy do nazwy zakładu należy dopisać wartość (np. "2.5"), a kiedy nie (zwycięzca rywalizacji).
  * 2. Standaryzacja UI: Gwarantuje, że kursy zawsze wyświetlają się w tym samym formacie
- * (np. dwie liczby po przecinku), co zapewnia profesjonalny wygląd aplikacji.
  */
 
 class OddsService

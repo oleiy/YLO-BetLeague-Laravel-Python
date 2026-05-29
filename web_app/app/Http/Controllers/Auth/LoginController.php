@@ -27,172 +27,170 @@ class LoginController extends Controller
         $this->rewardService = $rewardService;
     }
 
-/**
- * @desc Obsługa logowania użytkownika.
- */
-public function login(LoginRequest $request)
-{
-    /*
+    public function login(LoginRequest $request)
+    {
+        /*
     |--------------------------------------------------------------------------
     | LOGIN FIELD
     |--------------------------------------------------------------------------
     */
 
-    $loginValue = $request->input('login');
+        $loginValue = $request->input('login');
 
-    $loginField = filter_var(
-        $loginValue,
-        FILTER_VALIDATE_EMAIL
-    )
-        ? 'email'
-        : 'username';
+        // wykrycie maila lub usernamea
+        $loginField = filter_var(
+            $loginValue,
+            FILTER_VALIDATE_EMAIL
+        )
+            ? 'email'
+            : 'username';
 
-    /*
+        /*
     |--------------------------------------------------------------------------
     | FIND USER
     |--------------------------------------------------------------------------
     */
 
-    $user = \App\Models\User::with('stats')
-        ->where($loginField, $loginValue)
-        ->first();
+        $user = \App\Models\User::with('stats')
+            ->where($loginField, $loginValue)
+            ->first();
 
-    /*
+        /*
     |--------------------------------------------------------------------------
     | BAN CHECK
     |--------------------------------------------------------------------------
     */
 
-if (
-    $user &&
-    $user->stats &&
-    $user->stats->is_banned
-) {
+        if (
+            $user &&
+            $user->stats &&
+            $user->stats->is_banned
+        ) {
 
-    $banUntil = $user->stats->ban_until;
+            $banUntil = $user->stats->ban_until;
 
-    /*
+            /*
     |--------------------------------------------------------------------------
     | AUTO UNBAN
     |--------------------------------------------------------------------------
     */
 
-    if (
-        $banUntil &&
-        now()->greaterThanOrEqualTo($banUntil)
-    ) {
+            if (
+                $banUntil &&
+                now()->greaterThanOrEqualTo($banUntil)
+            ) {
 
-        $user->stats->update([
-            'is_banned' => false,
-            'ban_until' => null,
-        ]);
+                $user->stats->update([
+                    'is_banned' => false,
+                    'ban_until' => null,
+                ]);
+            } else {
 
-    } else {
+                $message = 'Twoje konto zostało zbanowane.';
 
-        $message = 'Twoje konto zostało zbanowane.';
+                if ($banUntil) {
 
-        if ($banUntil) {
+                    $message .= ' Ban obowiązuje do: '
+                        . $banUntil->format('d.m.Y H:i');
+                }
 
-            $message .= ' Ban obowiązuje do: '
-                . $banUntil->format('d.m.Y H:i');
+                return back()
+                    ->withErrors([
+                        'login' => $message,
+                    ])
+                    ->onlyInput('login');
+            }
         }
 
-        return back()
-            ->withErrors([
-                'login' => $message,
-            ])
-            ->onlyInput('login');
-    }
-}
-
-    /*
+        /*
     |--------------------------------------------------------------------------
     | LOGIN ATTEMPT
     |--------------------------------------------------------------------------
     */
 
-    $credentials = [
-        $loginField => $loginValue,
-        'password' => $request->input('password'),
-    ];
+        $credentials = [
+            $loginField => $loginValue,
+            'password' => $request->input('password'),
+        ];
 
-    if (Auth::attempt(
-        $credentials,
-        $request->filled('remember')
-    )) {
+        if (Auth::attempt(
+            $credentials,
+            $request->filled('remember')
+        )) {
 
-        $request->session()->regenerate();
+            // zabezpieczenie przed atakiem na sesji
+            $request->session()->regenerate();
 
-        /** @var \App\Models\User $user */
-        $user = Auth::user();
+            /** @var \App\Models\User $user */
+            $user = Auth::user();
 
-        /*
+            /*
         |--------------------------------------------------------------------------
         | DAILY LOGIN BONUS
         |--------------------------------------------------------------------------
         */
 
-        $today = Carbon::today();
+            $today = Carbon::today();
 
-        $lastLogin = $user->last_login
-            ? Carbon::parse($user->last_login)
-            : null;
+            $lastLogin = $user->last_login
+                ? Carbon::parse($user->last_login)
+                : null;
 
-        $dailyRewardGranted = false;
+            $dailyRewardGranted = false;
 
-        if (
-            !$lastLogin ||
-            !$lastLogin->isSameDay($today)
-        ) {
+            if (
+                !$lastLogin ||
+                !$lastLogin->isSameDay($today)
+            ) {
 
-            $this->rewardService
-                ->grantDailyLoginReward($user);
+                $this->rewardService
+                    ->grantDailyLoginReward($user);
 
-            $dailyRewardGranted = true;
-        }
+                $dailyRewardGranted = true;
+            }
 
-        /*
+            /*
         |--------------------------------------------------------------------------
         | UPDATE LAST LOGIN
         |--------------------------------------------------------------------------
         */
 
-        $user->update([
-            'last_login' => now(),
-        ]);
+            $user->update([
+                'last_login' => now(),
+            ]);
 
-        /*
+            /*
         |--------------------------------------------------------------------------
-        | SUCCESS MESSAGE
+        | SUCCESS MESSAGE // to bez sensu w sumie usuniemy później
         |--------------------------------------------------------------------------
         */
 
-        $message = $dailyRewardGranted
-            ? 'Witaj ponownie! Otrzymujesz +50 PKT za codzienne logowanie.'
-            : 'Witaj ponownie!';
+            $message = $dailyRewardGranted
+                ? 'Witaj ponownie! Otrzymujesz +50 PKT za codzienne logowanie.'
+                : 'Witaj ponownie!';
 
-        if ($user->role === 'admin') {
+            if ($user->role === 'admin') {
+
+                return redirect()
+                    ->intended('/admin')
+                    ->with('success', $message);
+            }
 
             return redirect()
-                ->intended('/admin')
+                ->intended('/')
                 ->with('success', $message);
         }
 
-        return redirect()
-            ->intended('/')
-            ->with('success', $message);
-    }
-
-    /*
+        /*
     |--------------------------------------------------------------------------
-    | INVALID CREDENTIALS
+    | Błędy logowania
     |--------------------------------------------------------------------------
     */
 
-    return back()
-        ->withErrors([
-            'login' => 'Podane dane logowania są błędne.',
-        ])
-        ->onlyInput('login');
-}
+        return back()
+            ->withErrors([
+                'login' => 'Podane dane logowania są błędne.',
+            ])
+            ->onlyInput('login');
+    }
 }

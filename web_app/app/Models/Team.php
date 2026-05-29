@@ -15,11 +15,14 @@ class Team extends Model
         'text_color'
     ];
 
+    // Poniższy podział pozwala na liczenie statystyk drużynowych
+    // Mecze jako gospodarz
     public function homeFixtures()
     {
         return $this->hasMany(Fixture::class, 'home_team_id');
     }
 
+    // Mecze jako gość
     public function awayFixtures()
     {
         return $this->hasMany(Fixture::class, 'away_team_id');

@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * * Klasa FormRequest odpowiedzialna za walidację parametrów filtrowania widoku społeczności.
+ * * Walidację parametrów filtrowania widoku społeczności.
  * * Odpowiada za:
  * 1. Zapewnienie, że parametr daty jest poprawnym formatem daty.
  * 2. Ograniczenie parametrów sortowania do dozwolonego zbioru wartości (Whitelisting),
@@ -23,7 +23,7 @@ class CommunityFilterRequest extends FormRequest
     {
         return [
             'date' => 'nullable|date',
-            'sort' => 'nullable|in:success_rate,time,odds_asc,odds_desc',
+            'sort' => 'nullable|in:success_rate,time,odds_asc,odds_desc', // dzięki temu nie można np DROP TABLE
         ];
     }
 }
