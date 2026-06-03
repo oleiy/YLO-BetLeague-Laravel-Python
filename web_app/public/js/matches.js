@@ -27,13 +27,13 @@ const marketConfig = [
 window.addEventListener('DOMContentLoaded', () => {
     const activeBtn = document.getElementById('activeDayBtn');
 
-if (activeBtn) {
-    activeBtn.scrollIntoView({
-        behavior: 'auto',
-        inline: 'center',
-        block: 'nearest'
-    });
-}
+    if (activeBtn) {
+        activeBtn.scrollIntoView({
+            behavior: 'auto',
+            inline: 'center',
+            block: 'nearest'
+        });
+    }
 
     document.addEventListener('click', (e) => {
         const btn = e.target.closest('.btn-odd');
@@ -344,9 +344,9 @@ function refreshMatchesUI(leagues) {
                 && o.outcome_name === '2'
             );
 
-            const o1 = o1Obj ? o1Obj.value : '';
-            const oX = oXObj ? oXObj.value : '';
-            const o2 = o2Obj ? o2Obj.value : '';
+            const o1 = o1Obj ? Number(o1Obj.value).toFixed(2) : '';
+            const oX = oXObj ? Number(oXObj.value).toFixed(2) : '';
+            const o2 = o2Obj ? Number(o2Obj.value).toFixed(2) : '';
 
             const parsedDate = parseMatchDate(match.match_date);
 
@@ -622,7 +622,7 @@ function renderMarketContent(odds, teamId, mName, match, leagueName) {
                         data-outcome-name="${t}"
                         data-odd-value="${o?.value || 0.0}">
                         <span class="x-small text-secondary fw-bold">${t}</span>
-                        <span class="text-accent fw-bold">${o?.value || '---'}</span>
+                        <span class="text-accent fw-bold">${o ? Number(o.value).toFixed(2) : '---'}</span>
                     </button>
                 </div>`;
         }).join('')}
@@ -646,7 +646,7 @@ function renderMarketContent(odds, teamId, mName, match, leagueName) {
                         data-outcome-name="${out}"
                         data-odd-value="${o?.value || 0.0}">
                         <span class="x-small text-secondary fw-bold">${out.toUpperCase()}</span>
-                        <span class="text-accent fw-bold">${o?.value || '---'}</span>
+                        <span class="text-accent fw-bold">${o ? Number(o.value).toFixed(2) : '---'}</span>
                     </button>
                 </div>`;
         }).join('')}

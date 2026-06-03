@@ -40,6 +40,12 @@ Route::get('/api/matches/{date}', [MatchesController::class, 'getMatchesByDate']
 Route::get('/community', [CommunityController::class, 'index'])
     ->name('community');
 
+Route::get('/moje-typy', [MyBetsController::class, 'index'])
+    ->name('my-bets');
+
+Route::get('/earn-balance', [EarnBalanceController::class, 'index'])
+    ->name('earn-balance');
+
 /*
 |--------------------------------------------------------------------------
 | AUTH ROUTES
@@ -75,17 +81,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/api/bets/store', [BetController::class, 'store'])
         ->name('bets.store');
 
-    Route::get('/moje-typy', [MyBetsController::class, 'index'])
-        ->name('my-bets');
-
     Route::put('/moje-typy/{bet}/analysis', [MyBetsController::class, 'updateAnalysis'])
         ->name('my-bets.analysis.update');
 
     Route::delete('/moje-typy/{bet}/analysis', [MyBetsController::class, 'destroyAnalysis'])
         ->name('my-bets.analysis.destroy');
-
-    Route::get('/earn-balance', [EarnBalanceController::class, 'index'])
-        ->name('earn-balance');
 });
 
 /*

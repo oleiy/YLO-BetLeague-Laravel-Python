@@ -72,6 +72,7 @@ class AdminActionController extends Controller
             );
 
             $process->setTimeout(300);
+            ini_set('max_execution_time', '300');
             $process->run();
 
             return [
@@ -153,9 +154,39 @@ class AdminActionController extends Controller
 
     public function updateCsv()
     {
+        $csvResult = $this->runPython(
+            $this->python['update_csv_data'] ?? ''
+        );
+
+        if (!$csvResult['success']) {
+            return $this->responseResult(
+                $csvResult,
+                'Błąd synchronizacji CSV'
+            );
+        }
+
+        $statsResult = $this->runPython(
+            $this->python['stats_aggregator'] ?? ''
+        );
+
+        if (!$statsResult['success']) {
+            return $this->responseResult(
+                $statsResult,
+                'Błąd agregacji statystyk'
+            );
+        }
+
         return $this->responseResult(
-            $this->runPython($this->python['update_csv_data'] ?? ''),
-            'CSV zostało zsynchronizowane'
+            [
+                'success' => true,
+                'output' =>
+                $csvResult['output']
+                    . "\n\n==============================\n"
+                    . "GENEROWANIE STATYSTYK\n"
+                    . "==============================\n\n"
+                    . $statsResult['output']
+            ],
+            'Statystyki zostały zsynchronizowane'
         );
     }
 

@@ -1,0 +1,12 @@
+certifi==2026.5.20
+charset-normalizer==3.4.7
+idna==3.16
+numpy==2.4.6
+pandas==3.0.3
+python-dateutil
+python-dotenv==1.2.2
+requests==2.34.2
+scipy==1.17.1
+tzdata
+urllib3==2.7.0
+curl_cffi==26.1.2

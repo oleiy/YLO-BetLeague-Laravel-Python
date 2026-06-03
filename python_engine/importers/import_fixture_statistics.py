@@ -3,16 +3,17 @@ from time import sleep
 from core.db import get_db_connection
 from core.api import make_request
 
+
 """
 Skrypt odpowiedzialny za pobieranie statystyk zakończonych meczów z API SofaScore
 oraz zapisywanie ich do tabeli fixture_statistics w bazie danych.
-Importowane są m.in. gole, kartki, rzuty rożne i strzały celne z podziałami na drużyny.
+
+Dodatkowe zabezpieczenie:
+przed zapisem wyników skrypt sprawdza, czy api_id meczu faktycznie odpowiada
+tym samym drużynom, które są zapisane lokalnie w bazie danych.
 """
 
-# ============================================
-# Pobiera podstawowe informacje o meczu:
-# status oraz końcowy wynik gospodarzy i gości
-# ============================================
+
 def fetch_match_details(api_id):
     data = make_request(
         "match/details",
@@ -22,41 +23,28 @@ def fetch_match_details(api_id):
     if not data:
         return None
 
-    print(data)
-
-    # Pobranie statusu meczu
     status = data.get("status", {})
+    status_type = status.get("type") if isinstance(status, dict) else None
 
-    if isinstance(status, dict):
-        status_type = status.get("type")
-    else:
-        status_type = None
-
-    # Pobranie wyniku gospodarzy
     home_score = data.get("homeScore", {})
-
-    if isinstance(home_score, dict):
-        home_goals = home_score.get("current", 0)
-    else:
-        home_goals = 0
-
-    # Pobranie wyniku gości
     away_score = data.get("awayScore", {})
 
-    if isinstance(away_score, dict):
-        away_goals = away_score.get("current", 0)
-    else:
-        away_goals = 0
+    home_goals = home_score.get("current", 0) if isinstance(home_score, dict) else 0
+    away_goals = away_score.get("current", 0) if isinstance(away_score, dict) else 0
+
+    home_team = data.get("homeTeam", {})
+    away_team = data.get("awayTeam", {})
 
     return {
         "status": status_type,
         "home_goals": home_goals,
-        "away_goals": away_goals
+        "away_goals": away_goals,
+        "home_api_id": home_team.get("id"),
+        "away_api_id": away_team.get("id"),
+        "home_name": home_team.get("name"),
+        "away_name": away_team.get("name"),
     }
 
-
-# Konwersja wartości API na liczbę całkowitą.
-# Zabezpiecza przed błędnymi lub pustymi danymi.
 
 def safe_int(value):
     try:
@@ -64,8 +52,7 @@ def safe_int(value):
     except Exception:
         return 0
 
-# Pobiera szczegółowe statystyki meczu z API
-# i mapuje je na strukturę używaną w bazie danych.
+
 def fetch_match_statistics(api_id):
     stats = {
         "home_corners": 0,
@@ -75,7 +62,7 @@ def fetch_match_statistics(api_id):
         "home_red_cards": 0,
         "away_red_cards": 0,
         "home_shots_on_goal": 0,
-        "away_shots_on_goal": 0
+        "away_shots_on_goal": 0,
     }
 
     data = make_request(
@@ -83,11 +70,9 @@ def fetch_match_statistics(api_id):
         {"match_id": str(api_id)}
     )
 
-    # SofaScore zwraca listę statystyk
     if not data or not isinstance(data, list):
         return stats
 
-    # Pobranie pełnych statystyk meczu
     all_period = next(
         (period for period in data if period.get("period") == "ALL"),
         None
@@ -98,33 +83,27 @@ def fetch_match_statistics(api_id):
 
     statistics_items = []
 
-    # Połączenie wszystkich grup statystyk
     for group in all_period.get("groups", []):
         statistics_items.extend(group.get("statisticsItems", []))
 
-    # Odczyt poszczególnych statystyk zwróconych przez API
     for item in statistics_items:
         key = item.get("key")
 
         home = safe_int(item.get("homeValue"))
         away = safe_int(item.get("awayValue"))
 
-        # Rzuty rożne
         if key == "cornerKicks":
             stats["home_corners"] = home
             stats["away_corners"] = away
 
-        # Żółte kartki
         elif key == "yellowCards":
             stats["home_yellow_cards"] = home
             stats["away_yellow_cards"] = away
 
-        # Czerwone kartki
         elif key == "redCards":
             stats["home_red_cards"] = home
             stats["away_red_cards"] = away
 
-        # Strzały celne
         elif key == "shotsOnGoal":
             stats["home_shots_on_goal"] = home
             stats["away_shots_on_goal"] = away
@@ -132,10 +111,7 @@ def fetch_match_statistics(api_id):
     return stats
 
 
-# Zapisuje statystyki meczu do bazy danych.
-# Jeśli rekord już istnieje, zostaje zaktualizowany.
 def save_fixture_statistics(cursor, fixture_id, data):
-
     query = """
         INSERT INTO fixture_statistics (
             fixture_id,
@@ -176,33 +152,47 @@ def save_fixture_statistics(cursor, fixture_id, data):
         data["home_red_cards"],
         data["away_red_cards"],
         data["home_shots_on_goal"],
-        data["away_shots_on_goal"]
+        data["away_shots_on_goal"],
     )
 
     cursor.execute(query, values)
 
-# Pobiera mecze posiadające api_id,
-# które nie mają jeszcze zapisanych statystyk
-# oraz których data rozpoczęcia już minęła.
+
 def fetch_today_fixtures(cursor):
     query = """
         SELECT
-    f.id,
-    f.api_id
-FROM fixtures f
-LEFT JOIN fixture_statistics fs
-    ON fs.fixture_id = f.id
-WHERE f.api_id IS NOT NULL
-    AND fs.fixture_id IS NULL
-    AND f.match_date <= datetime('now')
+            f.id,
+            f.api_id,
+
+            ht.api_id AS home_api_id,
+            ht.name AS home_name,
+
+            at.api_id AS away_api_id,
+            at.name AS away_name
+
+        FROM fixtures f
+        JOIN teams ht
+            ON ht.id = f.home_team_id
+        JOIN teams at
+            ON at.id = f.away_team_id
+        LEFT JOIN fixture_statistics fs
+            ON fs.fixture_id = f.id
+        WHERE f.api_id IS NOT NULL
+            AND fs.fixture_id IS NULL
+            AND f.status = 'FT'
     """
 
     cursor.execute(query)
     return cursor.fetchall()
 
 
-# Główna logika importu statystyk meczowych.
-# Iteruje po meczach, pobiera dane z API i zapisuje je w bazie.
+def teams_match(fixture, details):
+    return (
+        fixture["home_api_id"] == details["home_api_id"]
+        and fixture["away_api_id"] == details["away_api_id"]
+    )
+
+
 def main():
     print("[INFO] Starting fixture statistics import...")
 
@@ -217,44 +207,61 @@ def main():
         fixture_id = fixture["id"]
         api_id = fixture["api_id"]
 
+        print("\n==========================================")
         print(f"[INFO] Processing fixture {fixture_id} ({api_id})")
+        print(f"[DB] {fixture['home_name']} vs {fixture['away_name']}")
 
-        # Pobranie danych meczu
         details = fetch_match_details(api_id)
 
         if not details:
             print("[WARNING] Match details not found")
             continue
 
-        # Import tylko zakończonych meczów
+        print(f"[API] {details['home_name']} vs {details['away_name']}")
+
+        if not teams_match(fixture, details):
+            print("[WARNING] API fixture does not match local fixture")
+            print(
+                f"[DB IDS] home={fixture['home_api_id']} "
+                f"away={fixture['away_api_id']}"
+            )
+            print(
+                f"[API IDS] home={details['home_api_id']} "
+                f"away={details['away_api_id']}"
+            )
+            print("[SKIP] Statistics not saved")
+            continue
+
         if details["status"] not in [
             "finished",
             "after_penalties",
-            "after_extra_time"
+            "after_extra_time",
         ]:
             print("[INFO] Match not finished yet")
             continue
 
-        # Pobranie statystyk meczu
         statistics = fetch_match_statistics(api_id)
 
         final_data = {
             **details,
-            **statistics
+            **statistics,
         }
 
         save_fixture_statistics(cursor, fixture_id, final_data)
 
         conn.commit()
 
-        print(f"[SUCCESS] Statistics saved for fixture {fixture_id}")
+        print(
+            f"[SUCCESS] Statistics saved for fixture {fixture_id} "
+            f"({details['home_goals']}:{details['away_goals']})"
+        )
 
         sleep(1)
 
     cursor.close()
     conn.close()
 
-    print("[DONE] Fixture statistics import completed")
+    print("\n[DONE] Fixture statistics import completed")
 
 
 if __name__ == "__main__":

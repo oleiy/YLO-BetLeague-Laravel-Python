@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="btn-subtitle">
-                        update_csv_data.py
+                        update_csv_data.py & stats_aggregator.py
                     </div>
                 </div>
 

@@ -182,7 +182,7 @@
                                         <span class="odd-label-xs">1</span>
 
                                         <span class="odd-val">
-                                            {{ $o1->value ?? '---' }}
+                                            {{ isset($o1) ? number_format($o1->value, 2) : '---' }}
                                         </span>
                                     </button>
 
@@ -196,7 +196,7 @@
                                         <span class="odd-label-xs">X</span>
 
                                         <span class="odd-val">
-                                            {{ $oX->value ?? '---' }}
+                                            {{ isset($oX) ? number_format($oX->value, 2) : '---' }}
                                         </span>
                                     </button>
 
@@ -210,7 +210,7 @@
                                         <span class="odd-label-xs">2</span>
 
                                         <span class="odd-val">
-                                            {{ $o2->value ?? '---' }}
+                                            {{ isset($o2) ? number_format($o2->value, 2) : '---' }}
                                         </span>
                                     </button>
 

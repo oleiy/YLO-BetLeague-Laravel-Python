@@ -3,92 +3,92 @@
         "Liverpool": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.7,
-                "goals_conceded": 1.2,
-                "sot_won": 5.3,
-                "sot_lost": 4.1,
-                "corners_won": 6.5,
-                "corners_lost": 4.3,
-                "cards_received": 1.2,
-                "cards_opponent": 1.7
+                "goals_scored": 1.9,
+                "goals_conceded": 1.0,
+                "sot_won": 5.6,
+                "sot_lost": 3.9,
+                "corners_won": 7.2,
+                "corners_lost": 4.9,
+                "cards_received": 1.3,
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 1.5,
-                "goals_conceded": 1.3,
+                "goals_scored": 1.4,
+                "goals_conceded": 1.7,
                 "sot_won": 4.1,
-                "sot_lost": 3.4,
-                "corners_won": 6.3,
-                "corners_lost": 3.9,
-                "cards_received": 1.6,
-                "cards_opponent": 2.7
+                "sot_lost": 4.4,
+                "corners_won": 6.8,
+                "corners_lost": 3.3,
+                "cards_received": 1.3,
+                "cards_opponent": 2.1
             }
         },
         "Aston Villa": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.0,
-                "sot_won": 4.6,
-                "sot_lost": 4.5,
-                "corners_won": 6.0,
-                "corners_lost": 4.1,
-                "cards_received": 0.9,
-                "cards_opponent": 2.5
+                "goals_scored": 1.7,
+                "goals_conceded": 1.5,
+                "sot_won": 4.7,
+                "sot_lost": 4.3,
+                "corners_won": 5.8,
+                "corners_lost": 4.9,
+                "cards_received": 1.4,
+                "cards_opponent": 2.6
             },
             "away": {
-                "goals_scored": 1.6,
-                "goals_conceded": 1.7,
-                "sot_won": 5.0,
-                "sot_lost": 5.1,
-                "corners_won": 4.7,
-                "corners_lost": 4.8,
-                "cards_received": 1.9,
-                "cards_opponent": 2.5
+                "goals_scored": 1.0,
+                "goals_conceded": 1.5,
+                "sot_won": 4.3,
+                "sot_lost": 5.2,
+                "corners_won": 4.8,
+                "corners_lost": 4.9,
+                "cards_received": 1.6,
+                "cards_opponent": 1.8
             }
         },
         "Brighton": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.1,
-                "sot_won": 4.5,
-                "sot_lost": 4.5,
-                "corners_won": 5.3,
-                "corners_lost": 4.7,
-                "cards_received": 2.2,
-                "cards_opponent": 2.5
+                "goals_scored": 1.4,
+                "goals_conceded": 0.9,
+                "sot_won": 4.7,
+                "sot_lost": 3.2,
+                "corners_won": 4.8,
+                "corners_lost": 4.0,
+                "cards_received": 1.8,
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 1.0,
-                "goals_conceded": 1.0,
-                "sot_won": 4.1,
-                "sot_lost": 3.7,
-                "corners_won": 3.9,
-                "corners_lost": 5.9,
-                "cards_received": 2.9,
-                "cards_opponent": 1.3
+                "goals_scored": 1.2,
+                "goals_conceded": 1.2,
+                "sot_won": 4.9,
+                "sot_lost": 4.0,
+                "corners_won": 5.0,
+                "corners_lost": 6.1,
+                "cards_received": 2.4,
+                "cards_opponent": 1.8
             }
         },
         "Sunderland": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.1,
+                "goals_scored": 0.9,
+                "goals_conceded": 1.2,
                 "sot_won": 3.6,
-                "sot_lost": 3.8,
-                "corners_won": 3.7,
-                "corners_lost": 4.9,
-                "cards_received": 2.1,
-                "cards_opponent": 2.3
+                "sot_lost": 3.2,
+                "corners_won": 4.2,
+                "corners_lost": 5.6,
+                "cards_received": 1.6,
+                "cards_opponent": 2.4
             },
             "away": {
-                "goals_scored": 0.7,
-                "goals_conceded": 1.6,
-                "sot_won": 3.6,
-                "sot_lost": 4.8,
-                "corners_won": 3.6,
-                "corners_lost": 5.9,
-                "cards_received": 2.6,
+                "goals_scored": 1.3,
+                "goals_conceded": 1.8,
+                "sot_won": 3.5,
+                "sot_lost": 5.2,
+                "corners_won": 3.4,
+                "corners_lost": 5.6,
+                "cards_received": 3.0,
                 "cards_opponent": 1.7
             }
         },
@@ -96,1196 +96,1196 @@
             "league_file": "E0.csv",
             "home": {
                 "goals_scored": 1.1,
-                "goals_conceded": 2.1,
-                "sot_won": 4.4,
-                "sot_lost": 4.1,
-                "corners_won": 5.7,
-                "corners_lost": 5.1,
-                "cards_received": 3.2,
-                "cards_opponent": 2.5
+                "goals_conceded": 2.0,
+                "sot_won": 4.6,
+                "sot_lost": 4.3,
+                "corners_won": 6.7,
+                "corners_lost": 4.6,
+                "cards_received": 3.0,
+                "cards_opponent": 2.3
             },
             "away": {
                 "goals_scored": 1.0,
-                "goals_conceded": 1.9,
-                "sot_won": 3.6,
-                "sot_lost": 5.0,
-                "corners_won": 3.7,
-                "corners_lost": 4.3,
-                "cards_received": 2.3,
-                "cards_opponent": 1.4
+                "goals_conceded": 1.4,
+                "sot_won": 4.4,
+                "sot_lost": 3.6,
+                "corners_won": 4.3,
+                "corners_lost": 3.7,
+                "cards_received": 2.7,
+                "cards_opponent": 2.1
             }
         },
         "Wolves": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.5,
-                "sot_won": 3.2,
-                "sot_lost": 4.7,
-                "corners_won": 2.8,
-                "corners_lost": 6.5,
-                "cards_received": 2.1,
-                "cards_opponent": 1.9
+                "goals_scored": 1.2,
+                "goals_conceded": 1.1,
+                "sot_won": 3.9,
+                "sot_lost": 3.7,
+                "corners_won": 3.5,
+                "corners_lost": 5.7,
+                "cards_received": 1.8,
+                "cards_opponent": 2.1
             },
             "away": {
-                "goals_scored": 0.6,
-                "goals_conceded": 1.5,
+                "goals_scored": 0.5,
+                "goals_conceded": 1.8,
                 "sot_won": 3.3,
-                "sot_lost": 4.8,
-                "corners_won": 3.5,
-                "corners_lost": 6.1,
-                "cards_received": 2.8,
-                "cards_opponent": 1.4
+                "sot_lost": 5.5,
+                "corners_won": 4.3,
+                "corners_lost": 5.4,
+                "cards_received": 2.4,
+                "cards_opponent": 2.0
             }
         },
         "Chelsea": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.7,
-                "goals_conceded": 1.1,
-                "sot_won": 4.0,
-                "sot_lost": 4.2,
-                "corners_won": 6.8,
+                "goals_scored": 1.3,
+                "goals_conceded": 1.6,
+                "sot_won": 3.5,
+                "sot_lost": 4.4,
+                "corners_won": 6.9,
                 "corners_lost": 4.0,
-                "cards_received": 2.7,
-                "cards_opponent": 2.6
+                "cards_received": 2.8,
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 1.6,
-                "goals_conceded": 1.6,
-                "sot_won": 4.6,
-                "sot_lost": 5.1,
-                "corners_won": 5.5,
-                "corners_lost": 4.3,
-                "cards_received": 2.9,
-                "cards_opponent": 1.9
+                "goals_scored": 1.5,
+                "goals_conceded": 1.7,
+                "sot_won": 4.0,
+                "sot_lost": 5.0,
+                "corners_won": 6.3,
+                "corners_lost": 4.6,
+                "cards_received": 2.7,
+                "cards_opponent": 2.1
             }
         },
         "Nott'm Forest": {
             "league_file": "E0.csv",
             "home": {
                 "goals_scored": 0.8,
-                "goals_conceded": 0.9,
-                "sot_won": 3.8,
-                "sot_lost": 3.1,
-                "corners_won": 6.1,
-                "corners_lost": 4.0,
-                "cards_received": 1.1,
-                "cards_opponent": 1.6
+                "goals_conceded": 0.8,
+                "sot_won": 4.0,
+                "sot_lost": 3.4,
+                "corners_won": 5.7,
+                "corners_lost": 3.7,
+                "cards_received": 1.2,
+                "cards_opponent": 1.4
             },
             "away": {
-                "goals_scored": 1.3,
+                "goals_scored": 2.2,
                 "goals_conceded": 1.5,
-                "sot_won": 4.1,
-                "sot_lost": 3.7,
-                "corners_won": 4.9,
-                "corners_lost": 5.4,
-                "cards_received": 1.9,
-                "cards_opponent": 2.1
+                "sot_won": 4.7,
+                "sot_lost": 4.7,
+                "corners_won": 4.5,
+                "corners_lost": 6.4,
+                "cards_received": 1.7,
+                "cards_opponent": 1.7
             }
         },
         "Man United": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.1,
-                "sot_won": 6.9,
-                "sot_lost": 3.3,
-                "corners_won": 5.4,
-                "corners_lost": 4.6,
-                "cards_received": 1.8,
-                "cards_opponent": 2.4
+                "goals_scored": 2.2,
+                "goals_conceded": 1.2,
+                "sot_won": 7.5,
+                "sot_lost": 3.6,
+                "corners_won": 6.0,
+                "corners_lost": 4.4,
+                "cards_received": 2.1,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 1.8,
-                "goals_conceded": 1.4,
-                "sot_won": 5.3,
+                "goals_scored": 1.5,
+                "goals_conceded": 1.0,
+                "sot_won": 4.0,
                 "sot_lost": 3.4,
-                "corners_won": 4.6,
-                "corners_lost": 5.0,
-                "cards_received": 1.8,
-                "cards_opponent": 2.0
+                "corners_won": 4.0,
+                "corners_lost": 5.4,
+                "cards_received": 1.9,
+                "cards_opponent": 1.4
             }
         },
         "Leeds": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.5,
-                "goals_conceded": 1.3,
-                "sot_won": 4.2,
-                "sot_lost": 3.7,
-                "corners_won": 6.0,
-                "corners_lost": 4.7,
-                "cards_received": 1.1,
-                "cards_opponent": 2.1
+                "goals_scored": 1.2,
+                "goals_conceded": 0.9,
+                "sot_won": 3.9,
+                "sot_lost": 3.8,
+                "corners_won": 5.9,
+                "corners_lost": 5.0,
+                "cards_received": 1.3,
+                "cards_opponent": 1.8
             },
             "away": {
                 "goals_scored": 1.2,
-                "goals_conceded": 1.6,
-                "sot_won": 3.8,
-                "sot_lost": 4.3,
-                "corners_won": 3.4,
-                "corners_lost": 5.6,
-                "cards_received": 2.0,
-                "cards_opponent": 1.7
+                "goals_conceded": 1.5,
+                "sot_won": 3.7,
+                "sot_lost": 5.1,
+                "corners_won": 2.8,
+                "corners_lost": 8.2,
+                "cards_received": 2.4,
+                "cards_opponent": 2.1
             }
         },
         "West Ham": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.5,
-                "sot_won": 3.0,
-                "sot_lost": 4.7,
-                "corners_won": 5.3,
+                "goals_scored": 1.7,
+                "goals_conceded": 0.9,
+                "sot_won": 4.1,
+                "sot_lost": 4.0,
+                "corners_won": 4.7,
                 "corners_lost": 4.9,
-                "cards_received": 1.9,
-                "cards_opponent": 2.0
+                "cards_received": 2.0,
+                "cards_opponent": 2.6
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.9,
-                "sot_won": 3.3,
-                "sot_lost": 6.0,
-                "corners_won": 4.5,
-                "corners_lost": 7.6,
-                "cards_received": 2.0,
-                "cards_opponent": 2.1
+                "goals_scored": 1.0,
+                "goals_conceded": 2.0,
+                "sot_won": 3.8,
+                "sot_lost": 5.8,
+                "corners_won": 4.6,
+                "corners_lost": 6.9,
+                "cards_received": 2.2,
+                "cards_opponent": 2.0
             }
         },
         "Man City": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 2.3,
-                "goals_conceded": 0.7,
-                "sot_won": 6.1,
-                "sot_lost": 3.0,
-                "corners_won": 6.0,
-                "corners_lost": 3.3,
-                "cards_received": 1.8,
-                "cards_opponent": 3.0
+                "goals_scored": 2.0,
+                "goals_conceded": 0.8,
+                "sot_won": 5.4,
+                "sot_lost": 3.3,
+                "corners_won": 6.9,
+                "corners_lost": 3.5,
+                "cards_received": 1.7,
+                "cards_opponent": 2.8
             },
             "away": {
-                "goals_scored": 1.7,
-                "goals_conceded": 1.3,
-                "sot_won": 4.5,
-                "sot_lost": 4.1,
-                "corners_won": 5.5,
+                "goals_scored": 1.4,
+                "goals_conceded": 1.0,
+                "sot_won": 5.2,
+                "sot_lost": 3.6,
+                "corners_won": 7.5,
                 "corners_lost": 3.7,
-                "cards_received": 2.2,
-                "cards_opponent": 1.6
+                "cards_received": 2.0,
+                "cards_opponent": 2.3
             }
         },
         "Bournemouth": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.3,
-                "sot_won": 4.0,
-                "sot_lost": 3.6,
-                "corners_won": 5.2,
-                "corners_lost": 5.0,
-                "cards_received": 2.0,
-                "cards_opponent": 1.9
+                "goals_scored": 1.8,
+                "goals_conceded": 1.4,
+                "sot_won": 4.6,
+                "sot_lost": 3.7,
+                "corners_won": 6.7,
+                "corners_lost": 4.9,
+                "cards_received": 2.3,
+                "cards_opponent": 1.7
             },
             "away": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.9,
-                "sot_won": 5.3,
-                "sot_lost": 5.6,
-                "corners_won": 6.1,
-                "corners_lost": 6.8,
-                "cards_received": 2.5,
-                "cards_opponent": 2.2
+                "goals_scored": 1.3,
+                "goals_conceded": 0.7,
+                "sot_won": 3.9,
+                "sot_lost": 3.9,
+                "corners_won": 3.9,
+                "corners_lost": 7.8,
+                "cards_received": 2.3,
+                "cards_opponent": 2.1
             }
         },
         "Brentford": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.7,
+                "goals_scored": 1.3,
                 "goals_conceded": 1.1,
-                "sot_won": 3.8,
-                "sot_lost": 3.8,
-                "corners_won": 4.2,
-                "corners_lost": 4.9,
-                "cards_received": 1.4,
-                "cards_opponent": 1.6
+                "sot_won": 3.5,
+                "sot_lost": 3.7,
+                "corners_won": 5.1,
+                "corners_lost": 3.9,
+                "cards_received": 1.2,
+                "cards_opponent": 2.0
             },
             "away": {
                 "goals_scored": 1.4,
-                "goals_conceded": 1.3,
+                "goals_conceded": 1.5,
                 "sot_won": 3.8,
-                "sot_lost": 4.2,
-                "corners_won": 4.9,
-                "corners_lost": 5.6,
+                "sot_lost": 5.0,
+                "corners_won": 4.3,
+                "corners_lost": 7.3,
                 "cards_received": 2.1,
-                "cards_opponent": 1.6
+                "cards_opponent": 1.9
             }
         },
         "Burnley": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.0,
+                "goals_scored": 1.1,
                 "goals_conceded": 1.9,
-                "sot_won": 3.3,
-                "sot_lost": 6.2,
+                "sot_won": 3.9,
+                "sot_lost": 7.0,
                 "corners_won": 4.0,
-                "corners_lost": 5.3,
-                "cards_received": 1.4,
-                "cards_opponent": 1.1
+                "corners_lost": 5.9,
+                "cards_received": 1.6,
+                "cards_opponent": 0.8
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 2.0,
+                "goals_scored": 0.8,
+                "goals_conceded": 2.2,
                 "sot_won": 2.4,
-                "sot_lost": 4.8,
-                "corners_won": 4.1,
-                "corners_lost": 6.2,
-                "cards_received": 2.5,
-                "cards_opponent": 1.3
+                "sot_lost": 5.1,
+                "corners_won": 3.0,
+                "corners_lost": 5.5,
+                "cards_received": 2.6,
+                "cards_opponent": 1.5
             }
         },
         "Arsenal": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 2.3,
-                "goals_conceded": 0.8,
-                "sot_won": 5.5,
-                "sot_lost": 2.3,
+                "goals_scored": 1.9,
+                "goals_conceded": 0.7,
+                "sot_won": 5.1,
+                "sot_lost": 2.2,
                 "corners_won": 5.6,
-                "corners_lost": 3.1,
-                "cards_received": 1.1,
-                "cards_opponent": 2.3
+                "corners_lost": 3.0,
+                "cards_received": 1.2,
+                "cards_opponent": 2.1
             },
             "away": {
-                "goals_scored": 1.8,
+                "goals_scored": 1.9,
                 "goals_conceded": 0.9,
-                "sot_won": 4.6,
+                "sot_won": 4.5,
                 "sot_lost": 2.8,
-                "corners_won": 5.0,
-                "corners_lost": 3.6,
-                "cards_received": 1.8,
+                "corners_won": 5.3,
+                "corners_lost": 4.3,
+                "cards_received": 1.5,
                 "cards_opponent": 2.1
             }
         },
         "Crystal Palace": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 0.6,
-                "goals_conceded": 1.3,
-                "sot_won": 3.1,
-                "sot_lost": 4.6,
-                "corners_won": 4.9,
-                "corners_lost": 3.7,
-                "cards_received": 2.4,
-                "cards_opponent": 2.2
+                "goals_scored": 1.0,
+                "goals_conceded": 1.2,
+                "sot_won": 3.7,
+                "sot_lost": 4.7,
+                "corners_won": 5.0,
+                "corners_lost": 4.5,
+                "cards_received": 1.7,
+                "cards_opponent": 2.1
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.3,
+                "goals_scored": 1.0,
+                "goals_conceded": 1.9,
                 "sot_won": 3.2,
-                "sot_lost": 4.9,
+                "sot_lost": 4.7,
                 "corners_won": 4.2,
-                "corners_lost": 5.1,
-                "cards_received": 2.4,
-                "cards_opponent": 1.4
+                "corners_lost": 6.2,
+                "cards_received": 2.8,
+                "cards_opponent": 1.3
             }
         },
         "Everton": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.4,
-                "sot_won": 4.3,
+                "goals_scored": 1.5,
+                "goals_conceded": 1.7,
+                "sot_won": 4.9,
                 "sot_lost": 4.1,
-                "corners_won": 5.2,
-                "corners_lost": 4.4,
-                "cards_received": 1.6,
-                "cards_opponent": 2.2
+                "corners_won": 4.5,
+                "corners_lost": 4.8,
+                "cards_received": 1.9,
+                "cards_opponent": 1.8
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 0.8,
-                "sot_won": 3.3,
-                "sot_lost": 4.3,
+                "goals_scored": 1.4,
+                "goals_conceded": 1.3,
+                "sot_won": 4.0,
+                "sot_lost": 5.1,
                 "corners_won": 3.8,
-                "corners_lost": 6.1,
-                "cards_received": 1.9,
-                "cards_opponent": 1.2
+                "corners_lost": 5.7,
+                "cards_received": 2.5,
+                "cards_opponent": 1.4
             }
         },
         "Fulham": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.8,
-                "goals_conceded": 1.6,
-                "sot_won": 4.0,
-                "sot_lost": 3.6,
-                "corners_won": 4.9,
-                "corners_lost": 6.1,
-                "cards_received": 1.8,
-                "cards_opponent": 2.8
+                "goals_scored": 1.5,
+                "goals_conceded": 1.0,
+                "sot_won": 4.3,
+                "sot_lost": 3.3,
+                "corners_won": 5.4,
+                "corners_lost": 6.3,
+                "cards_received": 2.3,
+                "cards_opponent": 3.1
             },
             "away": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.4,
-                "sot_won": 3.4,
-                "sot_lost": 3.9,
-                "corners_won": 4.0,
-                "corners_lost": 6.1,
-                "cards_received": 2.5,
-                "cards_opponent": 1.6
+                "goals_scored": 0.7,
+                "goals_conceded": 1.5,
+                "sot_won": 2.9,
+                "sot_lost": 4.3,
+                "corners_won": 4.7,
+                "corners_lost": 5.2,
+                "cards_received": 1.8,
+                "cards_opponent": 1.0
             }
         },
         "Newcastle": {
             "league_file": "E0.csv",
             "home": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.9,
-                "sot_won": 5.8,
-                "sot_lost": 4.6,
-                "corners_won": 7.5,
-                "corners_lost": 5.0,
-                "cards_received": 1.9,
-                "cards_opponent": 3.4
+                "goals_scored": 2.0,
+                "goals_conceded": 1.8,
+                "sot_won": 5.5,
+                "sot_lost": 5.2,
+                "corners_won": 6.2,
+                "corners_lost": 4.3,
+                "cards_received": 2.0,
+                "cards_opponent": 3.1
             },
             "away": {
-                "goals_scored": 1.3,
+                "goals_scored": 1.0,
                 "goals_conceded": 1.4,
                 "sot_won": 4.4,
-                "sot_lost": 3.9,
-                "corners_won": 6.6,
-                "corners_lost": 4.8,
-                "cards_received": 2.1,
-                "cards_opponent": 2.1
+                "sot_lost": 4.6,
+                "corners_won": 5.3,
+                "corners_lost": 4.6,
+                "cards_received": 2.2,
+                "cards_opponent": 1.8
             }
         },
         "Girona": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.1,
-                "sot_won": 4.6,
-                "sot_lost": 4.1,
-                "corners_won": 4.9,
-                "corners_lost": 4.5,
-                "cards_received": 2.5,
-                "cards_opponent": 2.3
+                "goals_scored": 1.3,
+                "goals_conceded": 1.0,
+                "sot_won": 4.9,
+                "sot_lost": 3.1,
+                "corners_won": 4.3,
+                "corners_lost": 3.8,
+                "cards_received": 2.7,
+                "cards_opponent": 3.3
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.2,
-                "sot_won": 3.6,
-                "sot_lost": 4.9,
-                "corners_won": 3.7,
-                "corners_lost": 4.6,
-                "cards_received": 2.4,
-                "cards_opponent": 2.5
+                "goals_scored": 0.9,
+                "goals_conceded": 1.1,
+                "sot_won": 4.3,
+                "sot_lost": 5.1,
+                "corners_won": 4.4,
+                "corners_lost": 6.1,
+                "cards_received": 1.8,
+                "cards_opponent": 2.4
             }
         },
         "Villarreal": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 2.2,
-                "goals_conceded": 1.0,
+                "goals_scored": 2.8,
+                "goals_conceded": 1.3,
                 "sot_won": 5.4,
-                "sot_lost": 3.5,
-                "corners_won": 4.1,
-                "corners_lost": 5.4,
+                "sot_lost": 3.9,
+                "corners_won": 5.0,
+                "corners_lost": 5.6,
                 "cards_received": 1.7,
-                "cards_opponent": 2.4
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 1.4,
+                "goals_scored": 1.0,
                 "goals_conceded": 1.5,
-                "sot_won": 3.2,
-                "sot_lost": 3.9,
-                "corners_won": 2.5,
-                "corners_lost": 4.7,
-                "cards_received": 2.9,
-                "cards_opponent": 2.4
+                "sot_won": 3.0,
+                "sot_lost": 4.6,
+                "corners_won": 3.2,
+                "corners_lost": 5.5,
+                "cards_received": 1.8,
+                "cards_opponent": 2.2
             }
         },
         "Mallorca": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.3,
-                "sot_won": 5.2,
-                "sot_lost": 4.3,
-                "corners_won": 3.5,
-                "corners_lost": 6.4,
-                "cards_received": 2.0,
+                "goals_scored": 2.0,
+                "goals_conceded": 1.0,
+                "sot_won": 6.1,
+                "sot_lost": 4.2,
+                "corners_won": 5.1,
+                "corners_lost": 5.5,
+                "cards_received": 1.7,
                 "cards_opponent": 2.9
             },
             "away": {
-                "goals_scored": 0.6,
-                "goals_conceded": 2.0,
-                "sot_won": 2.7,
-                "sot_lost": 5.6,
-                "corners_won": 2.9,
-                "corners_lost": 7.2,
+                "goals_scored": 0.7,
+                "goals_conceded": 2.1,
+                "sot_won": 2.6,
+                "sot_lost": 5.1,
+                "corners_won": 3.0,
+                "corners_lost": 6.6,
                 "cards_received": 2.9,
-                "cards_opponent": 2.2
+                "cards_opponent": 2.5
             }
         },
         "Alaves": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.3,
-                "sot_won": 4.4,
+                "goals_scored": 1.4,
+                "goals_conceded": 1.6,
+                "sot_won": 5.5,
                 "sot_lost": 4.2,
-                "corners_won": 5.2,
-                "corners_lost": 4.6,
-                "cards_received": 2.9,
-                "cards_opponent": 2.6
+                "corners_won": 6.6,
+                "corners_lost": 4.3,
+                "cards_received": 2.6,
+                "cards_opponent": 2.9
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 2.1,
-                "sot_won": 4.0,
-                "sot_lost": 4.8,
-                "corners_won": 3.1,
-                "corners_lost": 5.5,
-                "cards_received": 3.2,
-                "cards_opponent": 1.8
+                "goals_scored": 1.5,
+                "goals_conceded": 1.7,
+                "sot_won": 3.7,
+                "sot_lost": 4.6,
+                "corners_won": 3.6,
+                "corners_lost": 6.4,
+                "cards_received": 3.4,
+                "cards_opponent": 2.5
             }
         },
         "Valencia": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.3,
+                "goals_scored": 1.6,
+                "goals_conceded": 1.5,
                 "sot_won": 3.4,
-                "sot_lost": 2.8,
-                "corners_won": 6.4,
-                "corners_lost": 3.4,
-                "cards_received": 2.1,
-                "cards_opponent": 4.0
+                "sot_lost": 3.8,
+                "corners_won": 5.3,
+                "corners_lost": 4.7,
+                "cards_received": 1.5,
+                "cards_opponent": 3.3
             },
             "away": {
-                "goals_scored": 1.0,
-                "goals_conceded": 1.6,
-                "sot_won": 2.6,
-                "sot_lost": 4.9,
-                "corners_won": 4.1,
-                "corners_lost": 4.9,
-                "cards_received": 2.4,
-                "cards_opponent": 2.0
+                "goals_scored": 1.3,
+                "goals_conceded": 1.0,
+                "sot_won": 3.6,
+                "sot_lost": 3.6,
+                "corners_won": 4.4,
+                "corners_lost": 5.3,
+                "cards_received": 2.6,
+                "cards_opponent": 2.1
             }
         },
         "Celta": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.5,
-                "sot_won": 4.3,
-                "sot_lost": 3.9,
-                "corners_won": 3.4,
-                "corners_lost": 4.5,
-                "cards_received": 2.2,
-                "cards_opponent": 3.3
+                "goals_scored": 2.0,
+                "goals_conceded": 1.6,
+                "sot_won": 5.2,
+                "sot_lost": 3.6,
+                "corners_won": 4.2,
+                "corners_lost": 3.3,
+                "cards_received": 1.5,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 0.9,
-                "sot_won": 4.1,
-                "sot_lost": 4.0,
-                "corners_won": 3.1,
-                "corners_lost": 5.0,
-                "cards_received": 1.8,
-                "cards_opponent": 2.9
+                "goals_scored": 1.2,
+                "goals_conceded": 1.3,
+                "sot_won": 3.2,
+                "sot_lost": 4.6,
+                "corners_won": 3.2,
+                "corners_lost": 5.5,
+                "cards_received": 2.2,
+                "cards_opponent": 1.7
             }
         },
         "Ath Bilbao": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.2,
+                "goals_scored": 1.3,
                 "goals_conceded": 1.2,
-                "sot_won": 5.3,
-                "sot_lost": 3.7,
-                "corners_won": 4.8,
-                "corners_lost": 4.2,
-                "cards_received": 2.4,
-                "cards_opponent": 2.0
+                "sot_won": 5.6,
+                "sot_lost": 3.5,
+                "corners_won": 6.8,
+                "corners_lost": 3.2,
+                "cards_received": 2.8,
+                "cards_opponent": 2.4
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 1.9,
+                "goals_scored": 1.4,
+                "goals_conceded": 2.3,
                 "sot_won": 4.3,
-                "sot_lost": 5.3,
-                "corners_won": 5.3,
-                "corners_lost": 3.2,
-                "cards_received": 3.0,
-                "cards_opponent": 1.9
+                "sot_lost": 5.7,
+                "corners_won": 5.2,
+                "corners_lost": 3.8,
+                "cards_received": 2.3,
+                "cards_opponent": 1.6
             }
         },
         "Espanol": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 0.9,
+                "goals_scored": 0.8,
                 "goals_conceded": 1.4,
-                "sot_won": 4.6,
-                "sot_lost": 4.5,
-                "corners_won": 5.4,
-                "corners_lost": 4.3,
-                "cards_received": 2.6,
-                "cards_opponent": 3.0
+                "sot_won": 4.8,
+                "sot_lost": 4.7,
+                "corners_won": 5.6,
+                "corners_lost": 4.8,
+                "cards_received": 2.1,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.7,
+                "goals_scored": 1.2,
+                "goals_conceded": 2.3,
                 "sot_won": 3.1,
-                "sot_lost": 5.8,
-                "corners_won": 4.2,
-                "corners_lost": 4.6,
-                "cards_received": 3.1,
+                "sot_lost": 7.4,
+                "corners_won": 4.6,
+                "corners_lost": 5.0,
+                "cards_received": 4.2,
                 "cards_opponent": 2.0
             }
         },
         "Elche": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.8,
+                "goals_scored": 1.4,
                 "goals_conceded": 1.4,
-                "sot_won": 4.9,
-                "sot_lost": 5.4,
-                "corners_won": 4.1,
-                "corners_lost": 4.1,
+                "sot_won": 4.4,
+                "sot_lost": 4.5,
+                "corners_won": 6.1,
+                "corners_lost": 3.8,
                 "cards_received": 2.2,
-                "cards_opponent": 2.8
+                "cards_opponent": 3.3
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 2.3,
-                "sot_won": 2.9,
-                "sot_lost": 5.8,
-                "corners_won": 3.5,
-                "corners_lost": 5.1,
-                "cards_received": 2.7,
-                "cards_opponent": 1.4
+                "goals_scored": 1.1,
+                "goals_conceded": 2.2,
+                "sot_won": 3.2,
+                "sot_lost": 5.6,
+                "corners_won": 2.5,
+                "corners_lost": 5.3,
+                "cards_received": 3.3,
+                "cards_opponent": 1.8
             }
         },
         "Real Madrid": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 2.6,
-                "goals_conceded": 0.9,
-                "sot_won": 8.0,
-                "sot_lost": 3.4,
-                "corners_won": 6.6,
-                "corners_lost": 3.2,
-                "cards_received": 3.1,
-                "cards_opponent": 3.9
+                "goals_scored": 2.4,
+                "goals_conceded": 1.0,
+                "sot_won": 7.7,
+                "sot_lost": 2.8,
+                "corners_won": 6.5,
+                "corners_lost": 3.0,
+                "cards_received": 2.0,
+                "cards_opponent": 3.1
             },
             "away": {
-                "goals_scored": 1.6,
+                "goals_scored": 1.4,
                 "goals_conceded": 0.9,
-                "sot_won": 5.4,
-                "sot_lost": 2.7,
-                "corners_won": 6.6,
-                "corners_lost": 4.0,
-                "cards_received": 1.3,
-                "cards_opponent": 2.7
+                "sot_won": 4.5,
+                "sot_lost": 3.1,
+                "corners_won": 6.2,
+                "corners_lost": 4.6,
+                "cards_received": 2.1,
+                "cards_opponent": 2.3
             }
         },
         "Betis": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.1,
-                "sot_won": 5.3,
-                "sot_lost": 3.6,
-                "corners_won": 4.5,
-                "corners_lost": 4.0,
-                "cards_received": 2.3,
-                "cards_opponent": 3.0
+                "goals_scored": 1.6,
+                "goals_conceded": 0.8,
+                "sot_won": 4.9,
+                "sot_lost": 4.2,
+                "corners_won": 4.3,
+                "corners_lost": 4.2,
+                "cards_received": 1.8,
+                "cards_opponent": 2.9
             },
             "away": {
-                "goals_scored": 1.0,
-                "goals_conceded": 1.4,
-                "sot_won": 4.7,
-                "sot_lost": 5.4,
-                "corners_won": 4.2,
-                "corners_lost": 6.0,
-                "cards_received": 1.7,
-                "cards_opponent": 2.7
+                "goals_scored": 1.3,
+                "goals_conceded": 1.6,
+                "sot_won": 4.4,
+                "sot_lost": 5.2,
+                "corners_won": 3.6,
+                "corners_lost": 5.3,
+                "cards_received": 2.1,
+                "cards_opponent": 2.2
             }
         },
         "Ath Madrid": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 2.0,
-                "goals_conceded": 0.9,
-                "sot_won": 6.8,
-                "sot_lost": 2.7,
-                "corners_won": 8.0,
-                "corners_lost": 4.1,
-                "cards_received": 2.4,
-                "cards_opponent": 1.5
+                "goals_scored": 1.7,
+                "goals_conceded": 1.0,
+                "sot_won": 5.6,
+                "sot_lost": 3.7,
+                "corners_won": 6.9,
+                "corners_lost": 4.0,
+                "cards_received": 2.1,
+                "cards_opponent": 1.4
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.1,
-                "sot_won": 3.8,
-                "sot_lost": 5.2,
-                "corners_won": 5.1,
-                "corners_lost": 4.7,
-                "cards_received": 1.9,
-                "cards_opponent": 2.1
+                "goals_scored": 1.2,
+                "goals_conceded": 1.8,
+                "sot_won": 3.5,
+                "sot_lost": 5.6,
+                "corners_won": 5.4,
+                "corners_lost": 5.9,
+                "cards_received": 3.1,
+                "cards_opponent": 2.4
             }
         },
         "Levante": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.2,
-                "sot_won": 3.9,
-                "sot_lost": 4.2,
-                "corners_won": 4.9,
-                "corners_lost": 3.7,
+                "goals_scored": 1.5,
+                "goals_conceded": 0.8,
+                "sot_won": 4.6,
+                "sot_lost": 3.3,
+                "corners_won": 5.5,
+                "corners_lost": 3.6,
                 "cards_received": 2.8,
-                "cards_opponent": 2.8
+                "cards_opponent": 3.7
             },
             "away": {
-                "goals_scored": 0.8,
-                "goals_conceded": 1.9,
-                "sot_won": 3.2,
-                "sot_lost": 6.6,
-                "corners_won": 3.2,
-                "corners_lost": 8.2,
+                "goals_scored": 1.1,
+                "goals_conceded": 2.1,
+                "sot_won": 3.8,
+                "sot_lost": 6.8,
+                "corners_won": 4.0,
+                "corners_lost": 6.5,
                 "cards_received": 2.5,
-                "cards_opponent": 2.8
+                "cards_opponent": 2.5
             }
         },
         "Osasuna": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.4,
+                "goals_scored": 1.6,
+                "goals_conceded": 1.5,
                 "sot_won": 5.6,
-                "sot_lost": 4.6,
-                "corners_won": 4.8,
-                "corners_lost": 3.4,
-                "cards_received": 2.8,
-                "cards_opponent": 3.1
+                "sot_lost": 3.4,
+                "corners_won": 5.6,
+                "corners_lost": 3.7,
+                "cards_received": 2.7,
+                "cards_opponent": 3.5
             },
             "away": {
                 "goals_scored": 1.0,
                 "goals_conceded": 1.4,
-                "sot_won": 2.7,
-                "sot_lost": 4.5,
-                "corners_won": 3.5,
-                "corners_lost": 5.9,
-                "cards_received": 3.2,
+                "sot_won": 3.1,
+                "sot_lost": 4.7,
+                "corners_won": 2.9,
+                "corners_lost": 6.0,
+                "cards_received": 2.8,
                 "cards_opponent": 2.6
             }
         },
         "Sociedad": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 2.3,
-                "goals_conceded": 1.5,
-                "sot_won": 5.6,
+                "goals_scored": 2.4,
+                "goals_conceded": 1.7,
+                "sot_won": 4.9,
                 "sot_lost": 4.7,
-                "corners_won": 5.5,
+                "corners_won": 5.3,
                 "corners_lost": 5.0,
-                "cards_received": 2.4,
-                "cards_opponent": 2.6
+                "cards_received": 2.9,
+                "cards_opponent": 2.8
             },
             "away": {
                 "goals_scored": 1.3,
-                "goals_conceded": 1.6,
-                "sot_won": 4.4,
-                "sot_lost": 4.5,
-                "corners_won": 5.0,
-                "corners_lost": 4.3,
-                "cards_received": 2.0,
+                "goals_conceded": 1.8,
+                "sot_won": 3.7,
+                "sot_lost": 5.8,
+                "corners_won": 4.1,
+                "corners_lost": 4.5,
+                "cards_received": 2.6,
                 "cards_opponent": 2.2
             }
         },
         "Oviedo": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 0.5,
-                "goals_conceded": 0.4,
+                "goals_scored": 0.7,
+                "goals_conceded": 0.8,
                 "sot_won": 3.5,
-                "sot_lost": 3.0,
-                "corners_won": 4.9,
-                "corners_lost": 4.4,
-                "cards_received": 3.0,
+                "sot_lost": 2.6,
+                "corners_won": 4.7,
+                "corners_lost": 4.0,
+                "cards_received": 2.8,
                 "cards_opponent": 2.1
             },
             "away": {
-                "goals_scored": 0.9,
+                "goals_scored": 1.1,
                 "goals_conceded": 2.5,
-                "sot_won": 3.1,
-                "sot_lost": 7.3,
-                "corners_won": 3.2,
-                "corners_lost": 6.8,
-                "cards_received": 2.5,
-                "cards_opponent": 1.8
+                "sot_won": 3.2,
+                "sot_lost": 6.9,
+                "corners_won": 3.1,
+                "corners_lost": 6.1,
+                "cards_received": 1.7,
+                "cards_opponent": 1.4
             }
         },
         "Sevilla": {
             "league_file": "SP1.csv",
             "home": {
                 "goals_scored": 1.0,
-                "goals_conceded": 1.2,
-                "sot_won": 3.9,
-                "sot_lost": 3.5,
-                "corners_won": 4.4,
-                "corners_lost": 3.5,
-                "cards_received": 3.3,
-                "cards_opponent": 2.5
+                "goals_conceded": 1.0,
+                "sot_won": 3.7,
+                "sot_lost": 3.1,
+                "corners_won": 4.0,
+                "corners_lost": 4.0,
+                "cards_received": 3.6,
+                "cards_opponent": 2.1
             },
             "away": {
-                "goals_scored": 1.0,
-                "goals_conceded": 2.2,
-                "sot_won": 3.8,
-                "sot_lost": 5.1,
-                "corners_won": 5.7,
-                "corners_lost": 4.8,
-                "cards_received": 2.9,
-                "cards_opponent": 2.4
+                "goals_scored": 1.2,
+                "goals_conceded": 2.1,
+                "sot_won": 3.3,
+                "sot_lost": 4.6,
+                "corners_won": 5.0,
+                "corners_lost": 4.4,
+                "cards_received": 2.0,
+                "cards_opponent": 2.3
             }
         },
         "Vallecano": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 0.8,
-                "sot_won": 5.9,
-                "sot_lost": 3.5,
-                "corners_won": 6.6,
-                "corners_lost": 4.2,
-                "cards_received": 2.1,
-                "cards_opponent": 3.2
+                "goals_scored": 1.7,
+                "goals_conceded": 0.9,
+                "sot_won": 6.3,
+                "sot_lost": 4.0,
+                "corners_won": 6.1,
+                "corners_lost": 5.0,
+                "cards_received": 2.3,
+                "cards_opponent": 3.1
             },
             "away": {
-                "goals_scored": 0.6,
+                "goals_scored": 0.8,
                 "goals_conceded": 1.7,
-                "sot_won": 3.7,
-                "sot_lost": 4.4,
-                "corners_won": 4.9,
+                "sot_won": 4.3,
+                "sot_lost": 4.9,
+                "corners_won": 4.6,
                 "corners_lost": 5.8,
-                "cards_received": 4.6,
-                "cards_opponent": 2.6
+                "cards_received": 4.3,
+                "cards_opponent": 2.4
             }
         },
         "Getafe": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 0.8,
-                "goals_conceded": 0.7,
-                "sot_won": 3.2,
-                "sot_lost": 2.9,
-                "corners_won": 4.3,
-                "corners_lost": 4.3,
-                "cards_received": 2.5,
-                "cards_opponent": 2.1
+                "goals_scored": 1.0,
+                "goals_conceded": 0.8,
+                "sot_won": 3.1,
+                "sot_lost": 2.7,
+                "corners_won": 4.1,
+                "corners_lost": 3.4,
+                "cards_received": 2.3,
+                "cards_opponent": 2.7
             },
             "away": {
                 "goals_scored": 0.8,
-                "goals_conceded": 1.1,
-                "sot_won": 3.1,
-                "sot_lost": 5.1,
-                "corners_won": 5.0,
-                "corners_lost": 5.8,
-                "cards_received": 4.4,
-                "cards_opponent": 2.4
+                "goals_conceded": 0.6,
+                "sot_won": 2.7,
+                "sot_lost": 4.5,
+                "corners_won": 3.7,
+                "corners_lost": 6.3,
+                "cards_received": 5.2,
+                "cards_opponent": 3.6
             }
         },
         "Barcelona": {
             "league_file": "SP1.csv",
             "home": {
-                "goals_scored": 3.1,
+                "goals_scored": 2.9,
                 "goals_conceded": 0.5,
-                "sot_won": 6.9,
+                "sot_won": 7.2,
                 "sot_lost": 2.6,
-                "corners_won": 7.6,
-                "corners_lost": 4.1,
-                "cards_received": 1.1,
+                "corners_won": 6.9,
+                "corners_lost": 4.5,
+                "cards_received": 1.5,
                 "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 2.2,
-                "goals_conceded": 1.3,
-                "sot_won": 6.5,
-                "sot_lost": 5.3,
-                "corners_won": 6.9,
-                "corners_lost": 4.5,
-                "cards_received": 2.6,
-                "cards_opponent": 3.7
+                "goals_scored": 1.5,
+                "goals_conceded": 1.1,
+                "sot_won": 4.9,
+                "sot_lost": 4.3,
+                "corners_won": 6.5,
+                "corners_lost": 4.1,
+                "cards_received": 1.7,
+                "cards_opponent": 2.8
             }
         },
         "Bayern Munich": {
             "league_file": "D1.csv",
             "home": {
                 "goals_scored": 3.9,
-                "goals_conceded": 1.2,
-                "sot_won": 8.6,
-                "sot_lost": 2.8,
-                "corners_won": 8.0,
-                "corners_lost": 2.3,
-                "cards_received": 1.0,
-                "cards_opponent": 1.7
+                "goals_conceded": 1.5,
+                "sot_won": 9.3,
+                "sot_lost": 3.8,
+                "corners_won": 8.6,
+                "corners_lost": 2.5,
+                "cards_received": 1.1,
+                "cards_opponent": 1.8
             },
             "away": {
-                "goals_scored": 3.1,
-                "goals_conceded": 1.1,
-                "sot_won": 8.1,
-                "sot_lost": 3.3,
-                "corners_won": 5.4,
-                "corners_lost": 3.7,
-                "cards_received": 2.4,
-                "cards_opponent": 2.3
+                "goals_scored": 3.0,
+                "goals_conceded": 1.2,
+                "sot_won": 7.8,
+                "sot_lost": 4.3,
+                "corners_won": 5.0,
+                "corners_lost": 4.1,
+                "cards_received": 2.0,
+                "cards_opponent": 2.0
             }
         },
         "Ein Frankfurt": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.6,
-                "goals_conceded": 1.2,
-                "sot_won": 5.1,
-                "sot_lost": 3.4,
-                "corners_won": 5.6,
-                "corners_lost": 4.2,
-                "cards_received": 2.1,
-                "cards_opponent": 2.8
+                "goals_scored": 1.7,
+                "goals_conceded": 1.8,
+                "sot_won": 5.7,
+                "sot_lost": 4.9,
+                "corners_won": 5.5,
+                "corners_lost": 4.8,
+                "cards_received": 2.8,
+                "cards_opponent": 2.1
             },
             "away": {
                 "goals_scored": 1.5,
-                "goals_conceded": 2.3,
-                "sot_won": 3.4,
-                "sot_lost": 5.5,
-                "corners_won": 3.1,
-                "corners_lost": 5.2,
-                "cards_received": 2.0,
-                "cards_opponent": 1.2
+                "goals_conceded": 1.8,
+                "sot_won": 3.7,
+                "sot_lost": 5.7,
+                "corners_won": 3.6,
+                "corners_lost": 6.5,
+                "cards_received": 1.9,
+                "cards_opponent": 1.7
             }
         },
         "Freiburg": {
             "league_file": "D1.csv",
             "home": {
                 "goals_scored": 1.9,
-                "goals_conceded": 1.2,
-                "sot_won": 5.9,
-                "sot_lost": 4.1,
-                "corners_won": 4.9,
-                "corners_lost": 3.6,
-                "cards_received": 1.8,
-                "cards_opponent": 3.0
+                "goals_conceded": 1.3,
+                "sot_won": 5.1,
+                "sot_lost": 4.6,
+                "corners_won": 3.5,
+                "corners_lost": 4.4,
+                "cards_received": 1.5,
+                "cards_opponent": 2.2
             },
             "away": {
                 "goals_scored": 1.1,
-                "goals_conceded": 2.2,
-                "sot_won": 3.5,
+                "goals_conceded": 2.1,
+                "sot_won": 3.7,
                 "sot_lost": 5.7,
-                "corners_won": 4.6,
-                "corners_lost": 5.4,
-                "cards_received": 1.4,
-                "cards_opponent": 2.1
+                "corners_won": 3.8,
+                "corners_lost": 5.1,
+                "cards_received": 1.7,
+                "cards_opponent": 1.6
             }
         },
         "Heidenheim": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.3,
-                "goals_conceded": 2.6,
-                "sot_won": 3.5,
-                "sot_lost": 6.2,
-                "corners_won": 4.2,
-                "corners_lost": 4.9,
-                "cards_received": 1.2,
-                "cards_opponent": 1.2
+                "goals_scored": 1.5,
+                "goals_conceded": 2.4,
+                "sot_won": 3.9,
+                "sot_lost": 6.7,
+                "corners_won": 4.3,
+                "corners_lost": 4.4,
+                "cards_received": 0.9,
+                "cards_opponent": 1.3
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 2.1,
-                "sot_won": 2.9,
-                "sot_lost": 5.3,
-                "corners_won": 4.1,
-                "corners_lost": 5.9,
-                "cards_received": 1.7,
-                "cards_opponent": 2.6
+                "goals_scored": 1.3,
+                "goals_conceded": 1.8,
+                "sot_won": 3.2,
+                "sot_lost": 5.4,
+                "corners_won": 3.7,
+                "corners_lost": 6.3,
+                "cards_received": 1.5,
+                "cards_opponent": 2.5
             }
         },
         "Leverkusen": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 2.5,
-                "goals_conceded": 1.1,
-                "sot_won": 6.2,
-                "sot_lost": 3.6,
-                "corners_won": 7.1,
-                "corners_lost": 2.6,
+                "goals_scored": 2.2,
+                "goals_conceded": 1.3,
+                "sot_won": 7.1,
+                "sot_lost": 4.5,
+                "corners_won": 7.4,
+                "corners_lost": 2.9,
                 "cards_received": 1.7,
-                "cards_opponent": 2.9
+                "cards_opponent": 2.6
             },
             "away": {
-                "goals_scored": 1.7,
+                "goals_scored": 1.5,
                 "goals_conceded": 1.4,
-                "sot_won": 3.6,
-                "sot_lost": 6.2,
+                "sot_won": 3.5,
+                "sot_lost": 5.9,
                 "corners_won": 4.5,
-                "corners_lost": 4.2,
-                "cards_received": 2.2,
-                "cards_opponent": 2.8
+                "corners_lost": 4.0,
+                "cards_received": 1.9,
+                "cards_opponent": 2.7
             }
         },
         "Union Berlin": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.2,
+                "goals_scored": 1.6,
                 "goals_conceded": 1.6,
-                "sot_won": 3.9,
-                "sot_lost": 3.3,
-                "corners_won": 4.6,
-                "corners_lost": 3.6,
-                "cards_received": 2.7,
-                "cards_opponent": 2.4
+                "sot_won": 5.0,
+                "sot_lost": 3.2,
+                "corners_won": 4.7,
+                "corners_lost": 3.9,
+                "cards_received": 2.2,
+                "cards_opponent": 2.2
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 1.6,
-                "sot_won": 3.3,
-                "sot_lost": 4.7,
-                "corners_won": 4.8,
-                "corners_lost": 5.0,
-                "cards_received": 2.1,
-                "cards_opponent": 2.1
+                "goals_scored": 1.1,
+                "goals_conceded": 2.0,
+                "sot_won": 3.4,
+                "sot_lost": 5.5,
+                "corners_won": 4.6,
+                "corners_lost": 5.9,
+                "cards_received": 1.8,
+                "cards_opponent": 1.5
             }
         },
         "St Pauli": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 0.8,
-                "goals_conceded": 1.4,
+                "goals_scored": 0.9,
+                "goals_conceded": 1.6,
                 "sot_won": 3.7,
-                "sot_lost": 4.8,
-                "corners_won": 5.3,
-                "corners_lost": 4.5,
+                "sot_lost": 4.7,
+                "corners_won": 5.0,
+                "corners_lost": 4.9,
                 "cards_received": 1.6,
                 "cards_opponent": 1.9
             },
             "away": {
-                "goals_scored": 0.8,
+                "goals_scored": 0.7,
                 "goals_conceded": 1.8,
-                "sot_won": 2.4,
-                "sot_lost": 6.0,
-                "corners_won": 3.5,
-                "corners_lost": 6.8,
-                "cards_received": 1.6,
-                "cards_opponent": 1.1
+                "sot_won": 2.7,
+                "sot_lost": 5.8,
+                "corners_won": 4.0,
+                "corners_lost": 6.2,
+                "cards_received": 1.5,
+                "cards_opponent": 1.2
             }
         },
         "Mainz": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 0.9,
-                "sot_won": 4.6,
-                "sot_lost": 3.9,
+                "goals_scored": 1.6,
+                "goals_conceded": 1.4,
+                "sot_won": 5.0,
+                "sot_lost": 4.4,
                 "corners_won": 6.8,
-                "corners_lost": 3.2,
-                "cards_received": 2.1,
+                "corners_lost": 3.8,
+                "cards_received": 1.7,
                 "cards_opponent": 1.8
             },
             "away": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.8,
-                "sot_won": 3.6,
-                "sot_lost": 6.1,
-                "corners_won": 2.6,
-                "corners_lost": 6.2,
-                "cards_received": 2.5,
-                "cards_opponent": 1.8
+                "goals_scored": 1.5,
+                "goals_conceded": 1.3,
+                "sot_won": 5.5,
+                "sot_lost": 4.8,
+                "corners_won": 3.7,
+                "corners_lost": 5.8,
+                "cards_received": 1.8,
+                "cards_opponent": 2.5
             }
         },
         "M'gladbach": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.3,
-                "sot_won": 4.3,
-                "sot_lost": 4.8,
-                "corners_won": 2.9,
-                "corners_lost": 3.8,
-                "cards_received": 1.6,
-                "cards_opponent": 2.2
+                "goals_scored": 1.7,
+                "goals_conceded": 1.0,
+                "sot_won": 5.2,
+                "sot_lost": 3.9,
+                "corners_won": 2.4,
+                "corners_lost": 3.4,
+                "cards_received": 2.4,
+                "cards_opponent": 2.4
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 2.0,
-                "sot_won": 3.0,
-                "sot_lost": 6.5,
-                "corners_won": 4.0,
-                "corners_lost": 5.0,
-                "cards_received": 1.4,
-                "cards_opponent": 2.3
+                "goals_scored": 0.8,
+                "goals_conceded": 2.2,
+                "sot_won": 2.9,
+                "sot_lost": 8.2,
+                "corners_won": 3.6,
+                "corners_lost": 5.3,
+                "cards_received": 2.0,
+                "cards_opponent": 2.4
             }
         },
         "Hamburg": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.3,
-                "sot_won": 4.2,
-                "sot_lost": 3.5,
-                "corners_won": 4.1,
-                "corners_lost": 5.7,
-                "cards_received": 2.4,
-                "cards_opponent": 2.7
+                "goals_scored": 1.3,
+                "goals_conceded": 1.4,
+                "sot_won": 4.3,
+                "sot_lost": 3.8,
+                "corners_won": 3.8,
+                "corners_lost": 6.1,
+                "cards_received": 2.3,
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.8,
-                "sot_won": 4.7,
-                "sot_lost": 5.5,
-                "corners_won": 3.7,
-                "corners_lost": 5.2,
-                "cards_received": 3.5,
-                "cards_opponent": 2.3
+                "goals_scored": 1.2,
+                "goals_conceded": 1.6,
+                "sot_won": 4.6,
+                "sot_lost": 6.4,
+                "corners_won": 3.5,
+                "corners_lost": 7.2,
+                "cards_received": 2.7,
+                "cards_opponent": 2.9
             }
         },
         "Hoffenheim": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 2.4,
-                "goals_conceded": 0.8,
-                "sot_won": 6.4,
-                "sot_lost": 3.7,
-                "corners_won": 6.6,
-                "corners_lost": 4.3,
-                "cards_received": 1.8,
-                "cards_opponent": 1.6
+                "goals_scored": 2.0,
+                "goals_conceded": 1.0,
+                "sot_won": 6.8,
+                "sot_lost": 3.3,
+                "corners_won": 6.7,
+                "corners_lost": 4.4,
+                "cards_received": 1.9,
+                "cards_opponent": 2.1
             },
             "away": {
                 "goals_scored": 1.6,
-                "goals_conceded": 2.0,
-                "sot_won": 4.0,
-                "sot_lost": 5.1,
-                "corners_won": 4.5,
-                "corners_lost": 4.8,
-                "cards_received": 2.4,
-                "cards_opponent": 1.4
+                "goals_conceded": 2.2,
+                "sot_won": 4.1,
+                "sot_lost": 5.6,
+                "corners_won": 5.6,
+                "corners_lost": 4.2,
+                "cards_received": 3.3,
+                "cards_opponent": 2.0
             }
         },
         "RB Leipzig": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 2.4,
-                "goals_conceded": 1.5,
-                "sot_won": 7.2,
-                "sot_lost": 4.8,
-                "corners_won": 5.5,
-                "corners_lost": 4.5,
-                "cards_received": 0.9,
-                "cards_opponent": 2.3
+                "goals_scored": 2.1,
+                "goals_conceded": 1.4,
+                "sot_won": 7.1,
+                "sot_lost": 3.9,
+                "corners_won": 6.0,
+                "corners_lost": 4.3,
+                "cards_received": 1.3,
+                "cards_opponent": 1.9
             },
             "away": {
-                "goals_scored": 1.8,
-                "goals_conceded": 1.1,
-                "sot_won": 4.8,
-                "sot_lost": 3.2,
-                "corners_won": 4.1,
+                "goals_scored": 1.6,
+                "goals_conceded": 1.7,
+                "sot_won": 5.0,
+                "sot_lost": 4.3,
+                "corners_won": 3.8,
                 "corners_lost": 3.8,
-                "cards_received": 1.8,
-                "cards_opponent": 1.6
+                "cards_received": 1.7,
+                "cards_opponent": 1.1
             }
         },
         "Stuttgart": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.6,
-                "goals_conceded": 1.3,
-                "sot_won": 5.4,
-                "sot_lost": 4.1,
-                "corners_won": 4.9,
+                "goals_scored": 2.1,
+                "goals_conceded": 0.8,
+                "sot_won": 6.8,
+                "sot_lost": 3.6,
+                "corners_won": 6.7,
                 "corners_lost": 3.8,
-                "cards_received": 2.3,
-                "cards_opponent": 2.0
+                "cards_received": 1.8,
+                "cards_opponent": 1.4
             },
             "away": {
-                "goals_scored": 2.7,
-                "goals_conceded": 1.8,
-                "sot_won": 6.3,
-                "sot_lost": 5.3,
-                "corners_won": 5.1,
-                "corners_lost": 3.2,
-                "cards_received": 1.9,
-                "cards_opponent": 1.7
+                "goals_scored": 2.9,
+                "goals_conceded": 1.9,
+                "sot_won": 6.9,
+                "sot_lost": 6.1,
+                "corners_won": 5.0,
+                "corners_lost": 4.2,
+                "cards_received": 1.8,
+                "cards_opponent": 1.6
             }
         },
         "Werder Bremen": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.0,
+                "goals_scored": 1.1,
                 "goals_conceded": 1.9,
-                "sot_won": 4.4,
-                "sot_lost": 3.9,
-                "corners_won": 4.9,
-                "corners_lost": 3.3,
-                "cards_received": 2.1,
-                "cards_opponent": 1.6
+                "sot_won": 4.7,
+                "sot_lost": 4.0,
+                "corners_won": 5.1,
+                "corners_lost": 3.1,
+                "cards_received": 1.6,
+                "cards_opponent": 1.8
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 1.4,
-                "sot_won": 3.5,
-                "sot_lost": 5.4,
+                "goals_scored": 0.8,
+                "goals_conceded": 1.3,
+                "sot_won": 3.0,
+                "sot_lost": 4.6,
                 "corners_won": 4.9,
-                "corners_lost": 4.8,
-                "cards_received": 2.8,
-                "cards_opponent": 2.2
+                "corners_lost": 5.8,
+                "cards_received": 2.6,
+                "cards_opponent": 2.3
             }
         },
         "Augsburg": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.0,
-                "sot_won": 5.0,
-                "sot_lost": 3.5,
-                "corners_won": 4.8,
+                "goals_scored": 1.6,
+                "goals_conceded": 1.3,
+                "sot_won": 5.8,
+                "sot_lost": 4.1,
+                "corners_won": 5.0,
                 "corners_lost": 5.7,
-                "cards_received": 2.8,
+                "cards_received": 2.4,
                 "cards_opponent": 2.2
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 2.1,
-                "sot_won": 4.2,
-                "sot_lost": 5.3,
-                "corners_won": 4.3,
-                "corners_lost": 6.1,
-                "cards_received": 1.9,
-                "cards_opponent": 1.5
+                "goals_scored": 1.2,
+                "goals_conceded": 2.0,
+                "sot_won": 4.4,
+                "sot_lost": 6.3,
+                "corners_won": 4.6,
+                "corners_lost": 7.1,
+                "cards_received": 1.6,
+                "cards_opponent": 1.6
             }
         },
         "Wolfsburg": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.6,
-                "goals_conceded": 2.1,
-                "sot_won": 4.8,
-                "sot_lost": 4.8,
-                "corners_won": 5.2,
-                "corners_lost": 5.5,
-                "cards_received": 2.6,
-                "cards_opponent": 1.8
+                "goals_scored": 1.1,
+                "goals_conceded": 1.7,
+                "sot_won": 4.5,
+                "sot_lost": 5.0,
+                "corners_won": 6.2,
+                "corners_lost": 5.6,
+                "cards_received": 2.4,
+                "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 2.9,
-                "sot_won": 3.4,
-                "sot_lost": 7.4,
-                "corners_won": 2.5,
-                "corners_lost": 9.8,
+                "goals_scored": 1.4,
+                "goals_conceded": 2.8,
+                "sot_won": 3.9,
+                "sot_lost": 7.2,
+                "corners_won": 3.8,
+                "corners_lost": 8.5,
                 "cards_received": 2.0,
-                "cards_opponent": 1.0
+                "cards_opponent": 1.1
             }
         },
         "Dortmund": {
@@ -1294,951 +1294,951 @@
                 "goals_scored": 2.7,
                 "goals_conceded": 1.2,
                 "sot_won": 5.6,
-                "sot_lost": 3.9,
-                "corners_won": 7.0,
-                "corners_lost": 3.3,
-                "cards_received": 1.6,
-                "cards_opponent": 1.2
+                "sot_lost": 4.1,
+                "corners_won": 7.1,
+                "corners_lost": 2.7,
+                "cards_received": 2.0,
+                "cards_opponent": 0.8
             },
             "away": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.0,
-                "sot_won": 3.8,
-                "sot_lost": 3.5,
-                "corners_won": 3.5,
-                "corners_lost": 5.5,
-                "cards_received": 2.4,
-                "cards_opponent": 2.3
+                "goals_scored": 1.8,
+                "goals_conceded": 1.1,
+                "sot_won": 4.5,
+                "sot_lost": 3.8,
+                "corners_won": 3.2,
+                "corners_lost": 4.8,
+                "cards_received": 2.2,
+                "cards_opponent": 2.0
             }
         },
         "FC Koln": {
             "league_file": "D1.csv",
             "home": {
-                "goals_scored": 1.5,
+                "goals_scored": 1.6,
                 "goals_conceded": 1.9,
-                "sot_won": 4.3,
-                "sot_lost": 4.7,
-                "corners_won": 4.8,
-                "corners_lost": 4.8,
-                "cards_received": 2.4,
-                "cards_opponent": 2.4
+                "sot_won": 5.3,
+                "sot_lost": 4.6,
+                "corners_won": 5.3,
+                "corners_lost": 4.9,
+                "cards_received": 2.6,
+                "cards_opponent": 2.6
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 1.9,
+                "goals_scored": 1.1,
+                "goals_conceded": 2.2,
                 "sot_won": 4.1,
-                "sot_lost": 5.0,
-                "corners_won": 4.2,
-                "corners_lost": 5.8,
-                "cards_received": 2.1,
-                "cards_opponent": 2.4
+                "sot_lost": 4.9,
+                "corners_won": 4.9,
+                "corners_lost": 5.0,
+                "cards_received": 1.7,
+                "cards_opponent": 2.3
             }
         },
         "Rennes": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.8,
-                "goals_conceded": 1.1,
-                "sot_won": 5.7,
-                "sot_lost": 3.7,
-                "corners_won": 6.5,
-                "corners_lost": 4.3,
-                "cards_received": 1.5,
+                "goals_scored": 1.5,
+                "goals_conceded": 1.0,
+                "sot_won": 5.2,
+                "sot_lost": 4.2,
+                "corners_won": 7.3,
+                "corners_lost": 4.2,
+                "cards_received": 1.2,
                 "cards_opponent": 2.4
             },
             "away": {
-                "goals_scored": 1.8,
-                "goals_conceded": 1.7,
-                "sot_won": 4.1,
-                "sot_lost": 4.2,
-                "corners_won": 5.2,
-                "corners_lost": 5.4,
+                "goals_scored": 2.0,
+                "goals_conceded": 2.2,
+                "sot_won": 5.1,
+                "sot_lost": 5.0,
+                "corners_won": 5.7,
+                "corners_lost": 4.8,
                 "cards_received": 2.4,
-                "cards_opponent": 2.1
+                "cards_opponent": 1.8
             }
         },
         "Lens": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 2.3,
-                "goals_conceded": 0.6,
-                "sot_won": 5.7,
-                "sot_lost": 2.4,
-                "corners_won": 4.5,
-                "corners_lost": 4.1,
-                "cards_received": 2.0,
-                "cards_opponent": 2.4
+                "goals_scored": 2.1,
+                "goals_conceded": 0.9,
+                "sot_won": 6.9,
+                "sot_lost": 2.5,
+                "corners_won": 5.9,
+                "corners_lost": 3.3,
+                "cards_received": 1.4,
+                "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 1.9,
+                "goals_scored": 2.1,
                 "goals_conceded": 1.4,
-                "sot_won": 5.3,
-                "sot_lost": 5.0,
-                "corners_won": 6.5,
-                "corners_lost": 2.3,
-                "cards_received": 1.9,
-                "cards_opponent": 2.4
+                "sot_won": 4.8,
+                "sot_lost": 4.1,
+                "corners_won": 7.0,
+                "corners_lost": 4.1,
+                "cards_received": 2.6,
+                "cards_opponent": 2.1
             }
         },
         "Monaco": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.7,
-                "goals_conceded": 1.3,
-                "sot_won": 4.4,
-                "sot_lost": 4.8,
-                "corners_won": 4.5,
-                "corners_lost": 3.8,
-                "cards_received": 2.8,
-                "cards_opponent": 1.8
+                "goals_scored": 1.8,
+                "goals_conceded": 1.1,
+                "sot_won": 4.6,
+                "sot_lost": 4.4,
+                "corners_won": 5.3,
+                "corners_lost": 3.7,
+                "cards_received": 2.5,
+                "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 1.5,
-                "goals_conceded": 1.4,
-                "sot_won": 4.7,
-                "sot_lost": 5.0,
-                "corners_won": 4.5,
-                "corners_lost": 4.9,
-                "cards_received": 2.7,
-                "cards_opponent": 1.9
+                "goals_scored": 1.7,
+                "goals_conceded": 1.7,
+                "sot_won": 5.0,
+                "sot_lost": 4.8,
+                "corners_won": 5.8,
+                "corners_lost": 4.6,
+                "cards_received": 1.9,
+                "cards_opponent": 1.5
             }
         },
         "Nice": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.2,
-                "goals_conceded": 2.2,
-                "sot_won": 4.1,
-                "sot_lost": 5.6,
-                "corners_won": 4.6,
-                "corners_lost": 6.7,
-                "cards_received": 2.3,
+                "goals_scored": 0.8,
+                "goals_conceded": 1.7,
+                "sot_won": 3.7,
+                "sot_lost": 4.8,
+                "corners_won": 5.7,
+                "corners_lost": 4.6,
+                "cards_received": 2.2,
                 "cards_opponent": 2.0
             },
             "away": {
                 "goals_scored": 1.0,
-                "goals_conceded": 2.0,
-                "sot_won": 3.9,
-                "sot_lost": 5.2,
-                "corners_won": 5.2,
-                "corners_lost": 5.9,
-                "cards_received": 2.3,
-                "cards_opponent": 2.1
+                "goals_conceded": 1.7,
+                "sot_won": 4.0,
+                "sot_lost": 4.7,
+                "corners_won": 4.6,
+                "corners_lost": 6.1,
+                "cards_received": 1.8,
+                "cards_opponent": 2.3
             }
         },
         "Brest": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.5,
-                "goals_conceded": 1.1,
-                "sot_won": 4.0,
-                "sot_lost": 3.4,
-                "corners_won": 4.6,
-                "corners_lost": 4.1,
+                "goals_scored": 1.7,
+                "goals_conceded": 1.2,
+                "sot_won": 4.2,
+                "sot_lost": 3.5,
+                "corners_won": 3.7,
+                "corners_lost": 4.3,
                 "cards_received": 2.1,
-                "cards_opponent": 2.4
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 0.8,
-                "goals_conceded": 1.8,
-                "sot_won": 2.7,
-                "sot_lost": 5.6,
-                "corners_won": 3.1,
-                "corners_lost": 6.6,
-                "cards_received": 2.4,
-                "cards_opponent": 1.6
+                "goals_scored": 0.7,
+                "goals_conceded": 1.9,
+                "sot_won": 2.4,
+                "sot_lost": 5.8,
+                "corners_won": 3.3,
+                "corners_lost": 8.1,
+                "cards_received": 2.0,
+                "cards_opponent": 2.1
             }
         },
         "Angers": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.1,
-                "sot_won": 4.1,
-                "sot_lost": 5.0,
-                "corners_won": 3.6,
-                "corners_lost": 5.0,
-                "cards_received": 1.8,
-                "cards_opponent": 1.6
+                "goals_scored": 1.0,
+                "goals_conceded": 1.4,
+                "sot_won": 3.7,
+                "sot_lost": 5.9,
+                "corners_won": 3.9,
+                "corners_lost": 4.2,
+                "cards_received": 1.7,
+                "cards_opponent": 2.4
             },
             "away": {
                 "goals_scored": 0.7,
-                "goals_conceded": 1.4,
+                "goals_conceded": 1.7,
                 "sot_won": 3.1,
-                "sot_lost": 4.4,
-                "corners_won": 2.7,
+                "sot_lost": 5.0,
+                "corners_won": 3.1,
                 "corners_lost": 5.1,
-                "cards_received": 1.1,
-                "cards_opponent": 1.0
+                "cards_received": 1.6,
+                "cards_opponent": 0.9
             }
         },
         "Auxerre": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 0.9,
+                "goals_scored": 1.4,
                 "goals_conceded": 1.1,
-                "sot_won": 4.2,
+                "sot_won": 4.4,
                 "sot_lost": 4.7,
-                "corners_won": 6.2,
-                "corners_lost": 4.8,
-                "cards_received": 2.4,
-                "cards_opponent": 3.3
+                "corners_won": 5.6,
+                "corners_lost": 3.8,
+                "cards_received": 1.9,
+                "cards_opponent": 3.2
             },
             "away": {
-                "goals_scored": 0.7,
-                "goals_conceded": 1.4,
-                "sot_won": 2.3,
-                "sot_lost": 4.6,
-                "corners_won": 4.1,
-                "corners_lost": 4.5,
-                "cards_received": 2.3,
-                "cards_opponent": 2.0
+                "goals_scored": 1.2,
+                "goals_conceded": 1.3,
+                "sot_won": 2.7,
+                "sot_lost": 4.5,
+                "corners_won": 4.0,
+                "corners_lost": 5.5,
+                "cards_received": 2.6,
+                "cards_opponent": 2.1
             }
         },
         "Metz": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.8,
-                "sot_won": 5.0,
-                "sot_lost": 4.0,
-                "corners_won": 5.1,
-                "corners_lost": 3.9,
-                "cards_received": 1.7,
+                "goals_scored": 1.0,
+                "goals_conceded": 2.5,
+                "sot_won": 4.5,
+                "sot_lost": 4.9,
+                "corners_won": 5.5,
+                "corners_lost": 4.6,
+                "cards_received": 1.4,
                 "cards_opponent": 2.0
             },
             "away": {
                 "goals_scored": 0.8,
-                "goals_conceded": 2.2,
-                "sot_won": 2.3,
-                "sot_lost": 7.0,
-                "corners_won": 3.3,
-                "corners_lost": 5.6,
-                "cards_received": 2.6,
+                "goals_conceded": 2.0,
+                "sot_won": 2.0,
+                "sot_lost": 6.5,
+                "corners_won": 3.0,
+                "corners_lost": 5.8,
+                "cards_received": 2.2,
                 "cards_opponent": 1.4
             }
         },
         "Nantes": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.1,
-                "goals_conceded": 2.1,
-                "sot_won": 3.6,
-                "sot_lost": 4.7,
-                "corners_won": 3.2,
+                "goals_scored": 1.2,
+                "goals_conceded": 1.5,
+                "sot_won": 3.7,
+                "sot_lost": 4.1,
+                "corners_won": 4.1,
                 "corners_lost": 4.5,
-                "cards_received": 2.2,
-                "cards_opponent": 2.6
+                "cards_received": 2.3,
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 0.8,
-                "goals_conceded": 1.5,
-                "sot_won": 2.7,
-                "sot_lost": 5.1,
-                "corners_won": 2.5,
-                "corners_lost": 6.7,
-                "cards_received": 2.6,
-                "cards_opponent": 3.2
+                "goals_scored": 0.6,
+                "goals_conceded": 1.6,
+                "sot_won": 3.9,
+                "sot_lost": 4.7,
+                "corners_won": 3.6,
+                "corners_lost": 5.6,
+                "cards_received": 2.4,
+                "cards_opponent": 3.0
             }
         },
         "Paris SG": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 2.9,
-                "goals_conceded": 0.8,
-                "sot_won": 7.7,
-                "sot_lost": 3.2,
-                "corners_won": 6.1,
-                "corners_lost": 2.3,
-                "cards_received": 1.1,
-                "cards_opponent": 1.7
+                "goals_scored": 2.4,
+                "goals_conceded": 0.9,
+                "sot_won": 6.4,
+                "sot_lost": 3.1,
+                "corners_won": 7.7,
+                "corners_lost": 2.6,
+                "cards_received": 1.2,
+                "cards_opponent": 1.2
             },
             "away": {
-                "goals_scored": 1.9,
-                "goals_conceded": 1.0,
-                "sot_won": 7.1,
-                "sot_lost": 2.7,
-                "corners_won": 5.7,
-                "corners_lost": 3.2,
-                "cards_received": 1.1,
-                "cards_opponent": 2.1
+                "goals_scored": 1.8,
+                "goals_conceded": 0.9,
+                "sot_won": 6.6,
+                "sot_lost": 4.1,
+                "corners_won": 4.7,
+                "corners_lost": 3.9,
+                "cards_received": 1.2,
+                "cards_opponent": 1.5
             }
         },
         "Marseille": {
             "league_file": "F1.csv",
             "home": {
                 "goals_scored": 1.8,
-                "goals_conceded": 1.3,
-                "sot_won": 5.4,
-                "sot_lost": 4.7,
-                "corners_won": 5.5,
-                "corners_lost": 3.2,
-                "cards_received": 2.4,
-                "cards_opponent": 1.9
+                "goals_conceded": 1.2,
+                "sot_won": 6.2,
+                "sot_lost": 4.5,
+                "corners_won": 5.7,
+                "corners_lost": 4.0,
+                "cards_received": 2.8,
+                "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 1.6,
-                "goals_conceded": 1.7,
-                "sot_won": 5.2,
-                "sot_lost": 4.1,
-                "corners_won": 4.2,
-                "corners_lost": 3.9,
-                "cards_received": 2.7,
-                "cards_opponent": 2.0
+                "goals_scored": 1.0,
+                "goals_conceded": 1.9,
+                "sot_won": 4.9,
+                "sot_lost": 3.7,
+                "corners_won": 4.0,
+                "corners_lost": 3.5,
+                "cards_received": 2.5,
+                "cards_opponent": 1.5
             }
         },
         "Lyon": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.6,
-                "goals_conceded": 1.0,
-                "sot_won": 3.8,
-                "sot_lost": 3.6,
-                "corners_won": 5.4,
-                "corners_lost": 3.6,
-                "cards_received": 2.2,
-                "cards_opponent": 2.9
+                "goals_scored": 1.7,
+                "goals_conceded": 1.2,
+                "sot_won": 4.6,
+                "sot_lost": 4.1,
+                "corners_won": 6.7,
+                "corners_lost": 4.6,
+                "cards_received": 1.9,
+                "cards_opponent": 2.4
             },
             "away": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.0,
-                "sot_won": 4.9,
-                "sot_lost": 4.3,
+                "goals_scored": 1.5,
+                "goals_conceded": 1.3,
+                "sot_won": 4.8,
+                "sot_lost": 4.7,
                 "corners_won": 4.2,
-                "corners_lost": 5.5,
-                "cards_received": 2.3,
-                "cards_opponent": 2.3
+                "corners_lost": 5.6,
+                "cards_received": 2.1,
+                "cards_opponent": 3.4
             }
         },
         "Lorient": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.6,
-                "goals_conceded": 0.9,
-                "sot_won": 3.9,
-                "sot_lost": 3.7,
-                "corners_won": 2.7,
-                "corners_lost": 5.9,
-                "cards_received": 1.2,
-                "cards_opponent": 2.7
+                "goals_scored": 1.5,
+                "goals_conceded": 1.1,
+                "sot_won": 4.0,
+                "sot_lost": 3.6,
+                "corners_won": 3.3,
+                "corners_lost": 5.5,
+                "cards_received": 1.4,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 1.0,
-                "goals_conceded": 1.4,
-                "sot_won": 3.2,
-                "sot_lost": 4.0,
-                "corners_won": 4.1,
-                "corners_lost": 4.9,
-                "cards_received": 1.0,
-                "cards_opponent": 1.8
+                "goals_scored": 1.5,
+                "goals_conceded": 1.2,
+                "sot_won": 4.0,
+                "sot_lost": 4.2,
+                "corners_won": 4.0,
+                "corners_lost": 6.3,
+                "cards_received": 1.1,
+                "cards_opponent": 2.1
             }
         },
         "Le Havre": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 0.8,
-                "goals_conceded": 0.7,
-                "sot_won": 3.8,
-                "sot_lost": 3.8,
-                "corners_won": 5.2,
-                "corners_lost": 4.2,
-                "cards_received": 1.8,
-                "cards_opponent": 2.6
+                "goals_scored": 1.1,
+                "goals_conceded": 1.0,
+                "sot_won": 3.4,
+                "sot_lost": 4.2,
+                "corners_won": 4.7,
+                "corners_lost": 4.1,
+                "cards_received": 2.1,
+                "cards_opponent": 2.1
             },
             "away": {
-                "goals_scored": 0.6,
-                "goals_conceded": 1.9,
-                "sot_won": 3.1,
-                "sot_lost": 4.9,
-                "corners_won": 3.9,
-                "corners_lost": 6.5,
-                "cards_received": 2.3,
-                "cards_opponent": 2.0
+                "goals_scored": 0.8,
+                "goals_conceded": 1.3,
+                "sot_won": 3.7,
+                "sot_lost": 4.4,
+                "corners_won": 3.8,
+                "corners_lost": 6.2,
+                "cards_received": 2.5,
+                "cards_opponent": 1.9
             }
         },
         "Strasbourg": {
             "league_file": "F1.csv",
             "home": {
                 "goals_scored": 1.6,
-                "goals_conceded": 0.8,
-                "sot_won": 5.0,
-                "sot_lost": 2.9,
-                "corners_won": 5.2,
-                "corners_lost": 4.1,
-                "cards_received": 1.3,
-                "cards_opponent": 2.0
+                "goals_conceded": 1.5,
+                "sot_won": 4.5,
+                "sot_lost": 4.3,
+                "corners_won": 5.6,
+                "corners_lost": 5.2,
+                "cards_received": 1.0,
+                "cards_opponent": 1.7
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.6,
-                "sot_won": 3.7,
-                "sot_lost": 5.5,
-                "corners_won": 3.6,
-                "corners_lost": 4.9,
-                "cards_received": 2.9,
-                "cards_opponent": 2.1
+                "goals_scored": 1.7,
+                "goals_conceded": 1.3,
+                "sot_won": 4.8,
+                "sot_lost": 5.7,
+                "corners_won": 4.1,
+                "corners_lost": 5.0,
+                "cards_received": 2.2,
+                "cards_opponent": 1.9
             }
         },
         "Toulouse": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.0,
-                "goals_conceded": 0.9,
+                "goals_scored": 1.2,
+                "goals_conceded": 1.3,
                 "sot_won": 4.7,
-                "sot_lost": 3.2,
-                "corners_won": 5.7,
-                "corners_lost": 4.1,
-                "cards_received": 1.8,
-                "cards_opponent": 2.9
+                "sot_lost": 3.9,
+                "corners_won": 4.6,
+                "corners_lost": 4.2,
+                "cards_received": 2.9,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.4,
-                "sot_won": 4.0,
-                "sot_lost": 4.2,
-                "corners_won": 3.8,
-                "corners_lost": 4.6,
-                "cards_received": 2.6,
-                "cards_opponent": 1.7
+                "goals_scored": 1.7,
+                "goals_conceded": 1.6,
+                "sot_won": 4.4,
+                "sot_lost": 5.2,
+                "corners_won": 3.3,
+                "corners_lost": 6.0,
+                "cards_received": 2.4,
+                "cards_opponent": 1.6
             }
         },
         "Lille": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.9,
+                "goals_scored": 0.9,
                 "goals_conceded": 1.1,
-                "sot_won": 5.4,
-                "sot_lost": 3.1,
-                "corners_won": 6.4,
-                "corners_lost": 3.3,
-                "cards_received": 2.1,
-                "cards_opponent": 1.3
+                "sot_won": 4.3,
+                "sot_lost": 3.0,
+                "corners_won": 6.2,
+                "corners_lost": 2.9,
+                "cards_received": 2.4,
+                "cards_opponent": 1.5
             },
             "away": {
-                "goals_scored": 1.0,
-                "goals_conceded": 1.3,
-                "sot_won": 3.6,
-                "sot_lost": 4.1,
-                "corners_won": 5.0,
-                "corners_lost": 3.8,
-                "cards_received": 3.4,
-                "cards_opponent": 2.5
+                "goals_scored": 1.5,
+                "goals_conceded": 0.9,
+                "sot_won": 4.1,
+                "sot_lost": 3.4,
+                "corners_won": 3.8,
+                "corners_lost": 4.5,
+                "cards_received": 2.7,
+                "cards_opponent": 3.0
             }
         },
         "Paris FC": {
             "league_file": "F1.csv",
             "home": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.9,
-                "sot_won": 3.5,
-                "sot_lost": 3.7,
-                "corners_won": 5.7,
-                "corners_lost": 4.1,
-                "cards_received": 3.4,
-                "cards_opponent": 2.0
+                "goals_scored": 1.6,
+                "goals_conceded": 1.5,
+                "sot_won": 4.8,
+                "sot_lost": 3.6,
+                "corners_won": 5.1,
+                "corners_lost": 4.5,
+                "cards_received": 3.0,
+                "cards_opponent": 1.6
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 1.0,
-                "sot_won": 2.9,
+                "goals_scored": 1.0,
+                "goals_conceded": 0.9,
+                "sot_won": 3.3,
                 "sot_lost": 4.2,
-                "corners_won": 3.0,
-                "corners_lost": 7.1,
+                "corners_won": 3.1,
+                "corners_lost": 7.3,
                 "cards_received": 2.0,
-                "cards_opponent": 1.2
+                "cards_opponent": 1.0
             }
         },
         "Genoa": {
             "league_file": "I1.csv",
             "home": {
                 "goals_scored": 1.7,
-                "goals_conceded": 1.3,
+                "goals_conceded": 1.4,
                 "sot_won": 4.2,
-                "sot_lost": 3.8,
-                "corners_won": 3.3,
-                "corners_lost": 4.4,
-                "cards_received": 1.5,
-                "cards_opponent": 3.7
+                "sot_lost": 3.5,
+                "corners_won": 3.5,
+                "corners_lost": 3.5,
+                "cards_received": 1.6,
+                "cards_opponent": 4.0
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.5,
-                "sot_won": 3.9,
-                "sot_lost": 5.3,
-                "corners_won": 3.2,
-                "corners_lost": 6.7,
-                "cards_received": 1.5,
-                "cards_opponent": 2.4
+                "goals_scored": 0.6,
+                "goals_conceded": 0.9,
+                "sot_won": 3.2,
+                "sot_lost": 4.2,
+                "corners_won": 4.2,
+                "corners_lost": 5.3,
+                "cards_received": 1.0,
+                "cards_opponent": 2.2
             }
         },
         "Sassuolo": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.2,
-                "goals_conceded": 1.4,
-                "sot_won": 3.4,
-                "sot_lost": 5.0,
-                "corners_won": 4.4,
-                "corners_lost": 4.7,
-                "cards_received": 2.0,
-                "cards_opponent": 1.7
+                "goals_scored": 1.4,
+                "goals_conceded": 1.5,
+                "sot_won": 3.9,
+                "sot_lost": 4.9,
+                "corners_won": 4.0,
+                "corners_lost": 5.5,
+                "cards_received": 2.1,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 1.3,
+                "goals_scored": 0.9,
                 "goals_conceded": 1.3,
-                "sot_won": 3.7,
-                "sot_lost": 5.7,
-                "corners_won": 3.8,
-                "corners_lost": 4.6,
-                "cards_received": 2.6,
-                "cards_opponent": 1.4
+                "sot_won": 3.5,
+                "sot_lost": 5.0,
+                "corners_won": 4.0,
+                "corners_lost": 4.9,
+                "cards_received": 2.7,
+                "cards_opponent": 2.1
             }
         },
         "Milan": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 0.7,
-                "sot_won": 5.4,
-                "sot_lost": 3.2,
-                "corners_won": 5.8,
-                "corners_lost": 3.9,
-                "cards_received": 1.9,
-                "cards_opponent": 2.1
+                "goals_scored": 1.0,
+                "goals_conceded": 1.3,
+                "sot_won": 4.8,
+                "sot_lost": 4.4,
+                "corners_won": 4.8,
+                "corners_lost": 3.4,
+                "cards_received": 2.2,
+                "cards_opponent": 1.8
             },
             "away": {
-                "goals_scored": 1.6,
+                "goals_scored": 1.4,
                 "goals_conceded": 0.8,
-                "sot_won": 3.4,
-                "sot_lost": 3.9,
-                "corners_won": 4.3,
-                "corners_lost": 4.8,
-                "cards_received": 1.5,
-                "cards_opponent": 1.9
+                "sot_won": 3.1,
+                "sot_lost": 3.5,
+                "corners_won": 3.5,
+                "corners_lost": 4.4,
+                "cards_received": 1.9,
+                "cards_opponent": 2.1
             }
         },
         "Roma": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.8,
-                "goals_conceded": 0.6,
-                "sot_won": 4.8,
-                "sot_lost": 2.6,
-                "corners_won": 5.9,
-                "corners_lost": 2.0,
-                "cards_received": 1.7,
-                "cards_opponent": 2.1
+                "goals_scored": 2.2,
+                "goals_conceded": 0.5,
+                "sot_won": 5.6,
+                "sot_lost": 2.4,
+                "corners_won": 6.0,
+                "corners_lost": 2.7,
+                "cards_received": 1.6,
+                "cards_opponent": 2.3
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.6,
-                "sot_won": 2.9,
-                "sot_lost": 5.6,
-                "corners_won": 3.2,
-                "corners_lost": 4.0,
-                "cards_received": 2.4,
-                "cards_opponent": 1.9
+                "goals_scored": 1.7,
+                "goals_conceded": 1.4,
+                "sot_won": 3.4,
+                "sot_lost": 4.5,
+                "corners_won": 4.1,
+                "corners_lost": 4.3,
+                "cards_received": 2.0,
+                "cards_opponent": 2.5
             }
         },
         "Cagliari": {
             "league_file": "I1.csv",
             "home": {
                 "goals_scored": 1.2,
-                "goals_conceded": 1.1,
-                "sot_won": 3.2,
+                "goals_conceded": 1.0,
+                "sot_won": 3.1,
                 "sot_lost": 3.9,
-                "corners_won": 4.0,
+                "corners_won": 4.5,
                 "corners_lost": 5.5,
-                "cards_received": 2.1,
-                "cards_opponent": 2.1
+                "cards_received": 1.3,
+                "cards_opponent": 1.3
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 1.9,
-                "sot_won": 3.5,
-                "sot_lost": 5.6,
-                "corners_won": 3.3,
-                "corners_lost": 4.0,
-                "cards_received": 3.1,
-                "cards_opponent": 1.9
+                "goals_scored": 0.9,
+                "goals_conceded": 1.8,
+                "sot_won": 4.0,
+                "sot_lost": 4.4,
+                "corners_won": 3.7,
+                "corners_lost": 4.4,
+                "cards_received": 2.9,
+                "cards_opponent": 1.8
             }
         },
         "Como": {
             "league_file": "I1.csv",
             "home": {
                 "goals_scored": 2.2,
-                "goals_conceded": 0.8,
-                "sot_won": 6.7,
+                "goals_conceded": 1.1,
+                "sot_won": 6.8,
                 "sot_lost": 2.1,
-                "corners_won": 5.1,
-                "corners_lost": 1.9,
+                "corners_won": 5.9,
+                "corners_lost": 1.6,
                 "cards_received": 1.9,
-                "cards_opponent": 2.5
+                "cards_opponent": 2.4
             },
             "away": {
                 "goals_scored": 1.9,
-                "goals_conceded": 0.8,
-                "sot_won": 4.2,
-                "sot_lost": 4.0,
-                "corners_won": 3.5,
-                "corners_lost": 4.3,
-                "cards_received": 2.2,
-                "cards_opponent": 2.0
+                "goals_conceded": 0.5,
+                "sot_won": 4.0,
+                "sot_lost": 3.1,
+                "corners_won": 4.0,
+                "corners_lost": 3.9,
+                "cards_received": 2.1,
+                "cards_opponent": 2.9
             }
         },
         "Atalanta": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.8,
+                "goals_scored": 1.4,
                 "goals_conceded": 0.6,
-                "sot_won": 5.6,
-                "sot_lost": 2.8,
-                "corners_won": 6.3,
-                "corners_lost": 4.4,
+                "sot_won": 5.0,
+                "sot_lost": 2.9,
+                "corners_won": 7.1,
+                "corners_lost": 3.7,
                 "cards_received": 1.2,
-                "cards_opponent": 1.6
+                "cards_opponent": 1.5
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.0,
-                "sot_won": 4.4,
-                "sot_lost": 4.6,
-                "corners_won": 4.7,
-                "corners_lost": 5.1,
-                "cards_received": 2.2,
-                "cards_opponent": 1.8
+                "goals_scored": 1.5,
+                "goals_conceded": 1.1,
+                "sot_won": 4.6,
+                "sot_lost": 5.4,
+                "corners_won": 4.0,
+                "corners_lost": 4.5,
+                "cards_received": 2.4,
+                "cards_opponent": 1.6
             }
         },
         "Juventus": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 2.2,
+                "goals_scored": 2.0,
                 "goals_conceded": 0.8,
                 "sot_won": 6.8,
-                "sot_lost": 2.2,
-                "corners_won": 5.2,
-                "corners_lost": 3.4,
+                "sot_lost": 2.0,
+                "corners_won": 6.5,
+                "corners_lost": 2.7,
                 "cards_received": 1.1,
-                "cards_opponent": 2.2
+                "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 1.8,
-                "goals_conceded": 1.1,
-                "sot_won": 6.0,
-                "sot_lost": 3.3,
-                "corners_won": 4.9,
+                "goals_scored": 1.7,
+                "goals_conceded": 1.0,
+                "sot_won": 6.1,
+                "sot_lost": 3.5,
+                "corners_won": 5.2,
                 "corners_lost": 4.2,
-                "cards_received": 1.5,
-                "cards_opponent": 2.2
+                "cards_received": 1.8,
+                "cards_opponent": 1.4
             }
         },
         "Udinese": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.0,
-                "goals_conceded": 0.9,
-                "sot_won": 3.7,
-                "sot_lost": 3.8,
-                "corners_won": 4.1,
-                "corners_lost": 4.7,
-                "cards_received": 2.0,
+                "goals_scored": 0.9,
+                "goals_conceded": 0.8,
+                "sot_won": 3.5,
+                "sot_lost": 3.6,
+                "corners_won": 4.9,
+                "corners_lost": 4.8,
+                "cards_received": 1.9,
                 "cards_opponent": 2.4
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.5,
-                "sot_won": 3.5,
-                "sot_lost": 4.1,
-                "corners_won": 4.4,
-                "corners_lost": 4.7,
-                "cards_received": 2.2,
-                "cards_opponent": 1.7
+                "goals_scored": 1.8,
+                "goals_conceded": 1.1,
+                "sot_won": 4.3,
+                "sot_lost": 4.4,
+                "corners_won": 4.0,
+                "corners_lost": 5.4,
+                "cards_received": 1.9,
+                "cards_opponent": 1.3
             }
         },
         "Inter": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 2.7,
-                "goals_conceded": 1.1,
-                "sot_won": 7.5,
-                "sot_lost": 3.1,
-                "corners_won": 6.8,
-                "corners_lost": 2.5,
-                "cards_received": 1.7,
-                "cards_opponent": 2.0
+                "goals_scored": 2.6,
+                "goals_conceded": 1.0,
+                "sot_won": 6.8,
+                "sot_lost": 2.9,
+                "corners_won": 6.7,
+                "corners_lost": 3.3,
+                "cards_received": 1.3,
+                "cards_opponent": 1.7
             },
             "away": {
-                "goals_scored": 1.8,
-                "goals_conceded": 0.3,
-                "sot_won": 5.8,
-                "sot_lost": 1.9,
-                "corners_won": 6.0,
-                "corners_lost": 2.4,
-                "cards_received": 1.7,
-                "cards_opponent": 1.9
+                "goals_scored": 2.3,
+                "goals_conceded": 1.0,
+                "sot_won": 5.5,
+                "sot_lost": 3.2,
+                "corners_won": 4.9,
+                "corners_lost": 2.6,
+                "cards_received": 2.1,
+                "cards_opponent": 2.1
             }
         },
         "Cremonese": {
             "league_file": "I1.csv",
             "home": {
                 "goals_scored": 0.7,
-                "goals_conceded": 1.7,
-                "sot_won": 3.6,
-                "sot_lost": 5.3,
-                "corners_won": 3.3,
-                "corners_lost": 6.4,
-                "cards_received": 2.2,
-                "cards_opponent": 1.3
+                "goals_conceded": 1.6,
+                "sot_won": 3.7,
+                "sot_lost": 4.3,
+                "corners_won": 4.0,
+                "corners_lost": 4.9,
+                "cards_received": 2.6,
+                "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 0.7,
-                "goals_conceded": 1.6,
+                "goals_scored": 0.5,
+                "goals_conceded": 1.9,
                 "sot_won": 2.9,
-                "sot_lost": 5.9,
-                "corners_won": 3.5,
-                "corners_lost": 6.5,
-                "cards_received": 2.4,
-                "cards_opponent": 1.4
+                "sot_lost": 6.0,
+                "corners_won": 3.6,
+                "corners_lost": 6.1,
+                "cards_received": 1.9,
+                "cards_opponent": 1.1
             }
         },
         "Lecce": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 0.8,
-                "goals_conceded": 1.5,
-                "sot_won": 2.2,
-                "sot_lost": 3.9,
-                "corners_won": 4.6,
-                "corners_lost": 3.8,
-                "cards_received": 2.1,
-                "cards_opponent": 2.3
+                "goals_scored": 0.7,
+                "goals_conceded": 1.3,
+                "sot_won": 2.3,
+                "sot_lost": 3.7,
+                "corners_won": 3.1,
+                "corners_lost": 4.0,
+                "cards_received": 2.0,
+                "cards_opponent": 2.0
             },
             "away": {
-                "goals_scored": 0.5,
-                "goals_conceded": 1.4,
-                "sot_won": 1.7,
-                "sot_lost": 4.9,
-                "corners_won": 3.3,
-                "corners_lost": 7.7,
-                "cards_received": 1.4,
-                "cards_opponent": 0.9
+                "goals_scored": 0.9,
+                "goals_conceded": 1.3,
+                "sot_won": 2.6,
+                "sot_lost": 4.4,
+                "corners_won": 4.1,
+                "corners_lost": 6.1,
+                "cards_received": 2.0,
+                "cards_opponent": 1.2
             }
         },
         "Bologna": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 0.5,
-                "goals_conceded": 1.7,
-                "sot_won": 3.8,
-                "sot_lost": 3.9,
-                "corners_won": 5.1,
-                "corners_lost": 3.8,
-                "cards_received": 1.9,
-                "cards_opponent": 1.5
+                "goals_scored": 0.8,
+                "goals_conceded": 1.5,
+                "sot_won": 3.2,
+                "sot_lost": 3.1,
+                "corners_won": 5.0,
+                "corners_lost": 3.6,
+                "cards_received": 1.4,
+                "cards_opponent": 1.7
             },
             "away": {
-                "goals_scored": 1.7,
+                "goals_scored": 1.6,
                 "goals_conceded": 1.2,
-                "sot_won": 4.0,
-                "sot_lost": 4.7,
-                "corners_won": 2.9,
-                "corners_lost": 5.4,
-                "cards_received": 2.8,
-                "cards_opponent": 2.3
+                "sot_won": 3.6,
+                "sot_lost": 3.5,
+                "corners_won": 3.0,
+                "corners_lost": 4.8,
+                "cards_received": 2.6,
+                "cards_opponent": 1.7
             }
         },
         "Parma": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 0.7,
-                "goals_conceded": 1.5,
+                "goals_scored": 0.9,
+                "goals_conceded": 1.4,
                 "sot_won": 3.2,
-                "sot_lost": 4.8,
-                "corners_won": 5.2,
-                "corners_lost": 3.6,
-                "cards_received": 1.9,
-                "cards_opponent": 3.0
+                "sot_lost": 4.6,
+                "corners_won": 4.8,
+                "corners_lost": 3.2,
+                "cards_received": 2.1,
+                "cards_opponent": 2.2
             },
             "away": {
-                "goals_scored": 0.8,
-                "goals_conceded": 1.1,
-                "sot_won": 2.3,
-                "sot_lost": 3.7,
+                "goals_scored": 0.5,
+                "goals_conceded": 1.2,
+                "sot_won": 1.7,
+                "sot_lost": 4.6,
                 "corners_won": 3.7,
-                "corners_lost": 5.1,
-                "cards_received": 1.8,
-                "cards_opponent": 2.4
+                "corners_lost": 7.1,
+                "cards_received": 1.4,
+                "cards_opponent": 1.6
             }
         },
         "Napoli": {
             "league_file": "I1.csv",
             "home": {
                 "goals_scored": 1.7,
-                "goals_conceded": 0.9,
-                "sot_won": 5.1,
-                "sot_lost": 2.8,
-                "corners_won": 6.0,
-                "corners_lost": 2.6,
-                "cards_received": 0.8,
-                "cards_opponent": 1.8
+                "goals_conceded": 1.0,
+                "sot_won": 5.3,
+                "sot_lost": 3.6,
+                "corners_won": 6.2,
+                "corners_lost": 3.0,
+                "cards_received": 0.6,
+                "cards_opponent": 2.1
             },
             "away": {
-                "goals_scored": 1.4,
+                "goals_scored": 1.5,
                 "goals_conceded": 1.1,
-                "sot_won": 3.9,
+                "sot_won": 3.8,
                 "sot_lost": 3.1,
                 "corners_won": 4.0,
-                "corners_lost": 2.8,
-                "cards_received": 2.4,
-                "cards_opponent": 2.5
+                "corners_lost": 2.9,
+                "cards_received": 2.2,
+                "cards_opponent": 2.2
             }
         },
         "Pisa": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 0.6,
-                "goals_conceded": 1.7,
-                "sot_won": 3.2,
-                "sot_lost": 3.7,
+                "goals_scored": 0.8,
+                "goals_conceded": 1.9,
+                "sot_won": 4.1,
+                "sot_lost": 3.9,
                 "corners_won": 3.7,
-                "corners_lost": 3.7,
-                "cards_received": 2.1,
-                "cards_opponent": 2.4
+                "corners_lost": 3.5,
+                "cards_received": 2.0,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 0.9,
-                "goals_conceded": 2.4,
-                "sot_won": 2.4,
-                "sot_lost": 5.4,
-                "corners_won": 4.1,
-                "corners_lost": 5.4,
-                "cards_received": 2.4,
-                "cards_opponent": 1.6
+                "goals_scored": 0.5,
+                "goals_conceded": 2.7,
+                "sot_won": 2.6,
+                "sot_lost": 5.8,
+                "corners_won": 3.4,
+                "corners_lost": 5.3,
+                "cards_received": 2.9,
+                "cards_opponent": 1.2
             }
         },
         "Torino": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.7,
-                "sot_won": 4.8,
+                "goals_scored": 1.7,
+                "goals_conceded": 1.3,
+                "sot_won": 3.9,
                 "sot_lost": 4.3,
-                "corners_won": 3.7,
-                "corners_lost": 4.9,
-                "cards_received": 2.0,
-                "cards_opponent": 1.3
+                "corners_won": 4.1,
+                "corners_lost": 5.5,
+                "cards_received": 2.1,
+                "cards_opponent": 1.9
             },
             "away": {
-                "goals_scored": 1.1,
-                "goals_conceded": 2.0,
-                "sot_won": 4.0,
-                "sot_lost": 4.4,
-                "corners_won": 3.8,
-                "corners_lost": 4.5,
-                "cards_received": 2.1,
-                "cards_opponent": 1.2
+                "goals_scored": 0.7,
+                "goals_conceded": 2.2,
+                "sot_won": 2.9,
+                "sot_lost": 5.4,
+                "corners_won": 2.6,
+                "corners_lost": 4.9,
+                "cards_received": 2.0,
+                "cards_opponent": 0.9
             }
         },
         "Lazio": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.0,
-                "goals_conceded": 1.4,
-                "sot_won": 4.3,
-                "sot_lost": 4.2,
-                "corners_won": 4.2,
-                "corners_lost": 3.7,
-                "cards_received": 3.4,
-                "cards_opponent": 3.3
+                "goals_scored": 1.4,
+                "goals_conceded": 1.8,
+                "sot_won": 5.1,
+                "sot_lost": 4.5,
+                "corners_won": 4.4,
+                "corners_lost": 3.5,
+                "cards_received": 2.4,
+                "cards_opponent": 2.5
             },
             "away": {
-                "goals_scored": 0.7,
+                "goals_scored": 0.9,
                 "goals_conceded": 0.8,
-                "sot_won": 3.2,
-                "sot_lost": 3.9,
-                "corners_won": 3.4,
-                "corners_lost": 3.8,
-                "cards_received": 2.1,
-                "cards_opponent": 2.5
+                "sot_won": 3.4,
+                "sot_lost": 3.7,
+                "corners_won": 3.1,
+                "corners_lost": 5.3,
+                "cards_received": 2.0,
+                "cards_opponent": 2.3
             }
         },
         "Fiorentina": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 1.4,
-                "goals_conceded": 1.0,
-                "sot_won": 4.8,
-                "sot_lost": 3.1,
-                "corners_won": 6.3,
-                "corners_lost": 3.5,
-                "cards_received": 2.1,
-                "cards_opponent": 3.0
+                "goals_scored": 0.8,
+                "goals_conceded": 0.7,
+                "sot_won": 3.9,
+                "sot_lost": 3.4,
+                "corners_won": 5.8,
+                "corners_lost": 3.7,
+                "cards_received": 1.9,
+                "cards_opponent": 2.2
             },
             "away": {
-                "goals_scored": 1.3,
-                "goals_conceded": 1.6,
+                "goals_scored": 1.5,
+                "goals_conceded": 1.5,
                 "sot_won": 3.2,
-                "sot_lost": 5.5,
-                "corners_won": 3.0,
-                "corners_lost": 5.7,
-                "cards_received": 2.3,
+                "sot_lost": 5.9,
+                "corners_won": 2.7,
+                "corners_lost": 5.6,
+                "cards_received": 2.6,
                 "cards_opponent": 2.5
             }
         },
         "Verona": {
             "league_file": "I1.csv",
             "home": {
-                "goals_scored": 0.8,
-                "goals_conceded": 1.8,
-                "sot_won": 3.4,
-                "sot_lost": 4.3,
-                "corners_won": 4.5,
-                "corners_lost": 4.2,
-                "cards_received": 2.2,
+                "goals_scored": 0.4,
+                "goals_conceded": 1.5,
+                "sot_won": 3.1,
+                "sot_lost": 4.0,
+                "corners_won": 5.1,
+                "corners_lost": 4.3,
+                "cards_received": 2.4,
                 "cards_opponent": 1.9
             },
             "away": {
                 "goals_scored": 0.8,
-                "goals_conceded": 1.9,
-                "sot_won": 3.0,
-                "sot_lost": 4.2,
-                "corners_won": 3.3,
-                "corners_lost": 5.8,
-                "cards_received": 2.9,
+                "goals_conceded": 1.7,
+                "sot_won": 3.3,
+                "sot_lost": 4.4,
+                "corners_won": 3.2,
+                "corners_lost": 6.7,
+                "cards_received": 3.0,
                 "cards_opponent": 1.1
             }
         }
     },
     "league_averages": {
         "E0.csv": {
-            "avg_goals": 2.73462783171521,
-            "avg_corners": 9.95145631067961,
-            "avg_cards": 3.954692556634304,
-            "avg_sot": 8.275080906148867
+            "avg_goals": 2.75,
+            "avg_corners": 9.99736842105263,
+            "avg_cards": 3.9526315789473685,
+            "avg_sot": 8.373684210526315
         },
         "SP1.csv": {
-            "avg_goals": 2.6866666666666665,
-            "avg_corners": 9.620000000000001,
-            "avg_cards": 4.99,
-            "avg_sot": 8.71
+            "avg_goals": 2.694736842105263,
+            "avg_corners": 9.66578947368421,
+            "avg_cards": 4.955263157894738,
+            "avg_sot": 8.671052631578947
         },
         "D1.csv": {
-            "avg_goals": 3.2063492063492065,
-            "avg_corners": 9.591269841269842,
-            "avg_cards": 4.238095238095237,
-            "avg_sot": 9.325396825396826
+            "avg_goals": 3.235294117647059,
+            "avg_corners": 9.754901960784313,
+            "avg_cards": 4.147058823529411,
+            "avg_sot": 9.542483660130719
         },
         "F1.csv": {
-            "avg_goals": 2.7768924302788847,
-            "avg_corners": 9.346613545816734,
-            "avg_cards": 4.330677290836654,
-            "avg_sot": 8.450199203187251
+            "avg_goals": 2.829508196721312,
+            "avg_corners": 9.61311475409836,
+            "avg_cards": 4.255737704918033,
+            "avg_sot": 8.659016393442624
         },
         "I1.csv": {
-            "avg_goals": 2.4387096774193546,
-            "avg_corners": 8.796774193548387,
-            "avg_cards": 4.103225806451613,
-            "avg_sot": 8.064516129032258
+            "avg_goals": 2.4263157894736844,
+            "avg_corners": 8.821052631578947,
+            "avg_cards": 4.063157894736842,
+            "avg_sot": 8.060526315789474
         }
     }
 }

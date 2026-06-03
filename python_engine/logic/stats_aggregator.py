@@ -18,6 +18,7 @@ LEAGUE_FILES = ["E0.csv", "SP1.csv", "D1.csv", "F1.csv", "I1.csv"]
 # Funkcja przetwarza dane z wielu lig,
 # wylicza średnie statystyki drużyn i zapisuje je do pliku JSON.
 def aggregate_all_stats():
+    print("[INFO] Starting stats aggregation...")
     # Przechowuje statystyki wszystkich drużyn
     all_teams_data = {}
     # Średnie wartości statystyczne dla każdej ligi
@@ -103,6 +104,8 @@ def aggregate_all_stats():
         json.dump(
             {"teams": all_teams_data, "league_averages": league_averages}, f, indent=4
         )
+
+    print("[DONE] Stats aggregation completed")
 
 if __name__ == "__main__":
     aggregate_all_stats()

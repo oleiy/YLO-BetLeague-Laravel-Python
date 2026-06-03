@@ -1,4 +1,5 @@
 import time
+import os
 
 from datetime import datetime, timedelta
 
@@ -9,23 +10,33 @@ from core.api import make_request
 """
 Skrypt odpowiedzialny za pobieranie terminarza meczów z API SofaScore
 i synchronizację danych w tabeli fixtures.
-Dodaje nowe mecze oraz aktualizuje daty istniejących spotkań.
+
+Na potrzeby demonstracji projektu daty spotkań mogą zostać
+przesunięte o liczbę dni określoną w zmiennej
+FIXTURES_DEMO_DATE_SHIFT_DAYS.
 """
 
-# Lista wybranych lig pobieranych z API
 TARGET_LEAGUES = [17, 8, 23, 35, 34, 7]
 
+FIXTURES_IMPORT_MODE = os.getenv("FIXTURES_IMPORT_MODE", "production").lower()
+DEMO_DATE_SHIFT_DAYS = int(os.getenv("FIXTURES_DEMO_DATE_SHIFT_DAYS", "14"))
 
-# Pobiera mecze z kolejnych dni i zapisuje je do bazy danych.
-# Obsługuje zarówno dodawanie nowych spotkań,
-# jak i aktualizację istniejących rekordów.
+
 def fetch_fixtures_for_next_days(days=14):
+
+    print(f"[INFO] Fixtures import mode: {FIXTURES_IMPORT_MODE}")
+
+    if FIXTURES_IMPORT_MODE == "test":
+        print(f"[INFO] Demo date shift: +{DEMO_DATE_SHIFT_DAYS} days")
+
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    start_date = datetime.now()
+    if FIXTURES_IMPORT_MODE == "test":
+        start_date = datetime.now() - timedelta(days=14)
+    else:
+        start_date = datetime.now()
 
-    # Iteracja po kolejnych dniach do przodu
     for i in range(days):
         current_date = (
             start_date + timedelta(days=i)
@@ -33,7 +44,6 @@ def fetch_fixtures_for_next_days(days=14):
 
         print(f"\n[INFO] Checking fixtures for {current_date}...")
 
-        # Pobranie listy meczów dla konkretnej daty
         data = make_request(
             "match/list",
             {
@@ -48,17 +58,10 @@ def fetch_fixtures_for_next_days(days=14):
 
         events = data
 
-        # Przetwarzanie każdego meczu zwróconego przez API
         for event in events:
-            unique_tournament = event.get(
-                "uniqueTournament",
-                {}
-            )
-
-            # Pobranie identyfikatora ligi z API
+            unique_tournament = event.get("uniqueTournament", {})
             api_league_id = unique_tournament.get("id")
 
-            # Pomijanie lig spoza listy docelowej
             if api_league_id not in TARGET_LEAGUES:
                 continue
 
@@ -70,14 +73,19 @@ def fetch_fixtures_for_next_days(days=14):
             home_api_id = home_team.get("id")
             away_api_id = away_team.get("id")
 
-            # Konwersja timestampu API na format daty
             timestamp = event.get("timestamp")
 
-            match_date = datetime.fromtimestamp(
-                timestamp
-            ).strftime("%Y-%m-%d %H:%M:%S")
+            if not timestamp:
+                print(f"[SKIP] Missing timestamp for event {api_id}")
+                continue
 
-            # Wyszukiwanie wewnętrznych ID ligi i drużyn w bazie danych
+            match_datetime = datetime.fromtimestamp(timestamp)
+
+            if FIXTURES_IMPORT_MODE == "test":
+                match_datetime = match_datetime + timedelta(days=DEMO_DATE_SHIFT_DAYS)
+
+            match_date = match_datetime.strftime("%Y-%m-%d %H:%M:%S")
+
             cursor.execute(
                 """
                 SELECT id
@@ -111,17 +119,14 @@ def fetch_fixtures_for_next_days(days=14):
 
             away_row = cursor.fetchone()
 
-            # Pomijanie rekordów bez powiązania w bazie
             if not league_row:
                 print(f"[SKIP] League not found: {api_league_id}")
                 continue
 
-            # Sprawdzenie drużyny gospodarzy
             if not home_row:
                 print(f"[SKIP] Home team not found: {home_api_id}")
                 continue
 
-            # Sprawdzenie drużyny gości
             if not away_row:
                 print(f"[SKIP] Away team not found: {away_api_id}")
                 continue
@@ -130,7 +135,6 @@ def fetch_fixtures_for_next_days(days=14):
             home_team_id = home_row["id"]
             away_team_id = away_row["id"]
 
-            # Sprawdzenie czy mecz istnieje już w bazie danych
             cursor.execute(
                 """
                 SELECT id
@@ -142,25 +146,33 @@ def fetch_fixtures_for_next_days(days=14):
 
             existing_fixture = cursor.fetchone()
 
-            # Aktualizacja istniejącego meczu
             if existing_fixture:
                 cursor.execute(
                     """
                     UPDATE fixtures
                     SET
+                        league_id = ?,
+                        home_team_id = ?,
+                        away_team_id = ?,
                         match_date = ?,
                         updated_at = datetime('now')
                     WHERE api_id = ?
                     """,
                     (
+                        league_id,
+                        home_team_id,
+                        away_team_id,
                         match_date,
                         api_id
                     )
                 )
 
-                print(f"[UPDATE] Fixture {api_id}")
+                print(
+                    f"[UPDATE] {home_team.get('name')} "
+                    f"vs {away_team.get('name')} "
+                    f"({match_date})"
+                )
 
-            # Dodanie nowego meczu
             else:
                 cursor.execute(
                     """
@@ -195,15 +207,12 @@ def fetch_fixtures_for_next_days(days=14):
                 )
 
                 print(
-                    f"[NEW] "
-                    f"{home_team.get('name')} "
-                    f"vs "
-                    f"{away_team.get('name')}"
+                    f"[NEW] {home_team.get('name')} "
+                    f"vs {away_team.get('name')} "
+                    f"({match_date})"
                 )
 
-        # Zapis zmian po zakończeniu przetwarzania dnia
         conn.commit()
-        # Krótkie opóźnienie zabezpieczające przed spamowaniem API
         time.sleep(1)
 
     cursor.close()
@@ -212,6 +221,5 @@ def fetch_fixtures_for_next_days(days=14):
     print("\n[DONE] Fixtures updated")
 
 
-# Start skryptu
 if __name__ == "__main__":
     fetch_fixtures_for_next_days(14)

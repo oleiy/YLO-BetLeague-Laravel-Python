@@ -92,7 +92,7 @@
                                         data-match-date="{{ $match->match_date }}" data-market-name="Wynik"
                                         data-outcome-name="1" data-odd-value="{{ $o1->value ?? 1 }}">
                                         <span class="odd-label-xs">1</span>
-                                        <span class="odd-val">{{ $o1->value ?? '---' }}</span>
+                                        <span class="odd-val">{{ isset($o1) ? number_format($o1->value, 2) : '---' }}</span>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -104,7 +104,8 @@
                                         data-match-date="{{ $match->match_date }}" data-market-name="Wynik"
                                         data-outcome-name="X" data-odd-value="{{ $oX->value ?? 1 }}">
                                         <span class="odd-label-xs">X</span>
-                                        <span class="odd-val">{{ $oX->value ?? '---' }}</span>
+                                        <span class="odd-val">{{ isset($oX) ? number_format($oX->value, 2) : '---' }}</span>
+
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -116,7 +117,7 @@
                                         data-match-date="{{ $match->match_date }}" data-market-name="Wynik"
                                         data-outcome-name="2" data-odd-value="{{ $o2->value ?? 1 }}">
                                         <span class="odd-label-xs">2</span>
-                                        <span class="odd-val">{{ $o2->value ?? '---' }}</span>
+                                        <span class="odd-val">{{ isset($o2) ? number_format($o2->value, 2) : '---' }}</span>
                                     </div>
                                 </div>
                             </div>
