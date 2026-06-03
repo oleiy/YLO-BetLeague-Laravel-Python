@@ -50,15 +50,13 @@ Poniższy przewodnik opisuje proces instalacji, konfiguracji oraz pierwszego uru
 2. Przejdź do wybranego folderu, w którym ma się znaleźć projekt
 3. Sklonuj repozytorium: 
 ```bash
-git clone https://github.com/oleiy/YLO-BetLeague-Laravel-Python.git
+git clone https://github.com/UR-INF/projekt-oh_project.git
 ```
 4. Przejdź do folderu aplikacji webowej:
 
 ```bash
 cd web_app
 ```
-
-
 
 ### Krok 2: Przygotowanie środowiska systemowego
 Upewnij się, że posiadasz zainstalowane: PHP 8.5.3, Composer 2.9.5 oraz Python 3.12.10.
@@ -113,7 +111,7 @@ PYTHON_PATH=C:\Users\User\AppData\Local\Programs\Python\Python312\python.exe
 
 #### Python Engine (`python_engine/.env`)
 
-Przejdź do katalogu python_engine i utwórz plik .env na podstawie pliku przykładowego:
+Przejdź do katalogu `python_engine` i utwórz plik `.env` na podstawie pliku przykładowego:
 
 ```cmd
 copy .env.example .env
@@ -127,9 +125,45 @@ DB_PATH=../web_app/database/database.sqlite
 RAPIDAPI_KEY=your_api_key
 RAPIDAPI_HOST=sofascore6.p.rapidapi.com
 RAPIDAPI_BASE_URL=https://sofascore6.p.rapidapi.com/api/sofascore/v1
+
+FIXTURES_IMPORT_MODE=production
+FIXTURES_DEMO_DATE_SHIFT_DAYS=14
 ```
 
-Parametr DB_PATH określa lokalizację współdzielonej bazy SQLite wykorzystywanej zarówno przez Laravel, jak i Python Engine.
+Parametr `DB_PATH` określa lokalizację współdzielonej bazy SQLite wykorzystywanej zarówno przez Laravel, jak i Python Engine.
+
+#### Tryb importu terminarza spotkań
+
+Importer meczów (`import_fixtures.py`) obsługuje dwa tryby działania określane przez zmienną:
+
+```env
+FIXTURES_IMPORT_MODE=production
+```
+
+Dostępne wartości:
+
+- `production` — tryb produkcyjny. System pobiera mecze z API SofaScore od aktualnej daty na kolejne 14 dni i zapisuje do bazy ich rzeczywiste daty.
+- `test` — tryb demonstracyjny. System pobiera mecze z poprzednich 14 dni, a następnie przesuwa ich daty o liczbę dni określoną w `FIXTURES_DEMO_DATE_SHIFT_DAYS`. Pozwala to zaprezentować działanie platformy poza aktywnym terminarzem rozgrywek, zachowując prawdziwe identyfikatory meczów, drużyny oraz dane pochodzące z API.
+
+Liczba dni przesunięcia w trybie demonstracyjnym określana jest przez parametr:
+
+```env
+FIXTURES_DEMO_DATE_SHIFT_DAYS=14
+```
+
+Przykładowa konfiguracja produkcyjna:
+
+```env
+FIXTURES_IMPORT_MODE=production
+FIXTURES_DEMO_DATE_SHIFT_DAYS=14
+```
+
+Przykładowa konfiguracja demonstracyjna:
+
+```env
+FIXTURES_IMPORT_MODE=test
+FIXTURES_DEMO_DATE_SHIFT_DAYS=14
+```
 
 #### Uzyskanie klucza RapidAPI
 
@@ -146,11 +180,10 @@ RAPIDAPI_KEY=YOUR_RAPIDAPI_KEY
 ```
 
 Brak poprawnego klucza API uniemożliwi działanie modułów:
-
-Pobierz Ligi
-Pobierz Drużyny
-Pobierz Mecze na 14 Dni
-Pobierz Statystyki Meczu
+- Pobierz Ligi
+- Pobierz Drużyny
+- Pobierz Mecze na 14 Dni
+- Pobierz Statystyki Meczu
 ---
 
 ### 2. Konfiguracja bazy danych SQLite
@@ -206,53 +239,52 @@ Login: admin
 Hasło: admin
 ```
 
----
+#### Dane demonstracyjne (opcjonalnie)
 
-#### Przykładowe dane meczowe
+Projekt zawiera dodatkowe seedery umożliwiające wygenerowanie przykładowych użytkowników oraz zakładów wykorzystywanych podczas testów i demonstracji działania systemu.
 
-Opcjonalnie można wygenerować przykładowe dane meczowe wykorzystywane do prezentacji działania systemu:
+Generowanie użytkowników:
 
 ```bash
-php artisan db:seed --class=FixturesSeeder
+php artisan db:seed --class=DemoUsersSeeder
 ```
-<!-- 
-### Krok 5: Konfiguracja bazy danych SQLite
-1. Utwórz plik bazy danych:
+Seeder tworzy 100 przykładowych użytkowników wraz z odpowiadającymi im rekordami w tabeli user_stats
+
+Generowanie zakładów:
 ```bash
-mkdir database
-type nul > database/database.sqlite
+php artisan db:seed --class=DemoBetsSeeder
 ```
-2. Ustaw konfigurację w pliku .env w folderze web_app
-```bash
-DB_CONNECTION=sqlite
-DB_DATABASE=database/database.sqlite
-```
-3. Wykonaj migracje:
-```bash
-php artisan migrate
-```
-4. Wykonaj seeder dodający admina (jeżeli chcesz korzystać z jego roli)
-```bash
-php artisan db:seed --class=AdminUserSeeder
-```
-5. Opcjonalnie można uruchomić seeder dodający przykładowe dane meczowe, przeznaczone do prezentacji działania systemu oraz testowania funkcjonalności aplikacji:
-```bash
-php artisan db:seed --class=FixturesSeeder
-```
--->
+Seeder tworzy 1000 przykładowych kuponów przypisanych do wygenerowanych użytkowników.
+
+Wygenerowane kupony:
+
+- wykorzystują rzeczywiste kursy znajdujące się w tabeli odds,
+- dotyczą wyłącznie spotkań zapisanych w tabeli fixtures,
+- obsługują zarówno pojedyncze typy, jak i zakłady typu Bet Builder,
+- zawierają przykładowe analizy użytkowników,
+- generują realistyczne statusy zakładów (won, lost, active).
+
+Uwaga: Przed uruchomieniem DemoBetsSeeder w bazie danych muszą znajdować się wcześniej zaimportowane mecze oraz wygenerowane kursy.
+
+
 ### Krok 5: Uruchomienie backendu Laravel
 ```bash
 php artisan serve
 ```
 ### Krok 6: Konfiguracja silnika Python
+
 1. W nowym oknie terminala przejdź do folderu python_engine:
+
 ```bash
 cd ../python_engine
 ```
-2. Zainstaluj zależności:
+
+2. Zainstaluj wymagane biblioteki:
+
 ```bash
-pip install pandas scipy requests python-dotenv urllib3 
+pip install -r requirements.txt
 ```
+Plik `requirements.txt` zawiera pełną listę bibliotek Python wymaganych do uruchomienia silnika analitycznego wraz z wersjami wykorzystanymi podczas tworzenia projektu.
 
 ### Krok 7: Uruchomienie systemu
 1. Wejdź pod adres: http://127.0.0.1:8000.
@@ -261,24 +293,37 @@ pip install pandas scipy requests python-dotenv urllib3
 
 ### Automatyzacja zadań (Scheduler)
 
-Projekt wykorzystuje mechanizm Laravel Scheduler do automatycznej aktualizacji statusów spotkań oraz typów.
+Projekt wykorzystuje mechanizm Laravel Scheduler do automatycznej aktualizacji statusów spotkań oraz zakładów.
 
-Uruchomienie:
+W celu uruchomienia harmonogramu zadań należy wykonać polecenie:
 
 ```bash
-php artisan schedule:run
+php artisan schedule:work
 ```
 
+Polecenie działa w trybie ciągłym i co minutę sprawdza zadania zdefiniowane w harmonogramie aplikacji.
+
+Po uruchomieniu scheduler automatycznie wykonuje m.in.:
+
+- aktualizację statusów spotkań (`NS → LIVE → FT`),
+- aktualizację statusów zakładów (`pending → active → settling`).
 ### Krok 8: Inicjalizacja danych w Panelu Administratora
-1. Zaloguj się jako administrator i wykonaj akcje w kolejności:
-2. W celu prawidłowego, pierwszego zainicjowania bazy danych, klikaj przyciski akcji w dokładnie poniższej kolejności chronologicznej:
-  * Pobierz Ligi (uruchamia import_leagues.py - pobiera ligi z API)
-  * Pobierz Drużyny (uruchamia import_teams.py - pobiera drużyny dla zapisanych wcześniej lig z API)
-  * Pobierz Mecze na 14 Dni (uruchamia import_fixtures.py — pobiera terminarz nadchodzących spotkań z API)
-  * Przetwórz Statystyki CSV (uruchamia stats_aggregator.py — wylicza średnie z plików historycznych i generuje plik processed_stats.json)
-  * Generuj Kursy (Poisson) (uruchamia odds_engine.py — oblicza rozkłady prawdopodobieństwa i zapisuje wygenerowane kursy do bazy danych)
-  * Pobierz Statystyki Meczu (uruchamia import_fixture_statistics.py — uzupełnia bazę danych o szczegółowe statystyki z rozegranych meczów)
-  * Rozlicz Zakłady (uruchamia settle_bets.py — sprawdza wyniki zakończonych spotkań i aktualizuje statusy kuponów oraz statystyki punktowe graczy)
+
+Przy pierwszym uruchomieniu systemu należy wykonać poniższe operacje w podanej kolejności:
+1. Importuj Ligi (uruchamia import_leagues.py - pobiera ligi z API)
+2. Importuj Drużyny (uruchamia import_teams.py - pobiera drużyny dla zapisanych wcześniej lig z API)
+3. Pobierz Mecze (uruchamia import_fixtures.py — pobiera terminarz spotkań zgodnie z konfiguracją FIXTURES_IMPORT_MODE)
+   > Importer działa zgodnie z konfiguracją `FIXTURES_IMPORT_MODE` w pliku `python_engine/.env`:
+   - w trybie `production` pobiera mecze od aktualnej daty na kolejne 14 dni,
+   - w trybie `test` pobiera mecze testowe i przesuwa ich daty o wartość `FIXTURES_DEMO_DATE_SHIFT_DAYS`.
+   
+4. Synchronizuj statystyki (pobiera aktualne pliki csv ze statystykami oraz automatycznie generuje plik processed_stats.json wykorzystywany przez model Poissona)
+5. Generuj Kursy (Poisson) (uruchamia odds_engine.py — oblicza rozkłady prawdopodobieństwa i zapisuje wygenerowane kursy do bazy danych)
+
+Po zakończeniu spotkań:
+6. Synchronizuj wyniki (uruchamia import_fixture_statistics.py — uzupełnia bazę danych o szczegółowe statystyki z rozegranych meczów)
+7. Rozlicz typy (uruchamia settle_bets.py — sprawdza wyniki zakończonych spotkań i aktualizuje statusy kuponów oraz statystyki punktowe graczy)
+
 W prawym dolnym rogu panelu administracyjnego znajduje się wbudowana konsola logów wykonywanych operacji. Podczas klikania kolejnych przycisków wyświetla ona komunikaty w czasie rzeczywistym o przebiegu poszczególnych operacji.
 
 ## Uruchomienie projektu (user)
