@@ -50,7 +50,7 @@ Poniższy przewodnik opisuje proces instalacji, konfiguracji oraz pierwszego uru
 2. Przejdź do wybranego folderu, w którym ma się znaleźć projekt
 3. Sklonuj repozytorium: 
 ```bash
-git clone https://github.com/UR-INF/projekt-oh_project.git
+git clone https://github.com/oleiy/YLO-BetLeague-Laravel-Python.git
 ```
 4. Przejdź do folderu aplikacji webowej:
 
@@ -248,8 +248,7 @@ Generowanie użytkowników:
 ```bash
 php artisan db:seed --class=DemoUsersSeeder
 ```
-Seeder tworzy 100 przykładowych użytkowników wraz z odpowiadającymi im rekordami w tabeli user_stats
-
+Seeder tworzy 100 przykładowych użytkowników wraz z odpowiadającymi im rekordami w tabeli `user_stats`.
 Generowanie zakładów:
 ```bash
 php artisan db:seed --class=DemoBetsSeeder
@@ -258,14 +257,13 @@ Seeder tworzy 1000 przykładowych kuponów przypisanych do wygenerowanych użytk
 
 Wygenerowane kupony:
 
-- wykorzystują rzeczywiste kursy znajdujące się w tabeli odds,
-- dotyczą wyłącznie spotkań zapisanych w tabeli fixtures,
+- wykorzystują rzeczywiste kursy znajdujące się w tabeli `odds`,
+- dotyczą wyłącznie spotkań zapisanych w tabeli `fixtures`,
 - obsługują zarówno pojedyncze typy, jak i zakłady typu Bet Builder,
 - zawierają przykładowe analizy użytkowników,
 - generują realistyczne statusy zakładów (won, lost, active).
 
-Uwaga: Przed uruchomieniem DemoBetsSeeder w bazie danych muszą znajdować się wcześniej zaimportowane mecze oraz wygenerowane kursy.
-
+**Uwaga:** Przed uruchomieniem `DemoBetsSeeder` w bazie danych muszą znajdować się wcześniej zaimportowane mecze oraz wygenerowane kursy.
 
 ### Krok 5: Uruchomienie backendu Laravel
 ```bash
@@ -348,7 +346,7 @@ Projekt był rozwijany na następującej konfiguracji, która zapewnia płynne d
 * **Dysk:** SSD 512 GB
 * **System operacyjny:** Windows 11
 
-# Podręcznik użytkownika
+# Funkcjonalności systemu
 
 ## Role w systemie
 
@@ -360,7 +358,7 @@ System YLO BetLeague obsługuje trzy poziomy dostępu:
 
 ---
 
-## Ścieżka użytkownika – Gość (Guest)
+## Funkcjonalności dostępne dla gościa
 
 Gość może korzystać z części funkcjonalności platformy bez konieczności zakładania konta.
 
@@ -388,7 +386,7 @@ Pozostałe funkcjonalności systemu wymagają zalogowania się na konto użytkow
 
 ---
 
-## Ścieżka użytkownika – Użytkownik
+## Funkcjonalności dostępne dla użytkownika
 
 ### Rejestracja
 
@@ -518,7 +516,7 @@ Aktualnie zalogowany użytkownik jest dodatkowo wyróżniony na liście rankingo
 
 ---
 
-# Ścieżka użytkownika – Administrator
+## Funkcjonalności dostępne dla administratora
 
 Administrator posiada specjalną rolę zapisaną w bazie danych.
 
@@ -604,6 +602,22 @@ Najważniejsze zadania administracyjne obejmują:
 - generowanie kursów przy pomocy modelu Poissona,
 - rozliczanie typów użytkowników,
 - aktualizację rankingów oraz statystyk społeczności.
+
+# Podręcznik użytkownika
+
+## Rejestracja nowego konta
+Aby utworzyć konto użytkownika należy kliknąć przycisk „Rejestracja”
+widoczny w prawym górnym rogu strony.
+
+
+
+Rys. 1. Formularz rejestracji nowego użytkownika.
+
+1. Wprowadź nazwę użytkownika.
+2. Wprowadź adres e-mail.
+3. Ustaw hasło.
+4. Opcjonalnie podaj kod polecający.
+5. Kliknij przycisk „Zarejestruj”.
 
 ## Plany rozbudowy
 Projekt mógłby zostać wzbogacony o nowe moduły, które zwiększą zaangażowanie społeczności oraz głębię analityczną platformy:
