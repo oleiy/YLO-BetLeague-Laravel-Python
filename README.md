@@ -182,7 +182,7 @@ RAPIDAPI_KEY=YOUR_RAPIDAPI_KEY
 Brak poprawnego klucza API uniemożliwi działanie modułów:
 - Pobierz Ligi
 - Pobierz Drużyny
-- Pobierz Mecze na 14 Dni
+- Pobierz Mecze 
 - Pobierz Statystyki Meczu
 ---
 
@@ -539,7 +539,7 @@ Administrator może uruchamiać wszystkie skrypty Python Engine:
 
 - Pobierz Ligi (`import_leagues.py`)
 - Pobierz Drużyny (`import_teams.py`)
-- Pobierz Mecze na 14 Dni (`import_fixtures.py`)
+- Pobierz Mecze (`import_fixtures.py`)
 - Pobierz Statystyki Meczu (`import_fixture_statistics.py`)
 - Przetwórz Statystyki CSV (`stats_aggregator.py`)
 - Generuj Kursy (Poisson) (`odds_engine.py`)
@@ -605,19 +605,767 @@ Najważniejsze zadania administracyjne obejmują:
 
 # Podręcznik użytkownika
 
+## Dostęp dla użytkownika niezalogowanego
+
+Użytkownik niezalogowany, czyli gość, ma dostęp do wybranych funkcjonalności systemu bez konieczności tworzenia konta. Może przeglądać dashboard, listę meczów, typy społeczności oraz rankingi, natomiast funkcje związane z postawieniem kuponu, historią własnych typów i zdobywaniem balansu wymagają zalogowania.
+
+### Dashboard gościa
+
+Po wejściu na stronę główną gość widzi dashboard z nadchodzącymi spotkaniami oraz podstawowymi kursami. W prawym panelu znajduje się sekcja typów roboczych, która jest dostępna w każdym głównym widoku aplikacji.
+
+<p align="left">
+    <img src="docs/images/03-guest-dashboard.png">
+</p>
+
+<p align="center">
+    Rys. 3. Dashboard użytkownika niezalogowanego.
+</p>
+
+Gość może kliknąć wybrany kurs, aby dodać go do panelu typów roboczych. Po dodaniu typu system wyświetla przycisk **„Zaloguj się”**, informując użytkownika, że do zatwierdzenia kuponu wymagane jest posiadanie konta.
+
+### Widok meczów
+
+Zakładka **Mecze** umożliwia przeglądanie spotkań według daty oraz lig. Przy każdym meczu widoczne są podstawowe kursy, a rozwinięcie spotkania pozwala zobaczyć dodatkowe rynki dostępne dla danego meczu.
+
+<p align="left">
+    <img src="docs/images/04-guest-matches.png">
+</p>
+
+<p align="center">
+    Rys. 4. Widok meczów dostępny dla użytkownika niezalogowanego.
+</p>
+
+W tym widoku gość może zapoznać się z ofertą kursową, jednak zatwierdzenie typu nadal wymaga logowania.
+
+Po rozwinięciu wybranego spotkania użytkownik uzyskuje dostęp do wszystkich rynków przygotowanych dla danego meczu. System prezentuje między innymi zakłady na wynik spotkania, podwójną szansę, liczbę bramek, liczbę bramek drużyn, obie drużyny strzelą, rzuty rożne, kartki oraz inne dostępne zdarzenia.
+
+<p align="left">
+    <img src="docs/images/04-guest-matches2.png">
+</p>
+
+<p align="center">
+    Rys. 5. Rozwinięty widok spotkania wraz z dodatkowymi rynkami zakładów.
+</p>
+
+Dzięki temu nawet użytkownik niezalogowany może analizować dostępne kursy oraz zapoznać się z pełną ofertą zdarzeń przygotowanych dla konkretnego meczu.
+
+System umożliwia również przeglądanie spotkań historycznych. W przypadku zakończonych meczów prezentowany jest końcowy wynik spotkania, a po rozwinięciu kafelka użytkownik może przeanalizować statystyki meczowe pobrane z zewnętrznego źródła danych.
+
+<p align="left">
+    <img src="docs/images/04-guest-matches3.png">
+</p>
+
+<p align="center">
+    Rys. 6. Widok zakończonego spotkania wraz ze statystykami meczowymi.
+</p>
+
+Dostępne statystyki obejmują między innymi liczbę strzałów celnych, rzutów rożnych, żółtych kartek oraz czerwonych kartek dla obu drużyn. Pozwala to użytkownikowi na analizę wcześniejszych spotkań bez konieczności opuszczania platformy.
+
+### Społeczność
+
+Zakładka **Społeczność** umożliwia użytkownikom przeglądanie aktywności innych graczy oraz analizowanie publikowanych przez nich typów. Funkcja ta pozwala śledzić najpopularniejsze zdarzenia, porównywać skuteczność typerów oraz obserwować aktualne trendy panujące w społeczności platformy.
+
+<p align="left">
+    <img src="docs/images/05-guest-community.png">
+</p>
+
+<p align="center">
+    Rys. 7. Widok typów społeczności.
+</p>
+
+W zakładce **Typy społeczności** prezentowane są publiczne kupony użytkowników wraz z dodatkowymi informacjami dotyczącymi autora typu.
+
+Dostępne informacje obejmują między innymi:
+
+- nazwę użytkownika,
+- aktualną skuteczność typowania,
+- serię ostatnich rozliczonych kuponów,
+- status kuponu,
+- analizę użytkownika (jeśli jest dostępna),
+- wybrane spotkanie,
+- kurs całkowity kuponu,
+- szczegóły wytypowanego zdarzenia.
+
+Widok został wyposażony w rozbudowany system filtrowania, umożliwiający sortowanie kuponów według skuteczności autora, godziny spotkania oraz wysokości kursu. Użytkownik może również wyświetlać wyłącznie typy zawierające analizę.
+
+Społeczność umożliwia również przeglądanie rankingów użytkowników.
+
+<p align="left">
+    <img src="docs/images/05-guest-community2.png">
+</p>
+
+<p align="center">
+    Rys. 8. Widok rankingów społeczności.
+</p>
+
+System udostępnia kilka niezależnych rankingów prezentujących najlepszych typerów platformy.
+
+Dostępne zestawienia obejmują:
+
+- ranking tygodniowy,
+- ranking miesięczny,
+- ranking Hall of Fame,
+- ranking najwyższych kursów.
+
+Rankingi aktualizowane są automatycznie na podstawie danych zapisanych w systemie i pozwalają użytkownikom śledzić własne postępy oraz porównywać wyniki z pozostałymi uczestnikami społeczności.
+
+### Moje Typy
+
+Zakładka **Moje Typy** służy do zarządzania własnymi kuponami oraz przeglądania historii postawionych typów. Funkcjonalność ta jest dostępna wyłącznie dla zalogowanych użytkowników.
+
+<p align="left">
+    <img src="docs/images/06-guest-mybets.png">
+</p>
+
+<p align="center">
+    Rys. 9. Widok zakładki „Moje Typy” dla użytkownika niezalogowanego.
+</p>
+
+W przypadku wejścia do tej sekcji przez użytkownika niezalogowanego system wyświetla komunikat informujący o konieczności zalogowania się do konta.
+
+Po zalogowaniu użytkownik uzyskuje dostęp do historii swoich kuponów, aktywnych typów, rozliczonych zakładów oraz opublikowanych analiz.
+
+Kliknięcie przycisku **„Zaloguj się”** powoduje otwarcie formularza logowania.
+
+### Zdobywaj Balans
+
+Zakładka **Zdobywaj Balans** odpowiada za system nagród dostępny dla zarejestrowanych użytkowników platformy.
+
+<p align="left">
+    <img src="docs/images/07-guest-earnbalance.png">
+</p>
+
+<p align="center">
+    Rys. 10. Widok zakładki „Zdobywaj Balans” dla użytkownika niezalogowanego.
+</p>
+
+Użytkownik niezalogowany może zapoznać się z przeznaczeniem modułu, jednak korzystanie z jego funkcji wymaga posiadania konta oraz zalogowania do systemu.
+
+Po zalogowaniu użytkownik uzyskuje dostęp do:
+
+- systemu poleceń,
+- indywidualnego kodu polecającego,
+- codziennych bonusów za logowanie,
+- nagród za utrzymywanie serii kolejnych logowań.
+
+Kliknięcie przycisku **„Zaloguj się”** powoduje otwarcie formularza logowania.
+
 ## Rejestracja nowego konta
+
 Aby utworzyć konto użytkownika należy kliknąć przycisk „Rejestracja”
 widoczny w prawym górnym rogu strony.
 
+<p align="left">
+    <img src="docs/images/01-register.png">
+</p>
 
+<p align="center">
+    Rys. 1. Formularz rejestracji nowego użytkownika.
+</p>
 
-Rys. 1. Formularz rejestracji nowego użytkownika.
+Formularz umożliwia utworzenie nowego konta w systemie YLO BetLeague. Użytkownik może podać opcjonalny kod polecający, który pozwala na uzyskanie dodatkowych punktów startowych.
 
 1. Wprowadź nazwę użytkownika.
 2. Wprowadź adres e-mail.
-3. Ustaw hasło.
-4. Opcjonalnie podaj kod polecający.
-5. Kliknij przycisk „Zarejestruj”.
+3. Opcjonalnie podaj kod polecający.
+4. Ustaw hasło.
+5. Potwierdź hasło.
+6. Kliknij przycisk „Stwórz konto”.
+
+Po pomyślnej rejestracji użytkownik zostaje automatycznie zalogowany i przekierowany do dashboardu użytkownika.
+
+Jeżeli użytkownik posiada już konto, może skorzystać z odnośnika **„Zaloguj się”** znajdującego się w dolnej części formularza. Spowoduje to zamknięcie formularza rejestracji i otwarcie formularza logowania bez konieczności powrotu do strony głównej.
+
+Dodatkowo formularz można zamknąć poprzez kliknięcie ikony zamknięcia w prawym górnym rogu okna lub kliknięcie poza obszarem modala. Powoduje to powrót do poprzedniego widoku aplikacji bez utraty aktualnie wyświetlanej strony.
+
+## Logowanie do systemu
+
+Użytkownik posiadający konto może zalogować się do systemu za pomocą przycisku „Zaloguj” dostępnego w nagłówku strony.
+
+<p align="left">
+    <img src="docs/images/02-login.png">
+</p>
+
+<p align="center">
+    Rys. 2. Formularz logowania użytkownika.
+</p>
+
+Formularz logowania umożliwia uwierzytelnienie użytkownika przy użyciu nazwy użytkownika lub adresu e-mail.
+
+1. Wprowadź nazwę użytkownika lub adres e-mail.
+2. Wprowadź hasło.
+3. Kliknij przycisk „Zaloguj się teraz”.
+
+Po poprawnym zalogowaniu użytkownik zostaje automatycznie przekierowany do dashboardu użytkownika, gdzie uzyskuje dostęp do wszystkich funkcjonalności platformy.
+
+Jeżeli użytkownik nie posiada jeszcze konta, może skorzystać z odnośnika **„Dołącz za darmo”**, który zamyka formularz logowania i otwiera formularz rejestracji.
+
+Dodatkowo formularz można zamknąć poprzez kliknięcie ikony zamknięcia w prawym górnym rogu okna lub kliknięcie poza obszarem modala. Powoduje to powrót do poprzedniego widoku aplikacji bez konieczności odświeżania strony.
+
+
+## Dashboard użytkownika
+
+Po zalogowaniu użytkownik zostaje automatycznie przekierowany do dashboardu platformy. W przeciwieństwie do widoku dostępnego dla gościa, użytkownik uzyskuje pełny dostęp do funkcji związanych z tworzeniem oraz publikowaniem własnych typów.
+
+<p align="left">
+    <img src="docs/images/08-user-dashboard.png">
+</p>
+
+<p align="center">
+    Rys. 11. Dashboard użytkownika po zalogowaniu.
+</p>
+
+Dashboard prezentuje nadchodzące spotkania wraz z podstawowymi kursami oraz umożliwia szybkie rozpoczęcie procesu tworzenia listy typów.
+
+W prawym górnym rogu interfejsu wyświetlane są informacje o aktualnym saldzie użytkownika oraz dostęp do menu konta.
+
+Po wybraniu kursu zdarzenie zostaje dodane do panelu typów roboczych znajdującego się po prawej stronie ekranu. Użytkownik może następnie skonfigurować kupon, określić stawkę, dodać analizę oraz zatwierdzić swój typ.
+
+- dodać własną analizę do kuponu,
+- określić wysokość stawki,
+- sprawdzić potencjalną wygraną,
+- usunąć wybrane zdarzenie,
+- zatwierdzić wszystkie typy robocze za pomocą przycisku **„Postaw typy”**.
+
+W przypadku, gdy użytkownik chciałby skorzystać z dodatkowych rynków zakładów dostępnych dla wybranego spotkania, może użyć przycisku **„Zobacz więcej”**. Powoduje on przejście do zakładki **Mecze** oraz automatyczne wyświetlenie dnia, w którym rozgrywane jest wybrane spotkanie. Dzięki temu użytkownik uzyskuje dostęp do wszystkich dostępnych zdarzeń i może budować bardziej rozbudowane kupony.
+
+Panel typów roboczych jest dostępny z poziomu wszystkich głównych widoków systemu, dzięki czemu użytkownik może swobodnie przeglądać spotkania i budować kupony bez utraty wcześniej wybranych zdarzeń.
+
+## Tworzenie i publikowanie typów
+
+Zakładka **Mecze** umożliwia tworzenie własnych typów na dostępne spotkania. Użytkownik może wybierać zarówno pojedyncze zdarzenia typu **SOLO**, jak również budować bardziej rozbudowane typy **Bet Builder**, składające się z wielu zdarzeń dotyczących tego samego spotkania.
+
+<p align="left">
+    <img src="docs/images/09-stawianie-typu.png">
+</p>
+
+<p align="center">
+    Rys. 12. Tworzenie typów oraz kuponów użytkownika.
+</p>
+
+Po wybraniu kursu zdarzenie zostaje automatycznie dodane do panelu typów roboczych znajdującego się po prawej stronie ekranu.
+
+System rozróżnia dwa rodzaje typów:
+
+- **SOLO** – pojedyncze zdarzenie dotyczące wybranego meczu,
+- **Bet Builder** – wiele zdarzeń dotyczących tego samego spotkania, których kursy są automatycznie łączone w jeden kurs całkowity.
+
+Typy dotyczące różnych spotkań są traktowane jako osobne typy i rozliczane niezależnie od siebie.
+
+Dla każdego tworzonego typu użytkownik może:
+
+- dodawać oraz usuwać zdarzenia,
+- określić wysokość stawki,
+- sprawdzić potencjalną wygraną,
+- dodać własną analizę tekstową,
+- usunąć cały typ przed jego zatwierdzeniem.
+
+Stawka przypisywana jest indywidualnie do każdego kuponu. Dzięki temu użytkownik może jednocześnie tworzyć wiele różnych typów i zarządzać nimi niezależnie.
+
+Po skonfigurowaniu wszystkich typów użytkownik może opublikować je jednocześnie za pomocą przycisku **„Postaw typy”**.
+
+Po zapisaniu ich w systemie użytkownik może przejrzeć swoje aktywne oraz historyczne typy na dwa sposoby:
+
+- korzystając z przycisku **„Zobacz postawione typy”** znajdującego się w panelu typów roboczych,
+- przechodząc bezpośrednio do zakładki **„Moje Typy”**.
+
+W momencie zapisania typu odpowiednia liczba punktów zostaje pobrana z salda użytkownika, a kupon oczekuje na rozliczenie po zakończeniu spotkania.
+
+## Moje Typy
+
+Zakładka **Moje Typy** umożliwia użytkownikowi przeglądanie wszystkich opublikowanych typów oraz monitorowanie ich aktualnego statusu.
+
+<p align="left">
+    <img src="docs/images/10-user-moje-typy1.png">
+</p>
+
+<p align="center">
+    Rys. 13. Widok aktywnych typów użytkownika.
+</p>
+
+W sekcji **Aktywne** wyświetlane są wszystkie typy oczekujące na rozliczenie. Są to typy dotyczące spotkań, które jeszcze się nie zakończyły lub nie zostały jeszcze przetworzone przez system rozliczeń.
+
+Dla każdego typu prezentowane są między innymi:
+
+- data publikacji typu,
+- nazwa rozgrywek,
+- spotkanie, którego dotyczy typ,
+- wybrane zdarzenia,
+- kurs całkowity typu,
+- wysokość stawki,
+- potencjalna wygrana,
+- aktualny status typu.
+
+Dodatkowo użytkownik może korzystać z mechanizmów sortowania oraz filtrowania typów, co ułatwia odnajdywanie interesujących pozycji.
+
+### Zarządzanie analizą typu
+
+Jeżeli użytkownik podczas publikacji typu dodał własną analizę tekstową, może nią później zarządzać bez konieczności usuwania całego typu.
+
+<p align="left">
+    <img src="docs/images/10-user-moje-typy-edycja.png">
+</p>
+
+<p align="center">
+    Rys. 14. Edycja analizy typu.
+</p>
+
+Do momentu rozliczenia typu użytkownik może:
+
+- edytować treść opublikowanej analizy,
+- zapisać wprowadzone zmiany,
+- anulować rozpoczętą edycję,
+- całkowicie usunąć analizę z typu.
+
+Funkcja ta pozwala poprawić błędy, uzupełnić argumentację lub usunąć nieaktualne informacje bez konieczności ponownego publikowania typu.
+
+Możliwość modyfikacji dostępna jest wyłącznie dla autora typu oraz tylko dla typów aktywnych. Po rozliczeniu typu analiza zostaje zarchiwizowana i nie może być już edytowana.
+
+Po zakończeniu spotkania oraz wykonaniu procesu rozliczania typ zostaje automatycznie przeniesiony do sekcji **Rozliczone**.
+
+<p align="left">
+    <img src="docs/images/10-user-moje-typy2.png">
+</p>
+
+<p align="center">
+    Rys. 14. Widok rozliczonych typów użytkownika.
+</p>
+
+System umożliwia przeglądanie wszystkich rozliczonych typów oraz ich filtrowanie według wyniku rozliczenia.
+
+Dostępne są następujące kategorie:
+
+- wszystkie typy,
+- wygrane,
+- przegrane,
+- anulowane.
+
+W przypadku trafionych typów system automatycznie przyznaje użytkownikowi odpowiednią liczbę punktów wynikającą z kursu oraz postawionej stawki. Informacja o uzyskanej wygranej prezentowana jest bezpośrednio na karcie typu.
+
+Użytkownik może również wyświetlać wyłącznie typy zawierające analizę tekstową oraz sortować wyniki według daty publikacji lub wysokości kursu.
+
+## Typy Społeczności
+
+Zakładka **Typy Społeczności** umożliwia przeglądanie typów opublikowanych przez innych użytkowników platformy oraz analizowanie ich skuteczności.
+
+<p align="left">
+    <img src="docs/images/11-user-community.png">
+</p>
+
+<p align="center">
+    Rys. 15. Widok typów społeczności dla zalogowanego użytkownika.
+</p>
+
+Funkcjonalność działa analogicznie do widoku dostępnego dla użytkowników niezalogowanych. Użytkownik może przeglądać opublikowane typy społeczności, analizować skuteczność innych typerów oraz korzystać z dostępnych mechanizmów filtrowania i sortowania.
+
+Dostępne filtry umożliwiają między innymi:
+
+- sortowanie według skuteczności autora,
+- sortowanie według godziny spotkania,
+- sortowanie według wysokości kursu,
+- wyświetlanie wyłącznie typów zawierających analizę.
+
+Dzięki temu użytkownik może śledzić aktywność społeczności oraz wyszukiwać najbardziej interesujące typy publikowane przez innych graczy.
+
+### Rankingi użytkowników
+
+Zakładka **Ranking** prezentuje zestawienia najlepszych typerów platformy.
+
+<p align="left">
+    <img src="docs/images/11-user-community2.png">
+</p>
+
+<p align="center">
+    Rys. 16. Widok rankingów użytkowników.
+</p>
+
+System udostępnia kilka niezależnych rankingów:
+
+- ranking tygodniowy,
+- ranking miesięczny,
+- ranking Hall of Fame,
+- ranking najwyższych kursów.
+
+Pozycja użytkownika wyliczana jest automatycznie na podstawie wyników osiąganych w systemie.
+
+Dodatkowo zalogowany użytkownik otrzymuje dostęp do przycisku **„Pokaż mnie w rankingu”**, który automatycznie przewija ranking do aktualnej pozycji zalogowanego użytkownika.
+
+<p align="left">
+    <img src="docs/images/11-user-community3.png">
+</p>
+
+<p align="center">
+    Rys. 17. Automatyczne odnalezienie pozycji użytkownika w rankingu.
+</p>
+
+Po użyciu funkcji **„Pokaż mnie w rankingu”** system automatycznie lokalizuje pozycję użytkownika w aktualnym zestawieniu oraz podświetla jego rekord, co pozwala szybko sprawdzić zajmowane miejsce bez konieczności ręcznego przeglądania całego rankingu.
+
+## Zdobywaj Balans
+
+Zakładka **Zdobywaj Balans** umożliwia użytkownikowi zdobywanie dodatkowych punktów wykorzystywanych do stawiania typów.
+
+<p align="left">
+    <img src="docs/images/12-user-earn-balance.png">
+</p>
+
+<p align="center">
+    Rys. 18. System zdobywania dodatkowego balansu.
+</p>
+
+Widok prezentuje aktualne saldo użytkownika oraz informacje dotyczące aktywnych programów premiowych dostępnych w systemie.
+
+### Codzienna nagroda za logowanie
+
+System nagradza regularne logowanie do platformy. Każdego dnia użytkownik może odebrać premię punktową, która zwiększa jego dostępne saldo.
+
+Kolejne logowania budują serię logowań (streak), której aktualny poziom prezentowany jest w prawej części widoku.
+
+### Program poleceń
+
+Każdy użytkownik otrzymuje indywidualny kod polecający, który może udostępniać innym osobom.
+
+Po wykorzystaniu kodu podczas rejestracji nowy użytkownik zostaje przypisany do osoby polecającej, a system automatycznie nalicza odpowiednie premie punktowe.
+
+W sekcji programu poleceń dostępne są informacje dotyczące:
+
+- indywidualnego kodu polecającego,
+- liczby pozyskanych użytkowników,
+- liczby zdobytych punktów,
+- przycisku umożliwiającego szybkie skopiowanie kodu do schowka.
+
+Zdobyte punkty są automatycznie dodawane do salda użytkownika i mogą zostać wykorzystane podczas tworzenia nowych typów.
+
+## Panel profilu użytkownika
+
+Po kliknięciu nazwy użytkownika znajdującej się w prawym górnym rogu interfejsu zostaje wyświetlony panel profilu zawierający podstawowe informacje o koncie.
+
+<p align="left">
+    <img src="docs/images/13-user-logout.png">
+</p>
+
+<p align="center">
+    Rys. 19. Panel profilu użytkownika.
+</p>
+
+Panel profilu umożliwia szybki podgląd najważniejszych informacji związanych z kontem użytkownika.
+
+W panelu wyświetlane są:
+
+- nazwa użytkownika,
+- adres e-mail,
+- indywidualny kod polecający,
+- liczba poleconych użytkowników,
+- liczba punktów zdobytych z programu poleceń,
+- aktualne saldo punktów.
+
+Dodatkowo użytkownik może skopiować swój kod polecający bezpośrednio do schowka za pomocą dedykowanego przycisku.
+
+Na dole panelu znajduje się przycisk **„Wyloguj”**, który kończy bieżącą sesję użytkownika i powoduje wylogowanie z systemu.
+
+# Panel administratora
+
+Administrator loguje się do systemu w identyczny sposób jak zwykły użytkownik. Podczas procesu uwierzytelniania aplikacja weryfikuje rolę przypisaną do konta. Jeżeli użytkownik posiada rolę administratora, zostaje automatycznie przekierowany do dedykowanego panelu administracyjnego zamiast do standardowych widoków użytkownika.
+
+Panel administratora stanowi centrum zarządzania całym systemem YLO BetLeague. Umożliwia kontrolę procesu importowania danych, uruchamianie silnika analitycznego, synchronizację wyników spotkań oraz rozliczanie typów użytkowników.
+
+<p align="left">
+    <img src="docs/images/14-admin-dashboard.png">
+</p>
+
+<p align="center">
+    Rys. 20. Dashboard administratora – część górna.
+</p>
+
+<p align="left">
+    <img src="docs/images/14-admin-dashboard2.png">
+</p>
+
+<p align="center">
+    Rys. 21. Dashboard administratora – część dolna.
+</p>
+
+## Import przed sezonem
+
+Sekcja wykorzystywana podczas inicjalizacji nowego sezonu rozgrywkowego.
+
+### Importuj ligi
+
+Uruchamia skrypt `import_leagues.py`, którego zadaniem jest pobranie oraz zapisanie do bazy danych wszystkich lig obsługiwanych przez system.
+
+Operacja wykonywana jest jednorazowo przed rozpoczęciem sezonu lub po całkowitym wyczyszczeniu bazy danych.
+
+### Importuj drużyny
+
+Uruchamia skrypt `import_teams.py`, który pobiera wszystkie drużyny uczestniczące w zaimportowanych rozgrywkach i zapisuje je w bazie danych.
+
+Operacja wykonywana jest po zaimportowaniu lig.
+
+---
+
+## Statystyki meczów
+
+Panel prezentuje aktualny stan spotkań zapisanych w systemie.
+
+Wyświetlane są między innymi:
+
+- liczba dzisiejszych spotkań,
+- liczba spotkań trwających,
+- liczba spotkań nadchodzących,
+- liczba spotkań zakończonych.
+
+Pozwala to administratorowi szybko zweryfikować poprawność synchronizacji danych.
+
+---
+
+## Synchronizacja meczów
+
+### Pobierz mecze
+
+Uruchamia skrypt `import_fixtures.py`.
+
+Skrypt pobiera terminarz spotkań z zewnętrznego API i zapisuje go w bazie danych aplikacji.
+
+Operacja wykonywana jest cyklicznie podczas działania systemu. Domyślnie mecze pobierane są na 14 dni do przodu względem dnia biezącego, natomiast można to dostosować podczas konfiguracji plików .env.
+
+---
+
+## Silnik analityczny
+
+Sekcja odpowiedzialna za przygotowanie danych wejściowych wykorzystywanych przez model analityczny.
+
+### Synchronizuj statystyki
+
+Uruchamia skrypty:
+
+- `update_csv_data.py`
+- `stats_aggregator.py`
+
+Pierwszy skrypt pobiera historyczne statystyki drużyn z plików źródłowych, natomiast drugi agreguje i przetwarza dane do postaci wykorzystywanej przez model analityczny.
+
+Proces ten przygotowuje komplet danych wejściowych niezbędnych do generowania kursów.
+
+### Generuj kursy
+
+Uruchamia skrypt `odds_engine.py`.
+
+Jest to główny moduł analityczny projektu wykorzystujący model Poissona do wyliczania prawdopodobieństw zdarzeń sportowych.
+
+Na podstawie przygotowanych statystyk generowane są kursy dla wszystkich dostępnych rynków zakładów i zapisywane w bazie danych.
+
+---
+
+## Typy użytkowników
+
+Sekcja prezentuje aktualny stan wszystkich typów znajdujących się w systemie.
+
+Wyświetlane są:
+
+- typy aktywne,
+- typy oczekujące na rozliczenie,
+- typy w trakcie rozliczania,
+- typy już rozliczone.
+
+Pozwala to administratorowi monitorować poprawność działania procesu rozliczeń.
+
+---
+
+## Silnik wyników i rozliczeń
+
+Sekcja odpowiedzialna za końcowy etap działania systemu.
+
+### Synchronizuj wyniki
+
+Uruchamia skrypt `import_fixture_statistics.py`.
+
+Skrypt pobiera oficjalne wyniki zakończonych spotkań oraz szczegółowe statystyki meczowe wykorzystywane podczas rozliczania typów.
+
+Do systemu trafiają między innymi:
+
+- wynik spotkania,
+- liczba bramek,
+- liczba rzutów rożnych,
+- liczba kartek,
+- liczba celnych strzałów.
+
+### Rozlicz typy
+
+Uruchamia skrypt `settle_bets.py`.
+
+Na podstawie pobranych wyników system automatycznie weryfikuje wszystkie nierozliczone typy użytkowników.
+
+Dla każdego typu wykonywane jest:
+
+- sprawdzenie poprawności wytypowanych zdarzeń,
+- określenie statusu wygrany/przegrany/anulowany,
+- wyliczenie końcowej wygranej,
+- aktualizacja salda użytkownika,
+- oznaczenie typu jako rozliczony.
+
+Proces ten stanowi końcowy etap cyklu życia typu w systemie.
+
+---
+
+## Konsola administracyjna
+
+W prawym dolnym rogu panelu znajduje się przycisk **Console**.
+
+<p align="left">
+    <img src="docs/images/konsola.png">
+</p>
+
+Po jego kliknięciu administrator otrzymuje dostęp do konsoli wykonania skryptów, w której prezentowane są komunikaty zwracane przez uruchamiane moduły Pythona.
+
+Pozwala to na bieżące monitorowanie przebiegu importów, synchronizacji danych oraz działania silnika analitycznego.
+
+## Zarządzanie meczami
+
+Moduł **Mecze** umożliwia administratorowi przegląd wszystkich spotkań zapisanych w systemie z podziałem na daty oraz ligi.
+
+<p align="left">
+    <img src="docs/images/15-admin-matches.png">
+</p>
+
+<p align="center">
+    Rys. 22. Zarządzanie meczami.
+</p>
+
+Administrator może:
+
+- filtrować mecze według wybranej daty,
+- przeglądać wszystkie spotkania zapisane w bazie danych,
+- monitorować status poszczególnych spotkań,
+- ponownie uruchomić synchronizację terminarza,
+- synchronizować wyniki zakończonych spotkań,
+- ręcznie uruchamiać proces rozliczania typów.
+
+Widok ten pełni przede wszystkim funkcję kontrolną i pozwala szybko zweryfikować poprawność pobranych danych meczowych.
+
+---
+
+## Zarządzanie typami użytkowników
+
+Moduł **Typy użytkowników** umożliwia administratorowi monitorowanie wszystkich typów znajdujących się w systemie.
+
+<p align="left">
+    <img src="docs/images/16-admin-bets (1).png">
+</p>
+
+<p align="center">
+    Rys. 23. Przegląd typów użytkowników.
+</p>
+
+Administrator może:
+
+- filtrować typy według daty,
+- filtrować typy według konkretnego użytkownika,
+- przeglądać aktywne i rozliczone typy,
+- analizować skuteczność poszczególnych typerów,
+- monitorować aktywność społeczności.
+
+Dla każdego typu prezentowane są informacje takie jak:
+
+- autor typu,
+- skuteczność użytkownika,
+- spotkanie, którego dotyczy typ,
+- kurs,
+- stawka,
+- potencjalna wygrana,
+- aktualny status typu.
+
+### Analizy użytkowników
+
+Jeżeli użytkownik podczas tworzenia typu dodał własną analizę tekstową, administrator może ją wyświetlić bezpośrednio z poziomu panelu.
+
+<p align="left">
+    <img src="docs/images/16-admin-bets (2).png">
+</p>
+
+<p align="center">
+    Rys. 24. Podgląd analizy użytkownika.
+</p>
+
+Pozwala to monitorować jakość publikowanych analiz oraz kontrolować treści udostępniane społeczności.
+
+---
+
+## Zarządzanie użytkownikami
+
+Moduł **Użytkownicy** odpowiada za administrację kontami znajdującymi się w systemie.
+
+<p align="left">
+    <img src="docs/images/17-admin-users (1).png">
+</p>
+
+<p align="center">
+    Rys. 25. Lista użytkowników.
+</p>
+
+Administrator może:
+
+- wyszukiwać użytkowników po nazwie,
+- sortować użytkowników,
+- przeglądać statystyki kont,
+- edytować dane użytkowników,
+- nakładać blokady czasowe,
+- usuwać konta.
+
+Dla każdego użytkownika prezentowane są:
+
+- nazwa użytkownika,
+- adres e-mail,
+- rola systemowa,
+- aktualne saldo,
+- liczba postawionych typów,
+- skuteczność typowania,
+- aktualna seria trafionych typów,
+- najlepsza seria trafionych typów.
+
+### Edycja użytkownika
+
+Po rozwinięciu wybranego rekordu administrator uzyskuje dostęp do formularza edycji.
+
+<p align="left">
+    <img src="docs/images/17-admin-users (2).png">
+</p>
+
+<p align="center">
+    Rys. 26. Edycja użytkownika.
+</p>
+
+Administrator może:
+
+#### Modyfikować dane konta
+
+Dostępna jest możliwość zmiany:
+
+- nazwy użytkownika,
+- adresu e-mail,
+- roli systemowej.
+
+Zmiany zapisywane są bezpośrednio w bazie danych.
+
+#### Nakładanie blokady konta
+
+Administrator może określić datę wygaśnięcia blokady.
+
+Do momentu upływu wskazanego terminu użytkownik nie będzie mógł korzystać z systemu.
+
+Mechanizm ten pozwala czasowo ograniczyć dostęp bez konieczności usuwania konta.
+
+#### Usuwanie użytkownika
+
+Administrator może całkowicie usunąć konto użytkownika.
+
+Operacja powoduje usunięcie:
+
+- danych konta,
+- historii typów,
+- analiz użytkownika,
+- wszystkich rekordów powiązanych z kontem.
+
+Z tego względu przed wykonaniem operacji wyświetlane jest dodatkowe ostrzeżenie.
+
+---
 
 ## Plany rozbudowy
 Projekt mógłby zostać wzbogacony o nowe moduły, które zwiększą zaangażowanie społeczności oraz głębię analityczną platformy:
